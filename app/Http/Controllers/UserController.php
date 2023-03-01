@@ -10,14 +10,34 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function register(Request $request)
     {
-        //
+        // valider les données envoyées par le formulaire
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+            'telephone' => 'required|string|max:20',
+            'adresse' => 'required|string|max:255',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+
+        // créer un nouvel utilisateur
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'telephone' => $request->telephone,
+            'adresse' => $request->adresse,
+        ]);
+
+        return response()->json(['message' => 'Utilisateur créé avec succès'], 201);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    
     public function create()
     {
         //
