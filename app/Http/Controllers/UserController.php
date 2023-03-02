@@ -11,21 +11,16 @@ class UserController extends Controller
      * Display a listing of the resource.
      */
     public function register(Request $request)
-    {
-        // valider les données envoyées par le formulaire
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-            'telephone' => 'required|string|max:20',
-            'adresse' => 'required|string|max:255',
-        ]);
+    {   $this->validate($request,[
+        'name'    =>'required',
+        'email'   =>'required',
+        'password'=>'required',
+        'telephone'=>'required',
+        'adresse'=>'required'
 
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
-        }
+        ] );
 
-        // créer un nouvel utilisateur
+       
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
