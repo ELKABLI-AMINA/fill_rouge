@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -24,7 +25,7 @@ class UserController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => bcrypt($request->password),
+            'password' => Hash::make($request->password),
             'telephone' => $request->telephone,
             'adresse' => $request->adresse,
         ]);
@@ -36,25 +37,39 @@ class UserController extends Controller
     public function login( Request $request)
     {
         
-        // valider les données envoyées par le formulaire
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|string|email|max:255',
-            'password' => 'required|string',
-        ]);
+        $this->validate($request,[
+            
+            'name'     =>'required',
+            'email'    =>'required',
+            'password' =>'required',
+            'telephone'=>'required',
+            'adresse'  =>'required'
+    
+            ] );
 
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
+        $user= User::whereEmail($request->email)->first();
+        if (isset($user->id)){
+            if(Hash::check($request->password, $user->password)){
+                $token = $user->createToken('auth_token')->plainTextToken;
+                return response()->json([
+                    'message'=>'Connected Successfully',
+                    'token'  =>$token
+                ]);
+
+            }else{
+                return response()->json([
+                    'message'=>'Invalid Credentials',
+                   
+                ]);  
+            }
+
+        }else{
+            return response()->json([
+                'message'=>'Invalid Credentials',
+                
+            ]);
         }
 
-        // vérifier les informations d'identification
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
-            $token = $user->createToken('MyApp')->accessToken;
-            return response()->json(['token' => $token], 200);
-        } else {
-            return response()->json(['message' => 'Echec de l\'authentification'], 401);
-        }
     }
 
     /**
