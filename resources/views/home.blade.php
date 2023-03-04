@@ -50,10 +50,24 @@
                 </div>
                 <div class="col-lg-6">
                     <h6 class="section-title bg-white text-start text-primary pe-3">About us</h6>
-
+                    <h1 class="mb-4">Welcome to <span class="text-primary">Travel</span></h1>
+                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit possimus inventore ipsa facere qui, debitis maxime deserunt expedita ducimus cumque. Voluptates atque vitae corrupti numquam temporibus sint tenetur beatae quo. </p>
+                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit possimus inventore ipsa facere qui, debitis maxime deserunt expedita ducimus cumque. Voluptates atque vitae corrupti numquam temporibus sint tenetur beatae quo. </p>
+                    <div class="btn btn-primary py-3 px-5 mt-2"> Read More</div>
                 </div>
             </div>
         </div>
+    </div>
+    {{-- Destination section --}}
+    <div class="container-xxl py-5 destination">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
+                <h1 class="mb-5">Popular Destination</h1>
+            </div>
+            
+        </div>
+
     </div>
 
 
