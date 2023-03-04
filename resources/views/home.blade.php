@@ -45,12 +45,13 @@
             <div class="row g-5">
                 <div class="col-lg-6" style="min-height: 400px;">
                  <div class="position-relative h-100">
-                    <img src="" alt="" class="img-fluid position-absolute w-100 h-100">
-
+                    <img src="{{ asset('img/bg-1.png') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
                  </div>   
+                </div>
+                <div class="col-lg-6">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About us</h6>
 
                 </div>
-
             </div>
         </div>
     </div>
