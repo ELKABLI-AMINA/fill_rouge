@@ -6,10 +6,31 @@
 }
 /* hero header */
 .hero-header{
-    background: url('./img/bg-1.jpg');
+    background: url('../../public/img/bg-1.jpg');
     background-position: center center ;
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+.navbar-light .navbar-nav .nav-link{
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 35px 0;
+    color: #ffffff !important;
+    font-size:18px;
+    font-weight: 600;
+    transition: 0.5s;
+    outline:none;
+}
+@media(min-width: 992px){
+    .navbar-light{
+        position:absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        z-index:999;
+    }
 }
 /* about section */

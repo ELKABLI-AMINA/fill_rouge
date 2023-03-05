@@ -20,6 +20,25 @@
     <!-- navbar -->
 
     <!-- Section -->
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+     <a href="#" class="navbar-brand p-0">
+       <h1 class="text-primary m-0"> <i class="fa fa-map-marked-alt me-3"></i>Travel Agency</h1>
+     </a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-targer="#">
+        <span class="fa fa-bars"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <a href="" class="nav-item nav-link">Home</a>
+            <a href="" class="nav-item nav-link">About</a>
+            <a href="" class="nav-item nav-link">Services</a>
+            <a href="" class="nav-item nav-link">Packages</a>
+            <a href="" class="nav-item nav-link">Contact</a>
+            <a href="" class="nav-item nav-link">Register</a>
+
+        </div>
+     </div>
+        </nav>
     <div class="container-fluid position-relative p-0">
         <div class="container-fluid bg-primary py-5 mb-5 hero-header">
            <div class="container py-5">
@@ -45,7 +64,7 @@
             <div class="row g-5">
                 <div class="col-lg-6" style="min-height: 400px;">
                  <div class="position-relative h-100">
-                    <img src="{{ asset('img/bg-1.png') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
+                    <img src="{{ asset('img/about.jpg') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
                  </div>   
                 </div>
                 <div class="col-lg-6">
@@ -65,9 +84,21 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
                 <h1 class="mb-5">Popular Destination</h1>
             </div>
-            
-        </div>
+            <div class="row g-3">
+                <div class=".col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12">
+                            <a href="" class="d-block position-relative overflow-hidden">
+                                <img src="{{asset('img/kech.jpg')}}" alt="">
+                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
 
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
