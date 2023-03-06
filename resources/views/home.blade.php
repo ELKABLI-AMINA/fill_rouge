@@ -64,7 +64,7 @@
             <div class="row g-5">
                 <div class="col-lg-6" style="min-height: 400px;">
                  <div class="position-relative h-100">
-                    <img src="{{ asset('img/about.jpg') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
+                    <img src="{{ asset('img/amina.jpg') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
                  </div>   
                 </div>
                 <div class="col-lg-6">
