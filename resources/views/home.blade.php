@@ -140,13 +140,36 @@
                             <i class="fa fa-map-marker-alt text-primary me-2"></i> Tanger
                          </small>
                          <small class="flex-fill text-center border-end py-2">
-                            <i class="fa fa-map-calender text-primary me-2"></i> 3 days
+                            <i class="bi bi-calendar  text-primary me-2"></i> 3 days
                          </small>
                          <small class="flex-fill text-center border-end py-2">
-                            <i class="fa fa-map-user text-primary me-2"></i> 2 Pers
+                            <i class="bi bi-person  text-primary me-2"></i>2 Pers
                          </small>
                       </div>
                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- footer section --}}
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Company</h4>
+                    <a href="" class="btn btn-link">About Us</a>
+                    <a href="" class="btn btn-link">Contact Us</a>
+                    <a href="" class="btn btn-link">Private Policy</a>
+                    <a href="" class="btn btn-link">Terms $ Condition</a>
+                    <a href="" class="btn btn-link">FAQ $ Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="bi bi-geo-alt me-3"></i> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    <p class="mb-2"><i class="bi bi-telephone-fill me-3"></i> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    <p class="mb-2"><i class="bi bi-envelope me-3"></i>info@example</p>
 
                 </div>
             </div>
