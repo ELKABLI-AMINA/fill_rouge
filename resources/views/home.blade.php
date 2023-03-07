@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -40,7 +40,9 @@
      </div>
         </nav>
     <div class="container-fluid position-relative p-0">
-        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div style='background: url({{asset('img/amina.jpg')}}); background-position: center center ;
+        background-repeat: no-repeat;
+        background-size: cover;' class="container-fluid bg-primary py-5 mb-5 hero-header">
            <div class="container py-5">
                 <div class="row justify-content-center py-5">
                   <div class="  col-lg-10 pt-lg-5 mt-lg-5 text-center">
@@ -90,19 +92,36 @@
                         <div class="col-lg-12 col-md-12">
                             <a href="" class="d-block position-relative overflow-hidden">
                                 <img src="{{asset('img/kech.jpg')}}" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-
-                                </div>
+                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF </div>
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">MARRAKECH </div>
                             </a>
                         </div>
+                        {{-- <div class="col-lg-6 col-md-12">
+                            <a href="" class="d-block position-relative overflow-hidden">
+                                <img src="{{asset('img/Akchour.jpg')}}" alt="">
+                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">14% OFF </div>
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">AKCHOUR </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <a href="" class="d-block position-relative overflow-hidden">
+                                <img src="{{asset('img/Merzouga.jpg')}}" alt="">
+                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">14% OFF </div>
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">MERZOUGA </div>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
-            </div>
+                <div class="col-lg-5 col-md-6" style="min-height: 350px;">
+                     <a href="" class="d-block position-relative h-100 overflow-hidden">
+                    <img src="{{asset('img/tanger.jpg')}}" alt="" class="img-fluid position-absolute w-100 h-100" style="object-fit: cover">
+                    <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>
+                    <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Tanger</div>
+                </a></div>
+            </div> --}}
         </div>
     </div>
-
-
-
 
 
 

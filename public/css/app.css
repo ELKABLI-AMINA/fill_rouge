@@ -6,7 +6,6 @@
 }
 /* hero header */
 .hero-header{
-    background: url('../../public/img/bg-1.jpg');
     background-position: center center ;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,4 +32,9 @@
         z-index:999;
     }
 }
-/* about section */
+.destination img{
+    transition: 0.5s;
+}
+.destination a:hover img{
+    transform:scale(1.1) ;
+}

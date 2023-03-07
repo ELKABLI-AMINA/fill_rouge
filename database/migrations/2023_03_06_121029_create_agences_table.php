@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('agences', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('ouner_id');
+            $table->foreignId('owner_id')->constrained('personnes')->onDelete('cascade')->onUpdate('cascade');
             $table->string('description');
             $table->string('logo');
             $table->string('adress');
