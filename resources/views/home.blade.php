@@ -234,15 +234,33 @@
                      </div>
                        </div>
                     </div>
- 
                  </div>
             </div>
         </div>
         
     </div>
-    
+     {{-- booking Section --}}
+     <div class="container-xxl py-5">
+        <div class="container">
+            <div class="booking p-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-md-6 text-white">
+                        <h6 class="text-white text-uppercase">Booking</h6>
+                        <h1 class="text-white mb-4">Online Booking</h1>
+                        <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae iste non nulla sint sunt quae qui, dolore hic architecto ex perferendis debitis ducimus cumque, laboriosam doloremque ipsam fuga repudiandae iure?</p>
+                        <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad quas eveniet distinctio ullam temporibus mollitia veniam? Iusto quas perferendis unde repellat mollitia in sed nam deleniti explicabo reprehenderit, laudantium veritatis?</p>
+                        <a href="" class="btn btn-outline-light py-3 px-5 mt-2">Read More</a>
+                    </div>
 
-    {{-- footer section --}}
+                </div>
+
+            </div>
+
+        </div>
+
+     </div>
+
+ {{-- footer section --}}
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
         <div class="container py-5">
             <div class="row g-5">
