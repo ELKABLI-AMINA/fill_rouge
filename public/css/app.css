@@ -34,4 +34,6 @@
 .destination a:hover img{
     transform:scale(1.1) ;
 }
-
+.package-item{
+    box-shadow: 0 0 45px rgba(0,0,0,0.80) ;
+}
