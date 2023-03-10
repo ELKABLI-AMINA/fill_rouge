@@ -37,3 +37,22 @@
 .package-item{
     box-shadow: 0 0 45px rgba(0,0,0,0.80) ;
 }
+.package-item img{
+    transition: 0.5s;
+}
+.package-item:hover img{
+    transform: scale(1.1);
+}
+.btn{
+    font-family: 'Nuito', sans-serif;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.btn.btn-success,
+.btn.bn-secondary{
+    color:#ffffff;
+}
+.btn-square{
+    width: 38px;
+    height: 38px;
+}
