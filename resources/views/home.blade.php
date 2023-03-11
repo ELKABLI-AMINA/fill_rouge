@@ -56,21 +56,21 @@
                     <div class="row g-3">
                         <div class="col-lg-12 col-md-12">
                             <a href="" class="d-block position-relative overflow-hidden">
-                                <img src="{{asset('img/about.jpg')}}" alt="" class="fluid">
+                                <img src="{{asset('img/hociema.jpg')}}" alt="" class="fluid">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF </div>
                                 <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">MARRAKECH </div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <a href="" class="d-block position-relative overflow-hidden">
-                                <img src="{{asset('img/Akchour.jpg')}}" alt=""  class="fluid">
+                                <img src="{{asset('img/hociema.jpg')}}" alt=""  class="fluid">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">14% OFF </div>
                                 <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">AKCHOUR </div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <a href="" class="d-block position-relative overflow-hidden">
-                                <img src="{{asset('img/Merzouga.jpg')}}" alt=""  class="fluid">
+                                <img src="{{asset('img/hociema.jpg')}}" alt=""  class="fluid">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">14% OFF </div>
                                 <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">MERZOUGA </div>
                             </a>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-lg-5 col-md-6" style="min-height: 350px;">
                      <a href="" class="d-block position-relative h-100 overflow-hidden">
-                    <img src="{{asset('img/tanger.jpg')}}" alt="" class="img-fluid position-absolute w-100 h-100" style="object-fit: cover">
+                    <img src="{{asset('img/hociema.jpg')}}" alt="" class="img-fluid position-absolute w-100 h-100" style="object-fit: cover">
                     <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>
                     <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Tanger</div>
                 </a></div>
@@ -99,21 +99,21 @@
                 <div class="col-lg-4 col-md-6">
                    <div class=" .package-item">
                     <div class="overflow-hidden">
-                        <img src="{{asset('img/tanger.jpg')}}" alt="" class="img-fluid">
+                        <img src="{{asset('img/hociema.jpg')}}" alt="" class="img-fluid">
                     </div>
                       <div class="d-flex border-bottom">
                          <small class="flex-fill text-center border-end py-2">
-                            <i class="fa fa-map-marker-alt text-success me-2"></i> Tanger
+                            <i class="fa fa-map-marker-alt text-success me-2"></i> AL HOCIEMA
                          </small>
                          <small class="flex-fill text-center border-end py-2">
-                            <i class="bi bi-calendar  text-success me-2"></i> 3 days
+                            <i class="bi bi-calendar  text-success me-2"></i> 4 days
                          </small>
                          <small class="flex-fill text-center border-end py-2">
                             <i class="bi bi-person  text-success me-2"></i>1 Pers
                          </small>
                       </div>
                       <div class="text-center p-4">
-                        <h3 class="mb-0">1490.00 DH</h3>
+                        <h3 class="mb-0">2650.00 DH</h3>
                         <div class="mb-3">
                              <small class="fa fa-star text-success"></small>
                              <small class="fa fa-star text-success"></small>
@@ -124,8 +124,8 @@
                         
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                     <div class="d-flex justify-content-center mb-2">
-                        <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 30px 0 0 30px;">Read More</a>
-                        <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 0 30px 30 px 0;">Book Now</a>
+                        <a href="" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
+
                     </div>
                       </div>
                    </div>
@@ -134,21 +134,21 @@
                 <div class="col-lg-4 col-md-6">
                     <div class=" .package-item">
                      <div class="overflow-hidden">
-                         <img src="{{asset('img/tanger.jpg')}}" alt="" class="img-fluid">
+                         <img src="{{asset('img/DAKHLA.jpg')}}" alt="" class="img-fluid">
                      </div>
                        <div class="d-flex border-bottom">
                           <small class="flex-fill text-center border-end py-2">
-                             <i class="fa fa-map-marker-alt text-success me-2"></i> Tanger
+                             <i class="fa fa-map-marker-alt text-success me-2"></i> DAKHLA
                           </small>
                           <small class="flex-fill text-center border-end py-2">
-                             <i class="bi bi-calendar  text-success me-2"></i> 3 days
+                             <i class="bi bi-calendar  text-success me-2"></i> 5 days
                           </small>
                           <small class="flex-fill text-center border-end py-2">
                              <i class="bi bi-person  text-success me-2"></i>1 Pers
                           </small>
                        </div>
                        <div class="text-center p-4">
-                         <h3 class="mb-0">1490.00 DH</h3>
+                         <h3 class="mb-0">5890.00 DH</h3>
                          <div class="mb-3">
                               <small class="fa fa-star text-success"></small>
                               <small class="fa fa-star text-success"></small>
@@ -159,8 +159,8 @@
                          
                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                      <div class="d-flex justify-content-center mb-2">
-                         <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 30px 0 0 30px;">Read More</a>
-                         <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 0 30px 30 px 0;">Book Now</a>
+                         <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+ 
                      </div>
                        </div>
                     </div>
@@ -195,7 +195,114 @@
                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                      <div class="d-flex justify-content-center mb-2">
                          <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
-                         {{-- <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 0 30px 30 px 0;">Book Now</a> --}}
+
+                     </div>
+                       </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-4 col-md-6">
+                   <div class=" .package-item">
+                    <div class="overflow-hidden">
+                        <img src="{{asset('img/fnideq.jpg')}}" alt="" class="img-fluid">
+                    </div>
+                      <div class="d-flex border-bottom">
+                         <small class="flex-fill text-center border-end py-2">
+                            <i class="fa fa-map-marker-alt text-success me-2"></i> M’DIQ – TETOUAN – F’NIDEK
+                         </small>
+                         <small class="flex-fill text-center border-end py-2">
+                            <i class="bi bi-calendar  text-success me-2"></i> 3 days
+                         </small>
+                         <small class="flex-fill text-center border-end py-2">
+                            <i class="bi bi-person  text-success me-2"></i>1 Pers
+                         </small>
+                      </div>
+                      <div class="text-center p-4">
+                        <h3 class="mb-0">1900.00 DH</h3>
+                        <div class="mb-3">
+                             <small class="fa fa-star text-success"></small>
+                             <small class="fa fa-star text-success"></small>
+                             <small class="fa fa-star text-success"></small>
+                             <small class="fa fa-star text-success"></small>
+                             <small class="fa fa-star text-success"></small>
+                        </div>
+                        
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
+                    <div class="d-flex justify-content-center mb-2">
+                        <a href="" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
+
+                    </div>
+                      </div>
+                   </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class=" .package-item">
+                     <div class="overflow-hidden">
+                         <img src="{{asset('img/nord.jpg')}}" alt="" class="img-fluid">
+                     </div>
+                       <div class="d-flex border-bottom">
+                          <small class="flex-fill text-center border-end py-2">
+                             <i class="fa fa-map-marker-alt text-success me-2"></i> ASSILAH – TANGER – CHEFCHAOUEN
+                          </small>
+                          <small class="flex-fill text-center border-end py-2">
+                             <i class="bi bi-calendar  text-success me-2"></i> 3 days
+                          </small>
+                          <small class="flex-fill text-center border-end py-2">
+                             <i class="bi bi-person  text-success me-2"></i>1 Pers
+                          </small>
+                       </div>
+                       <div class="text-center p-4">
+                         <h3 class="mb-0">1200.00 DH</h3>
+                         <div class="mb-3">
+                              <small class="fa fa-star text-success"></small>
+                              <small class="fa fa-star text-success"></small>
+                              <small class="fa fa-star text-success"></small>
+                              <small class="fa fa-star text-success"></small>
+                              <small class="fa fa-star text-success"></small>
+                         </div>
+                         
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
+                     <div class="d-flex justify-content-center mb-2">
+                         <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+ 
+                     </div>
+                       </div>
+                    </div>
+ 
+                 </div>
+                 <div class="col-lg-4 col-md-6">
+                    <div class=" .package-item">
+                     <div class="overflow-hidden ">
+                         <img src="{{asset('img/yaacoob.jpg')}}" alt="" class="img-fluid">
+                     </div>
+                       <div class="d-flex border-bottom">
+                          <small class="flex-fill text-center border-end py-2">
+                             <i class="fa fa-map-marker-alt text-success me-2"></i>WEEK-END IFRANE – FÈS – MOULAY YAACOUB
+                          </small>
+                          <small class="flex-fill text-center border-end py-2">
+                             <i class="bi bi-calendar  text-success me-2"></i> 3 days
+                          </small>
+                          <small class="flex-fill text-center border-end py-2">
+                             <i class="bi bi-person  text-success me-2"></i>1 Pers
+                          </small>
+                       </div>
+                       <div class="text-center p-4">
+                         <h3 class="mb-0">950.00 DH</h3>
+                         <div class="mb-3">
+                              <small class="fa fa-star text-success"></small>
+                              <small class="fa fa-star text-success"></small>
+                              <small class="fa fa-star text-success"></small>
+                              <small class="fa fa-star text-success"></small>
+                              <small class="fa fa-star text-success"></small>
+                         </div>
+                         
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
+                     <div class="d-flex justify-content-center mb-2">
+                         <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+
                      </div>
                        </div>
                     </div>
