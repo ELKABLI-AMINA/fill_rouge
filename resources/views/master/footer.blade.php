@@ -35,13 +35,13 @@
                 <h4 class="text-white mb-3">Gallery</h4>
                 <div class="row g-2 pt-2">
                     <div class="col-4">
-                        <img src="{{asset('img/tanger.jpg')}}" alt="" class="img-fluid bg-light p-1">
+                        <img src="{{asset('img/agafay.jpg')}}" alt="" class="img-fluid bg-light p-1">
                     </div>
                     <div class="col-4">
-                        <img src="{{asset('img/tanger.jpg')}}" alt="" class="img-fluid bg-light p-1">
+                        <img src="{{asset('img/dakhla.jpg')}}" alt="" class="img-fluid bg-light p-1">
                     </div>
                     <div class="col-4">
-                        <img src="{{asset('img/tanger.jpg')}}" alt="" class="img-fluid bg-light p-1">
+                        <img src="{{asset('img/nord.jpg')}}" alt="" class="img-fluid bg-light p-1">
                     </div>
                 </div>
             </div>

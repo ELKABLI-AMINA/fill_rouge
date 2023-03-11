@@ -2,7 +2,7 @@
 
     <!-- Section -->
     @section('title')
-    Travel
+    HomePage
     @endsection
 
     @section('content') 
@@ -13,7 +13,7 @@
            <div class="container py-5">
                 <div class="row justify-content-center py-5">
                   <div class="  col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="  display-3 text-white mb-3">Enjoy Your Vacation With Us</h1>
+                        <h1 class="  display-3 text-white mb-3"> <strong> Enjoy Your Vacation With Us </strong></h1>
                         <P class="fs-4 text-white mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente, qui quibusdam molestiae ad, aut ipsam inventore praesentium temporibus explicabo illum officia, nam cum totam neque ab quidem natus voluptates!</P>
                         <div class="position-relative w-75 mx-auto">
                             <!-- input box -->
@@ -57,21 +57,19 @@
                         <div class="col-lg-12 col-md-12">
                             <a href="" class="d-block position-relative overflow-hidden">
                                 <img src="{{asset('img/hociema.jpg')}}" alt="" class="fluid">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF </div>
                                 <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">MARRAKECH </div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <a href="" class="d-block position-relative overflow-hidden">
                                 <img src="{{asset('img/hociema.jpg')}}" alt=""  class="fluid">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">14% OFF </div>
                                 <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">AKCHOUR </div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <a href="" class="d-block position-relative overflow-hidden">
                                 <img src="{{asset('img/hociema.jpg')}}" alt=""  class="fluid">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">14% OFF </div>
+
                                 <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">MERZOUGA </div>
                             </a>
                         </div>
@@ -81,7 +79,7 @@
                 <div class="col-lg-5 col-md-6" style="min-height: 350px;">
                      <a href="" class="d-block position-relative h-100 overflow-hidden">
                     <img src="{{asset('img/hociema.jpg')}}" alt="" class="img-fluid position-absolute w-100 h-100" style="object-fit: cover">
-                    <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>
+                   
                     <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Tanger</div>
                 </a></div>
             </div>
@@ -206,7 +204,7 @@
                 <div class="col-lg-4 col-md-6">
                    <div class=" .package-item">
                     <div class="overflow-hidden">
-                        <img src="{{asset('img/fnideq.jpg')}}" alt="" class="img-fluid">
+                        <img src="{{asset('img/mdik.jpg')}}" alt="" class="img-fluid">
                     </div>
                       <div class="d-flex border-bottom">
                          <small class="flex-fill text-center border-end py-2">
@@ -316,12 +314,59 @@
         <div class="container">
             <div class="booking p-5">
                 <div class="row g-5 align-items-center">
-                    <div class="col-md-6 text-white">
-                        <h6 class="text-white text-uppercase">Booking</h6>
-                        <h1 class="text-white mb-4">Online Booking</h1>
+                    <div class="col-md-6 text-danger">
+                        <h6 class="text-danger text-uppercase">Booking</h6>
+                        <h1 class=" mb-4">Online Booking</h1>
                         <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae iste non nulla sint sunt quae qui, dolore hic architecto ex perferendis debitis ducimus cumque, laboriosam doloremque ipsam fuga repudiandae iure?</p>
                         <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad quas eveniet distinctio ullam temporibus mollitia veniam? Iusto quas perferendis unde repellat mollitia in sed nam deleniti explicabo reprehenderit, laudantium veritatis?</p>
                         <a href="" class="btn btn-outline-light py-3 px-5 mt-2">Read More</a>
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="text-white mb-4">Book A Tour</h1>
+                        <form action="">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-transparent" name="" id="name" placeholder=" Your Name">
+                                        <label for="name">Your Name</label>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control bg-transparent" name="" id="name" placeholder=" Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                            
+                            
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control bg-transparent" name="" id="email" placeholder=" Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                           
+                          
+                                <div class="col-md-6">
+                                    <div class="form-floating" id="date3">
+                                        <input type="email" class="form-control bg-transparent" name="" id="datetime">
+                                        <label for="datetime">Date & Time</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating" id="date3">
+                                        <input type="text" class="form-control bg-transparent" id="datetime">
+                                        <label for="datetime">Date & Time</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
 
                 </div>
