@@ -35,7 +35,7 @@
                  </div>   
                 </div>
                 <div class="col-lg-6">
-                    <h6 class="section-title bg-white text-start text-success pe-3">About us</h6>
+                    <h6 class="section-title bg-white text-start text-success pe-3"> <strong> About us</strong></h6>
                     <h1 class="mb-4">Welcome to <span class="text-success">Travel</span></h1>
                     <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit possimus inventore ipsa facere qui, debitis maxime deserunt expedita ducimus cumque. Voluptates atque vitae corrupti numquam temporibus sint tenetur beatae quo. </p>
                     <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit possimus inventore ipsa facere qui, debitis maxime deserunt expedita ducimus cumque. Voluptates atque vitae corrupti numquam temporibus sint tenetur beatae quo. </p>
@@ -48,7 +48,7 @@
     <div class="container-xxl py-5 destination">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-success px-3">Destination</h6>
+                <h6 class="section-title bg-white text-center text-success px-3"> <strong> Destination</strong></h6>
                 <h1 class="mb-5">Popular Destination</h1>
             </div>
             <div class="row g-3 ">
@@ -311,7 +311,7 @@
     </div>
      {{-- booking Section --}}
     <div class="container-xxl py-5">
-        <div class="container"  style='background: url({{asset('img/bg.jpg')}}); background-position: center center ;
+        <div class="container"  style='background: url({{asset('img/booking.jpg')}}); background-position: center center ;
         background-repeat: no-repeat;
         background-size: cover;'>
             <div class="booking p-5">
@@ -326,7 +326,7 @@
                     <div class="col-md-6">
                         <h1 class="text-white mb-4">Book A Tour</h1>
                         <form action="">
-                            <div class="row g-3">
+                            <div class="row g-3 mb-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="text" class="form-control bg-transparent" name="" id="name" placeholder=" Your Name">
@@ -383,6 +383,11 @@
                                     </div>
                             
                                  </div>
+                                 <div class="col-12">
+                                    <button class="btn btn-outline-light w-100 py-3" type="submit">
+                                        Book Now
+                                    </button>
+                                 </div>
                             </div>
                         </form>
 
@@ -395,7 +400,11 @@
         </div>
 
      </div>
+     
 
+     <div class="container-xxl py">
+
+     </div>
    
 </div>
 
