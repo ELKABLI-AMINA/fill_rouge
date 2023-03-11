@@ -310,12 +310,14 @@
         
     </div>
      {{-- booking Section --}}
-     <div class="container-xxl py-5">
-        <div class="container">
+    <div class="container-xxl py-5">
+        <div class="container"  style='background: url({{asset('img/bg.jpg')}}); background-position: center center ;
+        background-repeat: no-repeat;
+        background-size: cover;'>
             <div class="booking p-5">
                 <div class="row g-5 align-items-center">
-                    <div class="col-md-6 text-danger">
-                        <h6 class="text-danger text-uppercase">Booking</h6>
+                    <div class="col-md-6 text-white">
+                        <h6 class="text-white text-uppercase">Booking</h6>
                         <h1 class=" mb-4">Online Booking</h1>
                         <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae iste non nulla sint sunt quae qui, dolore hic architecto ex perferendis debitis ducimus cumque, laboriosam doloremque ipsam fuga repudiandae iure?</p>
                         <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad quas eveniet distinctio ullam temporibus mollitia veniam? Iusto quas perferendis unde repellat mollitia in sed nam deleniti explicabo reprehenderit, laudantium veritatis?</p>
@@ -364,6 +366,23 @@
                                         <label for="datetime">Date & Time</label>
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select name="" id="selected1" class="form-select bg-transparent">
+                                            <option value="1">Destination 1</option>
+                                            <option value="2">Destination 2</option>
+                                            <option value="3">Destination 3</option>
+                                        </select>
+                                        <label for="select1">Destination</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea  class="form-control bg-transparent" placeholder="Special Request" name="" id="message" style="height: 100px;" ></textarea>
+                                        <label for="message">Special Request</label>
+                                    </div>
+                            
+                                 </div>
                             </div>
                         </form>
 
@@ -376,6 +395,10 @@
         </div>
 
      </div>
+
+   
+</div>
+
 
 
     
