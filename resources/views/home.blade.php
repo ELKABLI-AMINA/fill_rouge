@@ -402,8 +402,39 @@
      </div>
      
 
-     <div class="container-xxl py">
+     <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+                <h1 class="mb-5">Our Clients Say!!!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
 
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img src="{{asset('img/yaacoob.jpg')}}" alt="" class="bg-white rounded-circle shadow p-1 mx-auto mb-3" style="width: 80px; height:80px;">
+                    <h5 class="mb-0">Amina</h5>
+                    <p>Benslimane</p>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, facere blanditiis, magni pariatur, similique voluptatibus ratione voluptas hic dignissimos perferendis autem. Ipsa sint consequatur inventore architecto soluta ex, dignissimos quibusdam.</p>
+
+                </div>
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img src="{{asset('img/yaacoob.jpg')}}" alt="" class="bg-white rounded-circle shadow p-1 mx-auto mb-3" style="width: 80px; height:80px;">
+                    <h5 class="mb-0">Amina</h5>
+                    <p>Benslimane</p>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, facere blanditiis, magni pariatur, similique voluptatibus ratione voluptas hic dignissimos perferendis autem. Ipsa sint consequatur inventore architecto soluta ex, dignissimos quibusdam.</p>
+
+                </div>
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img src="{{asset('img/yaacoob.jpg')}}" alt="" class="bg-white rounded-circle shadow p-1 mx-auto mb-3" style="width: 80px; height:80px;">
+                    <h5 class="mb-0">Amina</h5>
+                    <p>Benslimane</p>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, facere blanditiis, magni pariatur, similique voluptatibus ratione voluptas hic dignissimos perferendis autem. Ipsa sint consequatur inventore architecto soluta ex, dignissimos quibusdam.</p>
+
+                </div>
+
+            </div>
+
+        </div>
      </div>
    
 </div>
