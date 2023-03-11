@@ -36,6 +36,7 @@
 }
 .package-item{
     box-shadow: 0 0 45px rgba(0,0,0,0.80) ;
+    height: 30px;
 }
 .package-item img{
     transition: 0.5s;

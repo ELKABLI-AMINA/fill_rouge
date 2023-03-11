@@ -1,44 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!-- fontawesome icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <!-- bootstrap icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
-    <!-- google fonts -->
-    <link rel="stylesheet" href="link rel="preconnect href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- navbar -->
+@extends('master.layout')
 
     <!-- Section -->
-    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-     <a href="#" class="navbar-brand p-0">
-       <h1 class="text-success m-0"> <i class="fa fa-map-marked-alt me-3"></i>Travel Agency</h1>
-     </a>
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-targer="#">
-        <span class="fa fa-bars"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto py-0">
-            <a href="" class="nav-item nav-link">Home</a>
-            <a href="" class="nav-item nav-link">About</a>
-            <a href="" class="nav-item nav-link">Services</a>
-            <a href="" class="nav-item nav-link">Packages</a>
-            <a href="" class="nav-item nav-link">Contact</a>
-            <a href="" class="nav-item nav-link">Register</a>
+    @section('title')
+    Travel
+    @endsection
 
-        </div>
-     </div>
-        </nav>
+    @section('content') 
     <div class="container-fluid position-relative p-0">
         <div style='background: url({{asset('img/amina.jpg')}}); background-position: center center ;
         background-repeat: no-repeat;
@@ -52,8 +19,6 @@
                             <!-- input box -->
                             <input type="text" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5 " placeholder="Eg:Tanger">
                             <button type="button" class="btn btn-success rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top:7px;">Search</button>
-
-
                         </div>
                   </div>
                 </div>
@@ -64,7 +29,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6" style="min-height: 400px;">
+                <div class="col-lg-6 " style="min-height: 400px;">
                  <div class="position-relative h-100">
                     <img src="{{ asset('img/amina.jpg') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
                  </div>   
@@ -86,7 +51,7 @@
                 <h6 class="section-title bg-white text-center text-success px-3">Destination</h6>
                 <h1 class="mb-5">Popular Destination</h1>
             </div>
-            <div class="row g-3">
+            <div class="row g-3 ">
                 <div class=".col-lg-7 col-md-6">
                     <div class="row g-3">
                         <div class="col-lg-12 col-md-12">
@@ -260,61 +225,8 @@
 
      </div>
 
- {{-- footer section --}}
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Company</h4>
-                    <a href="" class="btn btn-link">About Us</a>
-                    <a href="" class="btn btn-link">Contact Us</a>
-                    <a href="" class="btn btn-link">Private Policy</a>
-                    <a href="" class="btn btn-link">Terms $ Condition</a>
-                    <a href="" class="btn btn-link">FAQ $ Help</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="bi bi-geo-alt me-3"></i> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                    <p class="mb-2"><i class="bi bi-telephone-fill me-3"></i> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                    <p class="mb-2"><i class="bi bi-envelope me-3"></i>info@example</p>
-                        {{-- social icon --}}
-                        <div class="d-flex pt-2">
-                            <a href="" class="btn btn-outline-light btn-social">
-                                <i class="bi bi-twitter"></i>
-                            </a>
-                            <a href="" class="btn btn-outline-light btn-social">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="" class="btn btn-outline-light btn-social">
-                                <i class="bi bi-youtube"></i>
-                            </a>
-                            <a href="" class="btn btn-outline-light btn-social">
-                                <i class="bi bi-linkedin"></i>
-                            </a>
 
-                        </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4">
-                            <img src="{{asset('img/tanger.jpg')}}" alt="" class="img-fluid bg-light p-1">
-                        </div>
-                        <div class="col-4">
-                            <img src="{{asset('img/tanger.jpg')}}" alt="" class="img-fluid bg-light p-1">
-                        </div>
-                        <div class="col-4">
-                            <img src="{{asset('img/tanger.jpg')}}" alt="" class="img-fluid bg-light p-1">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+@endsection
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>  
-    <script src="main.js"></script>
-</body>
-</html>
+   
