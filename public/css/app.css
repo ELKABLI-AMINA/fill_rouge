@@ -97,5 +97,15 @@
     justify-content: center;
 }
 .testimonial-carousel .owl-dots{
+    position: relative;
+    display: inline-block;
+    margin:0 5px ;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.testimonial-carousel .owl-dot.active{
     
 }
