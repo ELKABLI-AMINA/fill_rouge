@@ -19,6 +19,6 @@ import './bootstrap';
                 items:2
             }
         }
-    })
+    });
 }
-)
+)(jQuery);
