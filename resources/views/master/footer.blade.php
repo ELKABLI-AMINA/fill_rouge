@@ -64,6 +64,21 @@
                     <div class="btn btn-primary py-2 position-absolut top-0 end-0 mt-2 me-2" type="button">Signup</div>
                 </div>
             </div>
+        </div> 
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; <a href="" class="border-bottom">Mystery Code</a> | All Right Reserved.</div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-menu">
+                        <a href="" class="">Home</a>
+                        <a href="" class="">Cookies</a>
+                        <a href="" class="">Help</a>
+                        <a href="" class="">FQAs</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
