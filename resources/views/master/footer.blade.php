@@ -58,7 +58,7 @@
                 <h4 class="text white mb-3">
                     Newsletter
                 </h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id numquam atque libero sint! Nesciunt pariatur, assumenda cum dolores nam, eos reprehenderit earum autem consequuntur quis, ea rerum repudiandae. Minus, esse.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id numquam atque libero sint! Nesciunt pariatur,</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
                     <input type="text" class="form-control border-primary w-100 py-3 ps-4 pe-5" placeholder="Your Email">
                     <div class="btn btn-primary py-2 position-absolut top-0 end-0 mt-2 me-2" type="button">Signup</div>

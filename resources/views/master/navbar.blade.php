@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 ">
     <a href="#" class="navbar-brand p-0">
       <h1 class="text-success m-0"> <i class="fa fa-map-marked-alt me-3"></i>Travel Agency</h1>
     </a>

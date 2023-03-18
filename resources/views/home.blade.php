@@ -6,7 +6,7 @@
     @endsection
 
     @section('content') 
-    <div class="container-fluid position-relative pt-2">
+    <div class="container-fluid position-relative pt-2 ">
         <div style='background: url({{asset('img/bg.jpg')}}); background-position: center center ;
         background-repeat: no-repeat;
         background-size: cover;' class="container-fluid bg-success py-5 mb-5 hero-header">
@@ -45,7 +45,7 @@
         </div>
     </div>
     {{-- Destination section --}}
-    <div class="container-xxl py-5 destination">
+    {{-- <div class="container-xxl py-5 destination">
         <div class="container">
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-success px-3"> <strong> Destination</strong></h6>
@@ -84,7 +84,53 @@
                 </a></div>
             </div>
         </div>
-    </div>
+    </div> --}}
+    <section class="gallery ">
+        <h1 class="text-center mb-5">Travelling Gallery</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gallery-box">
+                       <img src="{{asset('img/hociema.jpg')}}" alt="">
+                       <h4>Al Hociema</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-box">
+                       <img src="{{asset('img/hociema.jpg')}}" alt="">
+                       <h4>Al Hociema</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-box">
+                       <img src="{{asset('img/hociema.jpg')}}" alt="">
+                       <h4>Al Hociema</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gallery-box">
+                       <img src="{{asset('img/hociema.jpg')}}" alt="">
+                       <h4>Al Hociema</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-box">
+                       <img src="{{asset('img/hociema.jpg')}}" alt="">
+                       <h4>Al Hociema</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-box">
+                       <img src="{{asset('img/hociema.jpg')}}" alt="">
+                       <h4>Al Hociema</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
     {{-- package --}}
     <div class="container-xxl py-5">
         <div class="container">
@@ -400,42 +446,11 @@
         </div>
 
      </div>
-     
+   
+  
+  
 
-     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Our Clients Say!!!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img src="{{asset('img/femme3.jpg')}}" alt="" class="bg-white rounded-circle shadow p-1 mx-auto mb-3" style="width: 80px; height:80px;">
-                    <h5 class="mb-0">Amina</h5>
-                    <p>Benslimane</p>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, facere blanditiis, magni pariatur, similique voluptatibus ratione voluptas hic dignissimos perferendis autem. Ipsa sint consequatur inventore architecto soluta ex, dignissimos quibusdam.</p>
-
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img src="{{asset('img/femme2.jpg')}}" alt="" class="bg-white rounded-circle shadow p-1 mx-auto mb-3" style="width: 80px; height:80px;">
-                    <h5 class="mb-0">Amina</h5>
-                    <p>Benslimane</p>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, facere blanditiis, magni pariatur, similique voluptatibus ratione voluptas hic dignissimos perferendis autem. Ipsa sint consequatur inventore architecto soluta ex, dignissimos quibusdam.</p>
-
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img src="{{asset('img/femme3.jpg')}}" alt="" class="bg-white rounded-circle shadow p-1 mx-auto mb-3" style="width: 80px; height:80px;">
-                    <h5 class="mb-0">Amina</h5>
-                    <p>Benslimane</p>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, facere blanditiis, magni pariatur, similique voluptatibus ratione voluptas hic dignissimos perferendis autem. Ipsa sint consequatur inventore architecto soluta ex, dignissimos quibusdam.</p>
-
-                </div>
-
-            </div>
-
-        </div>
-     </div>
+   
    
 </div>
 
