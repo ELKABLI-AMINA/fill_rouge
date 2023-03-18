@@ -1,8 +1,9 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wgh@300;400;500;600&display=swap');
+
 
 /* hero header */
 .hero-header{
+    background: url('../img/bg.jpg');
     background-position: center center ;
     background-repeat: no-repeat;
     background-size: cover;
@@ -78,7 +79,27 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.users-feedback
+{
+    padding: 100px 0;
+}
+.user-review{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+    padding-bottom: 50px;
+}
+.user-review p{
+    padding:  50px 10px 10px 10px;
+}
+.users-feedback img{
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    margin: -30px 0 20px 40%;
+}
 
+    
+   
 
 .footer .btn.btn-social{
     margin-right: 5px;

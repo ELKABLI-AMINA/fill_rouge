@@ -6,10 +6,8 @@
     @endsection
 
     @section('content') 
-    <div class="container-fluid position-relative pt-2 ">
-        <div style='background: url({{asset('img/bg.jpg')}}); background-position: center center ;
-        background-repeat: no-repeat;
-        background-size: cover;' class="container-fluid bg-success py-5 mb-5 hero-header">
+    <div class="container-fluid position-relative  ">
+        <div  class="container-fluid  hero-header">
            <div class="container py-5">
                 <div class="row justify-content-center py-5">
                   <div class="  col-lg-10 pt-lg-5 mt-lg-5 text-center">
@@ -45,46 +43,7 @@
         </div>
     </div>
     {{-- Destination section --}}
-    {{-- <div class="container-xxl py-5 destination">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-success px-3"> <strong> Destination</strong></h6>
-                <h1 class="mb-5">Popular Destination</h1>
-            </div>
-            <div class="row g-3 ">
-                <div class=".col-lg-7 col-md-6">
-                    <div class="row g-3">
-                        <div class="col-lg-12 col-md-12">
-                            <a href="" class="d-block position-relative overflow-hidden">
-                                <img src="{{asset('img/hociema.jpg')}}" alt="" class="fluid">
-                                <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">MARRAKECH </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                            <a href="" class="d-block position-relative overflow-hidden">
-                                <img src="{{asset('img/hociema.jpg')}}" alt=""  class="fluid">
-                                <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">AKCHOUR </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                            <a href="" class="d-block position-relative overflow-hidden">
-                                <img src="{{asset('img/hociema.jpg')}}" alt=""  class="fluid">
-
-                                <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">MERZOUGA </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6" style="min-height: 350px;">
-                     <a href="" class="d-block position-relative h-100 overflow-hidden">
-                    <img src="{{asset('img/hociema.jpg')}}" alt="" class="img-fluid position-absolute w-100 h-100" style="object-fit: cover">
-                   
-                    <div class="bg-white text-success fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Tanger</div>
-                </a></div>
-            </div>
-        </div>
-    </div> --}}
+   
     <section class="gallery ">
         <h1 class="text-center mb-5">Travelling Gallery</h1>
         <div class="container">
@@ -355,6 +314,39 @@
         </div>
         
     </div>
+    <section class="users-feedback">
+        <h1 class="text-center mb-5">Users Review</h1>
+       <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="user-review text-center">
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi officia distinctio, veritatis blanditiis unde nemo quibusdam ratione, fugit mollitia nobis enim, repudiandae iusto voluptas quaerat adipisci molestias possimus exercitationem.</p>
+                   <h5>ELKABLI Amina</h5> 
+                   <small>Benslimane</small>
+                </div>
+                <img src="{{asset('img/femme2.jpg')}}" alt="">
+            
+            </div>
+            <div class="col-md-4">
+                <div class="user-review text-center">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi officia distinctio, veritatis blanditiis unde nemo quibusdam ratione, fugit mollitia nobis enim, repudiandae iusto voluptas quaerat adipisci molestias possimus exercitationem.</p>
+                    <h5>ELKABLI Amina</h5> 
+                    <small>Benslimane</small>
+                 </div>
+                 <img src="{{asset('img/femme2.jpg')}}" alt="">
+            </div>
+            <div class="col-md-4">
+                <div class="user-review text-center">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi officia distinctio, veritatis blanditiis unde nemo quibusdam ratione, fugit mollitia nobis enim, repudiandae iusto voluptas quaerat adipisci molestias possimus exercitationem.</p>
+                    <h5>ELKABLI Amina</h5> 
+                    <small>Benslimane</small>
+                 </div>
+                 <img src="{{asset('img/femme3.jpg')}}" alt="">
+            </div>
+        </div>
+       </div>
+    
+      </section>
      {{-- booking Section --}}
     <div class="container-xxl py-5">
         <div class="container"  style='background: url({{asset('img/booking.jpg')}}); background-position: center center ;
@@ -447,7 +439,7 @@
 
      </div>
    
-  
+ 
   
 
    
