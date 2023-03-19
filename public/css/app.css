@@ -2,13 +2,9 @@
 
 
 /* hero header */
-.hero-header{
-    background: url('../img/bg.jpg');
-    background-position: center center ;
-    background-repeat: no-repeat;
-    background-size: cover;
 
-}
+
+
 .navbar-light .navbar-nav .nav-link{
     font-family: 'Nunito', sans-serif;
     position: relative;
@@ -29,6 +25,29 @@
         border-bottom: 1px solid rgba(240, 11, 11, 0.1);
         z-index:999;
     }
+}
+ .section-padding{
+    padding: 100px 0;
+ }
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+.carousel-caption{
+
+    z-index: 2;
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+   
+}
+.carousel-caption p{
+    width:60% ;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
 }
 
 .btn{

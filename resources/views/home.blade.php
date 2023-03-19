@@ -6,23 +6,60 @@
     @endsection
 
     @section('content') 
-    <div class="container-fluid position-relative  ">
-        <div  class="container-fluid  hero-header">
-           <div class="container py-5">
-                <div class="row justify-content-center py-5">
-                  <div class="  col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="  display-3 text-white mb-3"> <strong> Enjoy Your Vacation With Us </strong></h1>
-                        <P class="fs-4 text-white mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente, qui quibusdam molestiae ad, aut ipsam inventore praesentium temporibus explicabo illum officia, nam cum totam neque ab quidem natus voluptates!</P>
-                        <div class="position-relative w-75 mx-auto">
-                            <!-- input box -->
-                            <input type="text" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5 " placeholder="Eg:Tanger">
-                            <button type="button" class="btn btn-success rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top:7px;">Search</button>
-                        </div>
-                  </div>
-                </div>
-             </div>
+  
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{asset('img/bg.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="fs-45 mt-25"><strong> Enjoy Your Vacation With Us </strong></h5>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quaerat, maiores dolor voluptas est dolorem pariatur at fugit? </p>
+              <div class="position-relative w-75 mx-auto">
+                <!-- input box -->
+                <input type="text" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5 " placeholder="Eg:Tanger">
+                <button type="button" class="btn btn-success rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top:7px;">Search</button>
+            </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{asset('img/bg1.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block ">
+              <h5><strong> Enjoy Your Vacation With Us </strong></h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil pariatur ratione asperiores esse doloremque, ullam cupiditate </p>
+              <div class="position-relative w-75 mx-auto">
+                <!-- input box -->
+                <input type="text" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5 " placeholder="Eg:Tanger">
+                <button type="button" class="btn btn-success rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top:7px;">Search</button>
+            </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{asset('img/bg3.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5><strong> Enjoy Your Vacation With Us </strong></h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At facilis, non omnis accusantium a ducimus maxime praesentium rem </p>
+              <div class="position-relative w-75 mx-auto">
+                <!-- input box -->
+                <input type="text" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5 " placeholder="Eg:Tanger">
+                <button type="button" class="btn btn-success rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top:7px;">Search</button>
+            </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     <!-- about section -->
     <div class="container-xxl py-5">
         <div class="container">
