@@ -1,7 +1,7 @@
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg p-16 " >
     <div class="container">
-      <a class="navbar-brand fs-24" href="#"> <i class="bi bi-globe-europe-africa"></i>Bladi</a>
+      <a class="navbar-brand  " href="#"> <i class="bi bi-map"></i>Bladi</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -12,10 +12,10 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <a class="nav-link" href="register">Register</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Home</a>

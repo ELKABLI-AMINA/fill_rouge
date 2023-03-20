@@ -31,11 +31,8 @@
             <div class="carousel-caption d-none d-md-block ">
               <h5><strong> Enjoy Your Vacation With Us </strong></h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil pariatur ratione asperiores esse doloremque, ullam cupiditate </p>
-              <div class="position-relative w-75 mx-auto">
-                <!-- input box -->
-                <input type="text" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5 " placeholder="Eg:Tanger">
-                <button type="button" class="btn btn-success rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top:7px;">Search</button>
-            </div>
+             
+              
             </div>
           </div>
           <div class="carousel-item">
@@ -43,11 +40,7 @@
             <div class="carousel-caption d-none d-md-block">
               <h5><strong> Enjoy Your Vacation With Us </strong></h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At facilis, non omnis accusantium a ducimus maxime praesentium rem </p>
-              <div class="position-relative w-75 mx-auto">
-                <!-- input box -->
-                <input type="text" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5 " placeholder="Eg:Tanger">
-                <button type="button" class="btn btn-success rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top:7px;">Search</button>
-            </div>
+             
             </div>
           </div>
         </div>
@@ -481,7 +474,7 @@
 
    
    
-</div>
+ </div>
 
 
 
