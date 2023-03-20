@@ -1,3 +1,61 @@
+.header{
+    width: 100%;
+    height: 100vh;
+}
+.text-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav_bar-top{
+    background-color: #fcf6f6;
+    width: 100%;
+    height: 16vh;
+    padding: 26px;
+}
+.para-text{
+   
+    color: rgba(0, 0, 0, 0.589);
+    margin:  0px 4px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.span_text{
+    padding: 0px 6px;
+}
+.icon-social{
+    font-size: 21px;
+    padding: 0px 5px;
+    margin: 0px 7px;
+    cursor: pointer;
+}
+.icon-social:hover{
+    color: rgb(117, 6, 6);
+}
+.navbar-container{
+    position: absolute;
+    top: 70px;
+    left: 52px;
+    width: 90%;
+    background-color: #f8f9fa;
+    padding: 16px 38px;
+}
+.heading-logo{
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+.nav-item .nav-link{
+    color: rgba(8, 8, 8, 0.685);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+.nav-item .nav-link:hover{
+    color: rgba(10, 74, 4, 0.685);
+    
+}
 
 
 
