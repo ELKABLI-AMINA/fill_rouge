@@ -79,7 +79,7 @@
                     <h3 class=" mb-4 bg-white ">Manage Booking</h3>
                     <div class="col table-responsive">
                         <table class="table bg-white rounded shadow-sm  table-hover ">
-                            <thead class="bg-success">
+                            <thead class="bg-dark text-white">
                                 <tr>
                                     <th scope="col" width="50">Trip ID</th>
                                     <th scope="col">name</th>
@@ -107,7 +107,7 @@
                                     <td> The standard Lorem Ipsum passage,used since the 1500s</td>
                                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quae error dolor est ex unde maxime numquam quidem voluptate, quos quis sapiente saepe architecto animi, consectetur, amet velit voluptatum libero? </td>
                                     <td> 2023-03-23  06:23:53 </td>                        </td>
-                                    <td>Read</td>
+                                    <td>Pending</td>
                                 </tr>
                             </tbody>
                         </table>

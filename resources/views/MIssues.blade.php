@@ -81,33 +81,36 @@
                         <table class="table bg-white rounded shadow-sm  table-hover ">
                             <thead class="bg-dark text-white">
                                 <tr>
-                                    <th scope="col" width="50">Booking ID</th>
+                                    <th scope="col" width="50">#</th>
                                     <th scope="col">name</th>
                                     <th scope="col">mobile</th>
                                     <th scope="col">email</th>
-                                    <th scope="col">From/To</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">Issues</th>
+                                    <th scope="col">description</th>
+                                    <th scope="col">Posting Date</th>
                                     <th scope="col">ACTION</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">1</th>
+                                    <th scope="row">#Trip-4</th>
                                     <td>Amina</td>
                                     <td>05222222</td>
                                     <td>example@gmail.com</td>
-                                    <td>05/05/2023 To 05/10/2023 </td>
-                                    <td>accepted by user at 2023-03-23   </td>                        </td>
-                                    <td>accepted</td>
+                                    <td>Cancellation</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quae error dolor est ex unde maxime numquam quidem voluptate, quos quis sapiente saepe architecto animi, consectetur, amet velit voluptatum libero? </td>
+                                    <td> 2023-03-23  06:23:53 </td>                        </td>
+                                    <td>View</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th>
-                                    <td>Faiza</td>
+                                    <th scope="row">#Trip-8</th>
+                                    <td>Joudia</td>
                                     <td>05222222</td>
                                     <td>example@gmail.com</td>
-                                    <td>05/05/2023 To 05/10/2023</td>
-                                    <td>cancelled by user at 2023-03-23 </td>
-                                    <td>cancelled</td>
+                                    <td>refund</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quae error dolor est ex unde maxime numquam quidem voluptate, quos quis sapiente saepe architecto animi, consectetur, amet velit voluptatum libero? </td>
+                                    <td> 2023-03-23  06:23:53 </td>                        </td>
+                                    <td>View</td>
                                 </tr>
                             </tbody>
                         </table>

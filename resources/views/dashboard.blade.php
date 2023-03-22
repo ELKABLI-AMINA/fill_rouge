@@ -31,8 +31,8 @@
                         class="fas fa-shopping-cart me-2"></i>Manage Enquiries</a>
                 <a href="#" class="list-group-item list-group-item-action fw-bold"><i
                         class="fas fa-gift me-2"></i>Manage Pages</a>
-                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
-                        class="fas fa-comment-dots me-2"></i>Chat</a>
+                <a href="MIssues" class="list-group-item list-group-item-action fw-bold"><i
+                        class="fas fa-comment-dots me-2"></i>Manage Issues</a>
                 <a href="#" class="list-group-item list-group-item-action fw-bold"><i
                         class="fas fa-map-marker-alt me-2"></i>Outlet</a>
                 <a href="#" class="list-group-item list-group-item-action text-danger fw-bold"><i

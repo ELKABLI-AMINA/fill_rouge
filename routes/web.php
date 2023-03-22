@@ -38,6 +38,9 @@ Route::get('/MEnquiries', function () {
     return view('MEnquiries');
 });
 
+Route::get('/MIssues', function () {
+    return view('MIssues');
+});
 
 
 
