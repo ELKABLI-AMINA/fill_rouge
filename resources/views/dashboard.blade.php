@@ -1,250 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-                <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<!-- My CSS -->
-	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-	<title>AdminHub</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="{{asset('css/app.css')}}" />
+    <title> Admin Dashboard</title>
 </head>
+
 <body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+               <i class="bi bi-globe-central-south-asia me-2"></i>BLADI</div>
+            <div class="list-group list-group-flush my-3 "  >
+                <a href="#" class="list-group-item list-group-item-action fw-bold">
+                    <i  class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action  fw-bold">
+                   <i class="bi bi-airplane  me-2"></i>Tour Packages</a>
+                <a href="#" class="list-group-item list-group-item-action fw-bold">
+                    <i class="bi bi-person me-2"></i>Manage Users</a>
+                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
+                        class="fas fa-paperclip me-2"></i>Manage Booking</a>
+                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
+                        class="fas fa-shopping-cart me-2"></i>Manage Enquiries</a>
+                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
+                        class="fas fa-gift me-2"></i>Manage Pages</a>
+                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
+                        class="fas fa-comment-dots me-2"></i>Chat</a>
+                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
+                        class="fas fa-map-marker-alt me-2"></i>Outlet</a>
+                <a href="#" class="list-group-item list-group-item-action text-danger fw-bold"><i
+                        class="fas fa-power-off me-2"></i>Logout</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
+        <!-- Page Content -->
+        <div class="bg-white" id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light  py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">Dashboard</h2>
+                </div>
 
-	<!-- SIDEBAR -->
-<section id="sidebar">
-     <a href="#" class="brand">
-          <i class='bx bxs-smile'></i>
-          <span class="text">AdminHub</span>		
-    </a>
-	<ul class="side-menu top">
-	       <li class="active">
-		<a href="#">
-		     <i class='bx bxs-dashboard' ></i>
-		     <span class="text">Dashboard</span>
-		</a>
-	       </li>
-	       <li>
-		<a href="#">
-		     <i class='bx bxs-shopping-bag-alt' ></i>
-		     <span class="text">My Store</span>
-		</a>
-	     </li>
-	      <li>
-		<a href="#">
-		     <i class='bx bxs-doughnut-chart' ></i>
-		     <span class="text">Analytics</span>
-		</a>
-	     </li>
-	     <li>
-		<a href="#">
-		     <i class='bx bxs-message-dots' ></i>
-		      <span class="text">Message</span>
-	                </a>
-	    </li>
-	     <li>
-		<a href="#">
-		      <i class='bx bxs-group' ></i>
-		      <span class="text">Team</span>
-		</a>
-	    </li>
-	</ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user me-2"></i>ELKABLI AMINA
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-	<ul class="side-menu">
-	     <li>
-		<a href="#">
-		      <i class='bx bxs-cog' ></i>
-		      <span class="text">Settings</span>
-		</a>
-	    </li>
-	    <li>
-		<a href="#" class="logout">
-		      <i class='bx bxs-log-out-circle' ></i>
-		      <span class="text">Logout</span>
-		</a>
-	   </li>
-	</ul>
-</section>
-	<!-- SIDEBAR -->
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-2">
+                    <div class="col-md-3">
+                        <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2">720</h3>
+                                <p class="fs-5">Booking</p>
+                            </div>
+                            <i class="bi bi-journal-text fs-1 primary-text border rounded-full secondary-bg p-3" style="color: #009d63"></i>
+                        </div>
+                    </div>
 
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2">4</h3>
+                                <p class="fs-5">Users</p>
+                            </div>
+                            <i
+                             class="bi bi-person fs-1 primary-text border rounded-full secondary-bg p-3" style="color: #009d63"></i>
+                        </div>
+                    </div>
 
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2">38</h3>
+                                <p class="fs-5">Enquiries</p>
+                            </div>
+                            <i class="bi bi-chat-square-text fs-1 primary-text border rounded-full secondary-bg p-3" style="color: #009d63"></i>
+                        </div>
+                    </div>
 
-	<!-- CONTENT -->
-<section id="content">
-		<!-- NAVBAR -->
-	<nav>
-	     <i class='bx bx-menu' ></i>
-	     <a href="#" class="nav-link">Categories</a>
-                                <form action="#">
-                                                <div class="form-input">
-                                                                <input type="search" placeholder="Search...">
-                                                                <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-                                                </div>
-                                </form>
-                                <input type="checkbox" id="switch-mode" hidden>
-                                <label for="switch-mode" class="switch-mode"></label>
-                                <a href="#" class="notification">
-                                                <i class='bx bxs-bell' ></i>
-                                                <span class="num">8</span>
-                                </a>
-                                <a href="#" class="profile">
-                                                <img src="{{asset('img/femme3.jpg')}}">
-                                </a>
-	</nav>
-		<!-- NAVBAR -->
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2">5</h3>
+                                <p class="fs-5">Packages</p>
+                            </div>
+                            <i class="bi bi-airplane  fs-1 primary-text border rounded-full secondary-bg p-3" style="color: #009d63"></i>
+                        </div>
+                    </div>
+                </div>
 
-		<!-- MAIN -->
-	<main>
-                                <div class="head-title">
-                                                <div class="left">
-                                                                <h1>Dashboard</h1>
-                                                                <ul class="breadcrumb">
-                                                                                <li>
-                                                                                                <a href="#">Dashboard</a>
-                                                                                </li>
-                                                                                <li><i class='bx bx-chevron-right' ></i></li>
-                                                                                <li>
-                                                                                                <a class="active" href="#">Home</a>
-                                                                                </li>
-                                                                </ul>
-                                                </div>
-                                                <a href="#" class="btn-download">
-                                                                <i class='bx bxs-cloud-download' ></i>
-                                                                <span class="text">Download PDF</span>
-                                                </a>
-                                </div>
+                <div class="row my-5">
+                    <h3 class="fs-4 mb-3">Recent Packages</h3>
+                    <div class="col">
+                        <table class="table bg-white rounded shadow-sm  table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col" width="50">#</th>
+                                    <th scope="col">User</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Amina</td>
+                                    <td>le Nord</td>
+                                    <td>1200.00DH</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Faiza</td>
+                                    <td>le Sud</td>
+                                    <td>7500.00DH</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                                {{-- <ul >
-                                                <li>
-                                                                <i class='bx bxs-calendar-check' ></i>
-                                                                <span class="text">
-                                                                                <h3>1020</h3>
-                                                                                <p>New Order</p>
-                                                                </span>
-                                                </li>
-                                                <li>
-                                                                <i class='bx bxs-group' ></i>
-                                                                <span class="text">
-                                                                                <h3>2834</h3>
-                                                                                <p>Visitors</p>
-                                                                </span>
-                                                </li>
-                                                <li>
-                                                                <i class='bx bxs-dollar-circle' ></i>
-                                                                <span class="text">
-                                                                                <h3>$2543</h3>
-                                                                                <p>Total Sales</p>
-                                                                </span>
-                                                </li>
-                                                <li>
-                                                                <i class='bx bxs-dollar-circle' ></i>
-                                                                <span class="text">
-                                                                                <h3>$2543</h3>
-                                                                                <p>Total Sales</p>
-                                                                </span>
-                                                </li>
-                                </ul> --}}
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
 
-                                <div class="table-data">
-                                                <div class="order">
-                                                                <div class="head">
-                                                                                <h3>Recent Orders</h3>
-                                                                                <i class='bx bx-search' ></i>
-                                                                                <i class='bx bx-filter' ></i>
-                                                                </div>
-                                                                <table>
-                                                                                <thead>
-                                                                                                <tr>
-                                                                                                                <th>User</th>
-                                                                                                                <th>Date Order</th>
-                                                                                                                <th>Status</th>
-                                                                                                </tr>
-                                                                                </thead>
-                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                                <td>
-                                                                                                                                <img src="{{asset('img/femme3.jpg')}}">
-                                                                                                                                <p>John Doe</p>
-                                                                                                                </td>
-                                                                                                                <td>01-10-2021</td>
-                                                                                                                <td><span class="status completed">Completed</span></td>
-                                                                                                </tr>
-                                                                                                <tr>
-                                                                                                                <td>
-                                                                                                                                <img src="{{asset('img/femme3.jpg')}}">
-                                                                                                                                <p>John Doe</p>
-                                                                                                                </td>
-                                                                                                                <td>01-10-2021</td>
-                                                                                                                <td><span class="status pending">Pending</span></td>
-                                                                                                </tr>
-                                                                                                <tr>
-                                                                                                                <td>
-                                                                                                                                <img src="{{asset('img/femme3.jpg')}}">
-                                                                                                                                <p>John Doe</p>
-                                                                                                                </td>
-                                                                                                                <td>01-10-2021</td>
-                                                                                                                <td><span class="status process">Process</span></td>
-                                                                                                </tr>
-                                                                                                <tr>
-                                                                                                                <td>
-                                                                                                                                <img src="{{asset('img/femme3.jpg')}}">
-                                                                                                                                <p>John Doe</p>
-                                                                                                                </td>
-                                                                                                                <td>01-10-2021</td>
-                                                                                                                <td><span class="status pending">Pending</span></td>
-                                                                                                </tr>
-                                                                                                <tr>
-                                                                                                                <td>
-                                                                                                                                <img src="{{asset('img/femme3.jpg')}}">
-                                                                                                                                <p>John Doe</p>
-                                                                                                                </td>
-                                                                                                                <td>01-10-2021</td>
-                                                                                                                <td><span class="status completed">Completed</span></td>
-                                                                                                </tr>
-                                                                                </tbody>
-                                                                </table>
-                                                </div>
-                                                <div class="todo">
-                                                                <div class="head">
-                                                                                <h3>Todos</h3>
-                                                                                <i class='bx bx-plus' ></i>
-                                                                                <i class='bx bx-filter' ></i>
-                                                                </div>
-                                                                <ul class="todo-list">
-                                                                                <li class="completed">
-                                                                                                <p>Todo List</p>
-                                                                                                <i class='bx bx-dots-vertical-rounded' ></i>
-                                                                                </li>
-                                                                                <li class="completed">
-                                                                                                <p>Todo List</p>
-                                                                                                <i class='bx bx-dots-vertical-rounded' ></i>
-                                                                                </li>
-                                                                                <li class="not-completed">
-                                                                                                <p>Todo List</p>
-                                                                                                <i class='bx bx-dots-vertical-rounded' ></i>
-                                                                                </li>
-                                                                                <li class="completed">
-                                                                                                <p>Todo List</p>
-                                                                                                <i class='bx bx-dots-vertical-rounded' ></i>
-                                                                                </li>
-                                                                                <li class="not-completed">
-                                                                                                <p>Todo List</p>
-                                                                                                <i class='bx bx-dots-vertical-rounded' ></i>
-                                                                                </li>
-                                                                </ul>
-                                                </div>
-                                </div>
-	</main>
-		<!-- MAIN -->
-</section>
-	<!-- CONTENT -->
-	
-
-	<script src="script.js"></script>
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script>
 </body>
+
 </html>
