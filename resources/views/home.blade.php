@@ -157,7 +157,7 @@
                         
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                     <div class="d-flex justify-content-center mb-2">
-                        <a href="" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
+                        <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
 
                     </div>
                       </div>
@@ -192,7 +192,7 @@
                          
                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                      <div class="d-flex justify-content-center mb-2">
-                         <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+                         <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
  
                      </div>
                        </div>
@@ -227,7 +227,7 @@
                          
                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                      <div class="d-flex justify-content-center mb-2">
-                         <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+                         <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
 
                      </div>
                        </div>
@@ -264,7 +264,7 @@
                         
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                     <div class="d-flex justify-content-center mb-2">
-                        <a href="" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
+                        <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
 
                     </div>
                       </div>
@@ -299,7 +299,7 @@
                          
                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                      <div class="d-flex justify-content-center mb-2">
-                         <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+                         <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
  
                      </div>
                        </div>
@@ -334,7 +334,7 @@
                          
                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                      <div class="d-flex justify-content-center mb-2">
-                         <a href="" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+                         <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
 
                      </div>
                        </div>

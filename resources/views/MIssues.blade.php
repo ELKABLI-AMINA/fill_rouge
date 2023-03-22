@@ -76,7 +76,7 @@
                 
 
                 <div class="row my-5">
-                    <h3 class=" mb-4 bg-white ">Manage Booking</h3>
+                    <h3 class=" mb-4 bg-white ">Manage Inssues</h3>
                     <div class="col table-responsive">
                         <table class="table bg-white rounded shadow-sm  table-hover ">
                             <thead class="bg-dark text-white">

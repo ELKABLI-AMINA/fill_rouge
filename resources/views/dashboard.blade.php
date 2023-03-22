@@ -109,7 +109,7 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                                 <h3 class="fs-2">5</h3>
-                                <p class="fs-5">Packages</p>
+                                <p class="fs-5">Total Packages</p>
                             </div>
                             <i class="bi bi-airplane  fs-1 primary-text border rounded-full secondary-bg p-3" style="color: #009d63"></i>
                         </div>

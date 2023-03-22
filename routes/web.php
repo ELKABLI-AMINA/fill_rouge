@@ -42,6 +42,10 @@ Route::get('/MIssues', function () {
     return view('MIssues');
 });
 
+Route::get('/readmore', function () {
+    return view('readmore');
+});
+
 
 
 
