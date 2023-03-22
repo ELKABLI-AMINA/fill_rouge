@@ -30,8 +30,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/M.booking', function () {
-    return view('M.booking');
+Route::get('/Mbooking', function () {
+    return view('Mbooking');
 });
 
 

@@ -19,13 +19,13 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
                <i class="bi bi-globe-central-south-asia me-2"></i>BLADI</div>
             <div class="list-group list-group-flush my-3 "  >
-                <a href="dashboard" class="list-group-item list-group-item-action fw-bold">
+                <a href="#" class="list-group-item list-group-item-action fw-bold">
                     <i  class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="#" class="list-group-item list-group-item-action  fw-bold">
                    <i class="bi bi-airplane  me-2"></i>Tour Packages</a>
                 <a href="#" class="list-group-item list-group-item-action fw-bold">
                     <i class="bi bi-person me-2"></i>Manage Users</a>
-                <a href="Mbooking" class="list-group-item list-group-item-action fw-bold"><i
+                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
                         class="fas fa-paperclip me-2"></i>Manage Booking</a>
                 <a href="#" class="list-group-item list-group-item-action fw-bold"><i
                         class="fas fa-shopping-cart me-2"></i>Manage Enquiries</a>
@@ -43,10 +43,10 @@
 
         <!-- Page Content -->
         <div class="bg-light" id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 px-4">
+            <nav class="navbar navbar-expand-lg navbar-light  bg-white py-4 px-4">
                 <div class="d-flex align-items-center">
                     <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                    <h2 class="fs-2 m-0">Dashboard</h2>
+                    <h2 class="fs-2 m-0 text-success">Dashboard</h2>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -73,73 +73,41 @@
             </nav>
 
             <div class="container-fluid px-4">
-                <div class="row g-3 my-2">
-                    <div class="col-md-3">
-                        <div class="p-3 bg-white  shadow-sm d-flex justify-content-around align-items-center rounded">
-                            <div>
-                                <h3 class="fs-2">720</h3>
-                                <p class="fs-5">Booking</p>
-                            </div>
-                            <i class="bi bi-journal-text fs-1 primary-text border rounded-full secondary-bg p-3" style="color: #009d63"></i>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-                            <div>
-                                <h3 class="fs-2">4</h3>
-                                <p class="fs-5">Users</p>
-                            </div>
-                            <i
-                             class="bi bi-person fs-1 primary-text border rounded-full secondary-bg p-3" style="color: #009d63"></i>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-                            <div>
-                                <h3 class="fs-2">38</h3>
-                                <p class="fs-5">Enquiries</p>
-                            </div>
-                            <i class="bi bi-chat-square-text fs-1 primary-text border rounded-full secondary-bg p-3" style="color: #009d63"></i>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-                            <div>
-                                <h3 class="fs-2">5</h3>
-                                <p class="fs-5">Packages</p>
-                            </div>
-                            <i class="bi bi-airplane  fs-1 primary-text border rounded-full secondary-bg p-3" style="color: #009d63"></i>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div class="row my-5">
-                    <h3 class="fs-4 mb-3">Recent Packages</h3>
+                    <h3 class=" mb-3 ">Manage Booking</h3>
                     <div class="col">
                         <table class="table bg-white rounded shadow-sm  table-hover">
-                            <thead>
+                            <thead class="bg-success">
                                 <tr>
-                                    <th scope="col" width="50">#</th>
-                                    <th scope="col">User</th>
-                                    <th scope="col">Destination</th>
-                                    <th scope="col">Price</th>
+                                    <th scope="col" width="50">Booking ID</th>
+                                    <th scope="col">name</th>
+                                    <th scope="col">mobile</th>
+                                    <th scope="col">email</th>
+                                    <th scope="col">From/To</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">ACTION</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Amina</td>
-                                    <td>le Nord</td>
-                                    <td>1200.00DH</td>
+                                    <td>05222222</td>
+                                    <td>example@gmail.com</td>
+                                    <td>05/05/2023 To 05/10/2023 </td>
+                                    <td>accepted by user at 2023-03-23   </td>                        </td>
+                                    <td>accepted</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
                                     <td>Faiza</td>
-                                    <td>le Sud</td>
-                                    <td>7500.00DH</td>
+                                    <td>05222222</td>
+                                    <td>example@gmail.com</td>
+                                    <td>05/05/2023 To 05/10/2023</td>
+                                    <td>cancelled by user at 2023-03-23 </td>
+                                    <td>cancelled</td>
                                 </tr>
                             </tbody>
                         </table>
