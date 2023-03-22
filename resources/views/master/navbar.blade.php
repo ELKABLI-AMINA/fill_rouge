@@ -1,4 +1,4 @@
-<div class="header " style="width: 100%; height: 100vh; position:relative;">
+<div class="header " ="width: 100%; height: style100vh; position:relative;">
     <div class="nav_bar-top ">
         <div class="container-fluid">
             <div class="text-container d-flex align-items-center justify-content-between ">
