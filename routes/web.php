@@ -34,6 +34,12 @@ Route::get('/Mbooking', function () {
     return view('Mbooking');
 });
 
+Route::get('/MEnquiries', function () {
+    return view('MEnquiries');
+});
+
+
+
 
 
 

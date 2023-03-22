@@ -27,7 +27,7 @@
                     <i class="bi bi-person me-2"></i>Manage Users</a>
                 <a href="Mbooking" class="list-group-item list-group-item-action fw-bold"><i
                         class="fas fa-paperclip me-2"></i>Manage Booking</a>
-                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
+                <a href="MEnquiries" class="list-group-item list-group-item-action fw-bold"><i
                         class="fas fa-shopping-cart me-2"></i>Manage Enquiries</a>
                 <a href="#" class="list-group-item list-group-item-action fw-bold"><i
                         class="fas fa-gift me-2"></i>Manage Pages</a>
