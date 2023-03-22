@@ -118,7 +118,7 @@
 
                 <div class="row my-5">
                     <h3 class="fs-4 mb-3">Recent Packages</h3>
-                    <div class="col">
+                    <div class="col table-responsive">
                         <table class="table bg-white rounded shadow-sm  table-hover">
                             <thead>
                                 <tr>

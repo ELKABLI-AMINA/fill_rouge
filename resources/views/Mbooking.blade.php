@@ -76,9 +76,9 @@
                 
 
                 <div class="row my-5">
-                    <h3 class=" mb-3 ">Manage Booking</h3>
-                    <div class="col">
-                        <table class="table bg-white rounded shadow-sm  table-hover">
+                    <h3 class=" mb-4 bg-white ">Manage Booking</h3>
+                    <div class="col table-responsive">
+                        <table class="table bg-white rounded shadow-sm  table-hover ">
                             <thead class="bg-success">
                                 <tr>
                                     <th scope="col" width="50">Booking ID</th>
