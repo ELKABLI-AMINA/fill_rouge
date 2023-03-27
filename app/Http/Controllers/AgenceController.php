@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\agence;
 use Illuminate\Http\Request;
 use App\Http\Requests\AgenceRequest;
+use Illuminate\Support\Facades\Auth;
 
 class AgenceController extends Controller
 {
@@ -42,9 +43,22 @@ class AgenceController extends Controller
     }
 
     
-    public function update(Request $request, agence $agence)
+    public function update(AgenceRequest $request, agence $agence)
     {
-        
+        $user = Auth::user()->id;
+        $user_id = $agence->user_id;
+        if ($user == $user_id) {
+            $agence->update([
+            'name' => $request->name,
+            'description' => $request->description,
+            'logo' => $request->logo ,
+            'location' => $request->location,
+            'ouner_id' => $request->ouner_id,
+
+            ]);
+        }else{
+            return response(['status' => 'you are not create this Agence']); 
+        }
     }
 
    
