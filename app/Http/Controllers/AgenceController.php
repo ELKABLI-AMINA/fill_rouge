@@ -56,6 +56,10 @@ class AgenceController extends Controller
             'ouner_id' => $request->ouner_id,
 
             ]);
+            return response()->json([
+                'message' => 'Agence ajoutée avec succès',
+                'data' => $agence
+            ]);
         }else{
             return response(['status' => 'you are not create this Agence']); 
         }
@@ -64,6 +68,15 @@ class AgenceController extends Controller
    
     public function destroy(agence $agence)
     {
-        
+        $user = Auth::user()->id;
+        $user_id = $agence->user_id;
+        if ($user == $user_id) {
+            $agence->delete();
+            return response()->json([
+                'messsage' => 'agence deleted'
+            ]);
+        } else {
+            return response(['status' => 'you are not create this agence']);
+        }
     }
 }
