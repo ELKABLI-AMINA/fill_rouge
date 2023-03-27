@@ -4,23 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\user;
 use Illuminate\Http\Request;
+use Illuminate\Http\Request\PersonneRequest;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function register(Request $request)
-    {   $this->validate($request,[
-        'name'    =>'required',
-        'email'   =>'required',
-        'password'=>'required',
-        'telephone'=>'required',
-        'adresse'=>'required'
-
-        ] );
-
+    
+    public function register(PersonneRequest $request)
        
         $user = User::create([
             'name' => $request->name,
@@ -34,19 +24,9 @@ class UserController extends Controller
     }
 
     
-    public function login( Request $request)
+    public function login( PersonneRequest $request)
     {
-        
-        $this->validate($request,[
-            
-            'name'     =>'required',
-            'email'    =>'required',
-            'password' =>'required',
-            'telephone'=>'required',
-            'adresse'  =>'required'
-    
-            ] );
-
+       
         $user= User::whereEmail($request->email)->first();
         if (isset($user->id)){
             if(Hash::check($request->password, $user->password)){
