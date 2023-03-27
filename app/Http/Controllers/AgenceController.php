@@ -26,9 +26,19 @@ class AgenceController extends Controller
     }
 
     
-    public function show(agence $agence)
+    public function show($id)
     {
-        
+        $agence = Agence::find($id);
+
+        if (!$agence) {
+            return response()->json([
+                'message' => 'Agence non trouvée'
+            ], 404);
+        }
+    
+        return response()->json([
+            'data' => $agence
+        ], 200);
     }
 
     
