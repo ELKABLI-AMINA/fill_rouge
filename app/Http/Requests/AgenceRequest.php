@@ -25,8 +25,8 @@ class AgenceRequest extends FormRequest
             'name'=>'required',
             'description'=>'required',
             'logo'=>'required',
-            'location'=>'required',
-            'ouner_id'=>'required|exists:ouner,id',
+            'address'=>'required',
+            'city'=>'required',
         ];
     }
 }

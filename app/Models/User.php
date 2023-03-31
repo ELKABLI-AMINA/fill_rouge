@@ -21,8 +21,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'phone_number',
-        'adress',
+        'role',
+
+       
+
+
     ];
 
     /**
@@ -45,12 +48,12 @@ class User extends Authenticatable
     ];
 
 
-    
-    
 
 
-    public function voyages()
+
+
+    public function agences()
     {
-        return $this->hasMany(Voyage::class);
+        return $this->hasMany(agence::class);
     }
 }

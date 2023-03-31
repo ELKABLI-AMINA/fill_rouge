@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="{{asset('css/app.css')}}" />
-    <title> Manage Booking</title>
+    <title> Demande</title>
 </head>
 
 <body>
@@ -17,7 +19,7 @@
         <!-- Sidebar -->
         <div class="bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
-               <i class="bi bi-globe-central-south-asia me-2"></i>BLADI</div>
+               <i class="bi bi-globe-central-south-asia me-2"></i>Backseat Surfing</div>
             <div class="list-group list-group-flush my-3 "  >
                 <a href="#" class="list-group-item list-group-item-action fw-bold">
                     <i  class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
@@ -29,14 +31,8 @@
                         class="fas fa-paperclip me-2"></i>Manage Booking</a>
                 <a href="#" class="list-group-item list-group-item-action fw-bold"><i
                         class="fas fa-shopping-cart me-2"></i>Manage Enquiries</a>
-                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
-                        class="fas fa-gift me-2"></i>Manage Pages</a>
-                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
-                        class="fas fa-comment-dots me-2"></i>Chat</a>
-                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
-                        class="fas fa-map-marker-alt me-2"></i>Outlet</a>
-                <a href="#" class="list-group-item list-group-item-action text-danger fw-bold"><i
-                        class="fas fa-power-off me-2"></i>Logout</a>
+                 <a href="{{ route('demande.agence') }}" class="list-group-item list-group-item-action fw-bold"><i
+                                class="fas fa-comment-dots me-2"></i>Demandes</a>   
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -49,66 +45,44 @@
                     <h2 class="fs-2 m-0 text-success">Dashboard</h2>
                 </div>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user me-2"></i>ELKABLI AMINA
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+               
             </nav>
 
             <div class="container-fluid px-4">
                 
 
                 <div class="row my-5">
-                    <h3 class=" mb-4 bg-white ">Manage Booking</h3>
+                    <h3 class=" mb-4 bg-white ">Demandes</h3>
                     <div class="col table-responsive">
                         <table class="table bg-white rounded shadow-sm  table-hover ">
                             <thead class="bg-dark text-white">
                                 <tr>
-                                    <th scope="col" width="50">Booking ID</th>
+                                    <th scope="col">#</th>
                                     <th scope="col">name</th>
-                                    <th scope="col">mobile</th>
-                                    <th scope="col">email</th>
-                                    <th scope="col">From/To</th>
+                                    <th scope="col">description</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">logo</th>
                                     <th scope="col">Status</th>
-                                    <th scope="col">ACTION</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($demandes as $demande)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Amina</td>
-                                    <td>05222222</td>
-                                    <td>example@gmail.com</td>
-                                    <td>05/05/2023 To 05/10/2023 </td>
-                                    <td>accepted by user at 2023-03-23   </td>                        </td>
-                                    <td>accepted</td>
+                                   <td>{{$demande->id}}</td>
+                                    <td>{{$demande->name}}</td>
+                                    <td>{{$demande->description}}</td>
+                                    <td> {{$demande->address}}</td>
+                                    <td> {{$demande->logo}}</td>
+                                    <td>{{
+                                                $demande->status==0 ? 'Pending'
+                                                : ( $demande->status==1 ? 'Accepted' : 'Rejected')
+
+                                }}</td>
+                                    <td></td>
+                                   
                                 </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Faiza</td>
-                                    <td>05222222</td>
-                                    <td>example@gmail.com</td>
-                                    <td>05/05/2023 To 05/10/2023</td>
-                                    <td>cancelled by user at 2023-03-23 </td>
-                                    <td>cancelled</td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -124,7 +98,6 @@
     <script>
         var el = document.getElementById("wrapper");
         var toggleButton = document.getElementById("menu-toggle");
-
         toggleButton.onclick = function () {
             el.classList.toggle("toggled");
         };

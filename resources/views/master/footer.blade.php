@@ -60,8 +60,8 @@
                 </h4>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id numquam atque libero sint! Nesciunt pariatur,</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <input type="text" class="form-control border-primary w-100 py-3 ps-4 pe-5" placeholder="Your Email">
-                    <div class="btn btn-primary py-2 position-absolut top-0 end-0 mt-2 me-2" type="button">Signup</div>
+                    <input type="" class="form-control border-primary w-100 py-3 ps-4 pe-5" placeholder="Your Email">
+                    <div class="btn btn-primary py-2 position-absolut top-0 end-0 mt-2 me-2" type="button"> <a href="{{ route('form.agence') }}" class="btn btn-primary">join Us</a></div>
                 </div>
             </div>
         </div> 

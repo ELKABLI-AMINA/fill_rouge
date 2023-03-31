@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('agences', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('owner_id')->constrained('personnes')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('owner_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('description');
             $table->string('logo');
             $table->string('adress');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

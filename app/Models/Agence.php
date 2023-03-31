@@ -10,9 +10,9 @@ class Agence extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'ouner_id',
+        'owner_id',
         'description',
         'logo',
-        'adress',
+        'address',
     ];
 }

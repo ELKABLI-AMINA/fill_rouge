@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\AgenceController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RedirectController;
 use Illuminate\Support\Facades\Route;
-use App\Models\User;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,39 +17,38 @@ use App\Models\User;
 |
 */
 
+Route::get('/redirect', [RedirectController::class, 'redirect']);
+
 Route::get('/', function () {
-    return view('home');
-});
-Route::get('/register', function () {
-    return view('register');
-});
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
+    return view('welcome');
+})->name('/');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/Mbooking', function () {
-    return view('Mbooking');
+Route::get('/Demandes', function () {
+    return view('formAgence');
 });
 
-Route::get('/MEnquiries', function () {
-    return view('MEnquiries');
+Route::get('/Join Us', function () {
+    return view('formAgence');
 });
 
-Route::get('/MIssues', function () {
-    return view('MIssues');
-});
-
-Route::get('/readmore', function () {
-    return view('readmore');
-});
+require __DIR__ . '/auth.php';
 
 
+Route::get('/formAgence', [AgenceController::class, 'index'])->name('form.agence');
+Route::post('/formAgence', [AgenceController::class, 'store']);
 
+
+Route::get('/demandsAgence', [AgenceController::class, 'getAllDemande'])->name('demande.agence');
+Route::get('/user', [RedirectController::class, 'user'])->name('user');
 
 
