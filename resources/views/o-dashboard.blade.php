@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="{{asset('css/app.css')}}" />
-    <title> Admin Dashboard</title>
+    <title> Owner Dashboard</title>
 </head>
 
 <body>
@@ -20,22 +20,16 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
                <i class="bi bi-globe-central-south-asia me-2"></i>Backseat Surfing</div>
             <div class="list-group list-group-flush my-3 "  >
-                <a href="{{ Route('admin') }}" class="list-group-item list-group-item-action fw-bold">
+                <a href="{{ Route('owner') }}" class="list-group-item list-group-item-action fw-bold">
                     <i  class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="#" class="list-group-item list-group-item-action  fw-bold">
                     <i class="bi bi-airplane-fill me-2"></i>Tour Packages</a>
-                <a href="#" class="list-group-item list-group-item-action fw-bold">
-                    <i class="bi bi-person-fill me-2"></i>Manage Users</a>
                 <a href="Mbooking" class="list-group-item list-group-item-action fw-bold"><i
                         class="fas fa-paperclip me-2"></i>Manage Booking</a>
-                <a href="MEnquiries" class="list-group-item list-group-item-action fw-bold"><i
-                        class="fas fa-shopping-cart me-2"></i>Manage Enquiries</a>
-                <a href="#" class="list-group-item list-group-item-action fw-bold"><i
-                        class="fas fa-gift me-2"></i>Manage Pages</a>
-                <a href="MIssues" class="list-group-item list-group-item-action fw-bold"><i
-                        class="fas fa-comment-dots me-2"></i>Manage Issues</a>
-                 <a href="{{ route('demande.agence') }}" class="list-group-item list-group-item-action fw-bold"><i
-                        class="fas fa-comment-dots me-2"></i>Demandes</a>        
+                        <a href="Mbooking" class="list-group-item list-group-item-action fw-bold"><i
+                            class="fas fa-paperclip me-2"></i>Add Trip</a>
+               
+                      
                
             </div>
         </div>

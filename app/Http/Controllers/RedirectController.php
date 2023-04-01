@@ -12,9 +12,8 @@ class RedirectController extends Controller
     {
         
         if (Auth::user()->role == 0) {
-            return redirect()->route('admin');
+            return redirect()->route('dashboard');
         } elseif (Auth::user()->role == 1) {
-        
             return redirect()->route('owner');
         } else {
             return redirect()->route('user');

@@ -9,25 +9,26 @@
       <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="navbar-nav ms-auto me-5 ">
           <li class="nav-item">
-            <a class="nav-link text-success" href="#">Home</a>
+            <a class="nav-link text-success" href="{{ route('/') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-success" href="about">About</a>
+            <a class="nav-link text-success" href="{{ route('about') }}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-success" href="#">Contact</a>
+            <a class="nav-link text-success" href="{{ route('contact') }}">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-success" href="#">Packages</a>
+            <a class="nav-link text-success" href="#package">Packages</a>
           </li>
           @if(! Auth::check())
           <li class="nav-item">
-            <a class="nav-link text-success" href="">Register</a>
+            <a class="nav-link text-success" href="{{ route('register') }}">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="{{ route('login') }}">Login</a>
           </li>
           @endif
-          <li class="nav-item">
-            <a class="btn btn-success" href="#">Réserver maintenant</a>
-          </li>
+          
         </ul>
       </div>
     </div>

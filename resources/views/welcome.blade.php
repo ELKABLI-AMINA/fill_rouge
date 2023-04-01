@@ -67,7 +67,7 @@
                     <h1 class="mb-4">Welcome to <span class="text-success">Travel</span></h1>
                     <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit possimus inventore ipsa facere qui, debitis maxime deserunt expedita ducimus cumque. Voluptates atque vitae corrupti numquam temporibus sint tenetur beatae quo. </p>
                     <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit possimus inventore ipsa facere qui, debitis maxime deserunt expedita ducimus cumque. Voluptates atque vitae corrupti numquam temporibus sint tenetur beatae quo. </p>
-                    <div class="btn btn-success py-3 px-5 mt-2"> Read More</div>
+                    <a class="btn btn-md btn-success px-3" href="{{ route('about') }}">Read More</a>
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
 
     </section>
     {{-- package --}}
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="package">
         <div class="container">
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-success px-3">Packages</h6>
@@ -157,7 +157,7 @@
                         
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                     <div class="d-flex justify-content-center mb-2">
-                        <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
+                        <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
 
                     </div>
                       </div>
@@ -192,7 +192,7 @@
                          
                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                      <div class="d-flex justify-content-center mb-2">
-                         <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+                         <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
  
                      </div>
                        </div>
@@ -227,7 +227,7 @@
                          
                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                      <div class="d-flex justify-content-center mb-2">
-                         <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+                         <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
 
                      </div>
                        </div>
@@ -264,7 +264,7 @@
                         
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                     <div class="d-flex justify-content-center mb-2">
-                        <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
+                        <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
 
                     </div>
                       </div>
@@ -299,7 +299,7 @@
                          
                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                      <div class="d-flex justify-content-center mb-2">
-                         <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+                         <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
  
                      </div>
                        </div>
@@ -334,7 +334,7 @@
                          
                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
                      <div class="d-flex justify-content-center mb-2">
-                         <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+                         <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
 
                      </div>
                        </div>

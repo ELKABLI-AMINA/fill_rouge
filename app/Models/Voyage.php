@@ -5,19 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Agence extends Model
+class Voyage extends Model
 {
     use HasFactory;
     protected $fillable = [
         'name',
-        'owner_id',
         'description',
-        'logo',
-        'address',
+        'image',
+        'date_de_depart',
+        'date_arrive',
+        'prix',
+        'date_fin_reservation',
+        'nb_max_participants',
     ];
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+    
 }

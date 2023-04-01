@@ -12,7 +12,7 @@ class AgenceController extends Controller
 {
     public function index()
     {
-        return view('formAgence');
+        return view('Agence.formAgence');
     }
     public function getAllDemande()
 
@@ -33,7 +33,29 @@ class AgenceController extends Controller
         return redirect()->back();
     }
 
-    public function update()
+    public function edit($id)
     {
+        $agence=Agence::find($id);
+        return view ('edit')->with([]);
     }
+
+
+    
+    public function update(AgenceRequest $request, Agence $agence)
+{
+    $agence->update([
+        'name' => $request->name,
+        'description' => $request->description,
+        'logo' => $request->logo,
+        'address' => $request->address,
+    ]);
+
+    return redirect()->back();
+}
+
+
+
+
+
+
 }
