@@ -9,14 +9,29 @@ class Voyage extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
-        'description',
-        'image',
-        'date_de_depart',
-        'date_arrive',
-        'prix',
-        'date_fin_reservation',
-        'nb_max_participants',
+      'name',
+      'description',
+      'slug',
+      'agence_id',
+      'image',
+      'date_depart',
+      'date_arrive',
+      'nb_jours',
+      'nb_personne',
+      'date_fin_reservation',
+      'prix',
+      'nb_max_participants',
     ];
+
+    
+    public function getRouteKeyName()
+    {
+       return 'slug' ;
+    }
+
+    public function agence()
+    {
+        return $this->belongsTo(Agence::class);
+    }
     
 }

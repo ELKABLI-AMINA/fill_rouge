@@ -23,7 +23,7 @@
                 <a href="{{ Route('owner') }}" class="list-group-item list-group-item-action fw-bold">
                     <i  class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="#" class="list-group-item list-group-item-action  fw-bold">
-                    <i class="bi bi-airplane-fill me-2"></i>Tour Packages</a>
+                    <i class="bi bi-airplane-fill me-2"></i>Ajouter votre Voyage</a>
                 <a href="Mbooking" class="list-group-item list-group-item-action fw-bold"><i
                         class="fas fa-paperclip me-2"></i>Manage Booking</a>
                         <a href="Mbooking" class="list-group-item list-group-item-action fw-bold"><i
@@ -112,7 +112,7 @@
                     </div>
                 
                     <!-- Responsive Navigation Menu -->
-                    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+                    {{-- <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
                         <div class="pt-2 pb-3 space-y-1">
                             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                                 {{ __('Dashboard') }}
@@ -143,7 +143,7 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </nav>
             </nav>
 

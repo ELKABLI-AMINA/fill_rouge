@@ -128,7 +128,6 @@
                 <h1 class="mb-5">Awesome Packages</h1>
             </div>
             <div class="row g-4 justify-content-center">
-
                 <div class="col-lg-4 col-md-6">
                    <div class=" .package-item">
                     <div class="overflow-hidden">
@@ -156,10 +155,10 @@
                         </div>
                         
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
-                    <div class="d-flex justify-content-center mb-2">
+                         <div class="d-flex justify-content-center mb-2">
                         <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
 
-                    </div>
+                        </div>
                       </div>
                    </div>
 
@@ -180,7 +179,7 @@
                              <i class="bi bi-person  text-success me-2"></i>1 Pers
                           </small>
                        </div>
-                       <div class="text-center p-4">
+                        <div class="text-center p-4">
                          <h3 class="mb-0">5890.00 DH</h3>
                          <div class="mb-3">
                               <small class="fa fa-star text-success"></small>
@@ -189,53 +188,49 @@
                               <small class="fa fa-star text-success"></small>
                               <small class="fa fa-star text-success"></small>
                          </div>
-                         
-                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
-                     <div class="d-flex justify-content-center mb-2">
-                         <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
- 
-                     </div>
-                       </div>
-                    </div>
- 
-                 </div>
-                 <div class="col-lg-4 col-md-6">
-                    <div class=" .package-item">
-                     <div class="overflow-hidden ">
-                         <img src="{{asset('img/agafay.jpg')}}" alt="" class="img-fluid">
-                     </div>
-                       <div class="d-flex border-bottom">
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="fa fa-map-marker-alt text-success me-2"></i> MARRAKECH – AGAFAY
-                          </small>
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="bi bi-calendar  text-success me-2"></i> 3 days
-                          </small>
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="bi bi-person  text-success me-2"></i>1 Pers
-                          </small>
-                       </div>
-                       <div class="text-center p-4">
-                         <h3 class="mb-0">1800.00 DH</h3>
-                         <div class="mb-3">
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
+                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
+                         <div class="d-flex justify-content-center mb-2">
+                             <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
                          </div>
-                         
-                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
-                     <div class="d-flex justify-content-center mb-2">
-                         <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
-
-                     </div>
-                       </div>
+                        </div>
                     </div>
-                 </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class=" .package-item">
+                        <div class="overflow-hidden ">
+                            <img src="{{asset('img/agafay.jpg')}}" alt="" class="img-fluid">
+                        </div>
+                        <div class="d-flex border-bottom">
+                            <small class="flex-fill text-center border-end py-2">
+                                <i class="fa fa-map-marker-alt text-success me-2"></i> MARRAKECH – AGAFAY
+                            </small>
+                            <small class="flex-fill text-center border-end py-2">
+                                <i class="bi bi-calendar  text-success me-2"></i> 3 days
+                            </small>
+                            <small class="flex-fill text-center border-end py-2">
+                                <i class="bi bi-person  text-success me-2"></i>1 Pers
+                            </small>
+                        </div>
+                        <div class="text-center p-4">
+                            <h3 class="mb-0">1800.00 DH</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-success"></small>
+                                <small class="fa fa-star text-success"></small>
+                                <small class="fa fa-star text-success"></small>
+                                <small class="fa fa-star text-success"></small>
+                                <small class="fa fa-star text-success"></small>
+                            </div>
+                            
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
+                        <div class="d-flex justify-content-center mb-2">
+                            <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row g-4 justify-content-center">
-
                 <div class="col-lg-4 col-md-6">
                    <div class=" .package-item">
                     <div class="overflow-hidden">
@@ -303,43 +298,43 @@
  
                      </div>
                        </div>
-                    </div>
+                      </div>
  
-                 </div>
-                 <div class="col-lg-4 col-md-6">
-                    <div class=" .package-item">
-                     <div class="overflow-hidden ">
-                         <img src="{{asset('img/yaacoob.jpg')}}" alt="" class="img-fluid">
-                     </div>
-                       <div class="d-flex border-bottom">
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="fa fa-map-marker-alt text-success me-2"></i>WEEK-END IFRANE – FÈS – MOULAY YAACOUB
-                          </small>
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="bi bi-calendar  text-success me-2"></i> 3 days
-                          </small>
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="bi bi-person  text-success me-2"></i>1 Pers
-                          </small>
-                       </div>
-                       <div class="text-center p-4">
-                         <h3 class="mb-0">950.00 DH</h3>
-                         <div class="mb-3">
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                         </div>
-                         
-                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
-                     <div class="d-flex justify-content-center mb-2">
-                         <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
-
-                     </div>
-                       </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                <div class=" .package-item">
+                    <div class="overflow-hidden ">
+                        <img src="{{asset('img/yaacoob.jpg')}}" alt="" class="img-fluid">
                     </div>
-                 </div>
+                    <div class="d-flex border-bottom">
+                        <small class="flex-fill text-center border-end py-2">
+                            <i class="fa fa-map-marker-alt text-success me-2"></i>WEEK-END IFRANE – FÈS – MOULAY YAACOUB
+                        </small>
+                        <small class="flex-fill text-center border-end py-2">
+                            <i class="bi bi-calendar  text-success me-2"></i> 3 days
+                        </small>
+                        <small class="flex-fill text-center border-end py-2">
+                            <i class="bi bi-person  text-success me-2"></i>1 Pers
+                        </small>
+                    </div>
+                    <div class="text-center p-4">
+                        <h3 class="mb-0">950.00 DH</h3>
+                        <div class="mb-3">
+                            <small class="fa fa-star text-success"></small>
+                            <small class="fa fa-star text-success"></small>
+                            <small class="fa fa-star text-success"></small>
+                            <small class="fa fa-star text-success"></small>
+                            <small class="fa fa-star text-success"></small>
+                        </div>
+                        
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
+                    <div class="d-flex justify-content-center mb-2">
+                        <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+
+                    </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
         

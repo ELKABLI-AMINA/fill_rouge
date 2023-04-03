@@ -1,7 +1,7 @@
 @extends('master.layout')
 
 @section('title')
-Créer Votre Agence
+Créer Votre Voyage
 @endsection
 
 @section('content') 
@@ -30,28 +30,29 @@ Créer Votre Agence
                         <input type="text" name="name" class="form-control" id="exampleFormControlInput1">
                       </div>
                       <div class="form-group mt-2">
-                        <label for="exampleFormControlSelect1">City</label>
-                          <select class="form-control" name="city" id="exampleFormControlSelect1">
-                          <option>Casablanca</option>
-                          <option>Rabat</option>
-                          <option>Fes</option>
-                          <option>Marrakech</option>
-                          <option>5</option>
-                        </select> 
-                        
-                      </div>
-                      <div class="form-group mt-2 ">
-                        <label for="exampleFormControlInput1">Address</label>
-                        <input type="text" name="address" class="form-control" id="exampleFormControlInput1">
-                      </div>
-                      <div class="form-group mt-2">
                         <label for="exampleFormControlTextarea1">Description</label>
                         <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
                       </div>
                       <div class="form-group mt-2 ">
-                                      <label for="exampleFormControlInput1">Logo</label>
-                                      <input type="file" name="logo" class="form-control" id="exampleFormControlInput1">
-                                    </div>
+                          <label for="exampleFormControlInput1">Image</label>
+                           <input type="file" name="logo" class="form-control" id="exampleFormControlInput1">
+                       </div>
+                       <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">date_depart</label>
+                        <input type="date" name="date_depart" class="form-control" id="exampleFormControlInput1">
+                      </div>
+                      <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">date_arrive</label>
+                        <input type="date" name="date_arrive" class="form-control" id="exampleFormControlInput1">
+                      </div>
+                      <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">nb_jours</label>
+                        <input type="number" name="name" class="form-control" id="exampleFormControlInput1">
+                      </div>
+                      <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">nb_personne</label>
+                        <input type="number" name="nb_personne" class="form-control" id="exampleFormControlInput1">
+                      </div>
                       <button type="submit" class="btn btn-primary mt-3">Valider</button>
              </form>                                                    
          </div>

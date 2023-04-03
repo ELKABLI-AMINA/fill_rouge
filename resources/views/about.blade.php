@@ -53,7 +53,7 @@
   <div class="row">
     <div class="col-md-6">
       <h3 class="h3 mb-3 ">« BACKSEAT SURFING Travel est une agence de voyage opérant dans le tourisme et ayant pour spécialité l’organisation des voyages à l’échelle nationale .</h3>
-      <p>Nous sommes une agence de voyage fondée en 2005 avec pour objectif de proposer des voyages inoubliables à nos clients. Depuis, nous avons su gagner la confiance de nombreux voyageurs grâce à notre expertise et notre engagement à offrir des services de qualité.</p>
+      <p>Nous sommes une agence de voyage fondée en 2023 avec pour objectif de proposer des voyages inoubliables à nos clients. Depuis, nous avons su gagner la confiance de nombreux voyageurs grâce à notre expertise et notre engagement à offrir des services de qualité.</p>
       <p>Notre équipe est composée de professionnels passionnés et expérimentés qui mettent tout en œuvre pour que chaque voyage soit une expérience unique et inoubliable. Nous travaillons en étroite collaboration avec nos partenaires pour vous offrir les meilleurs tarifs et les meilleures prestations.</p>
     
       <h3 class="h3 mb-3">« Nos engagements vers vos »</h3>

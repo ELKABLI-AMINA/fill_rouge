@@ -20,7 +20,7 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
                <i class="bi bi-globe-central-south-asia me-2"></i>Backseat Surfing</div>
             <div class="list-group list-group-flush my-3 "  >
-                <a href="{{ Route('admin') }}" class="list-group-item list-group-item-action fw-bold">
+                <a href="{{ route('dashboard') }}" class="list-group-item list-group-item-action fw-bold">
                     <i  class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="#" class="list-group-item list-group-item-action  fw-bold">
                     <i class="bi bi-airplane-fill me-2"></i>Tour Packages</a>
@@ -42,7 +42,7 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div class=" bg-light" id="page-content-wrapper">
+        {{-- <div class=" bg-light" id="page-content-wrapper">
             <nav style="display:flex" class=" d-flex justify-between   bg-white py-4 px-4">
                 <div class="d-flex align-items-center">
                     <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
@@ -64,11 +64,11 @@
                                 </div>
                 
                                 <!-- Navigation Links -->
-                                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                                         {{ __('Dashboard') }}
                                     </x-nav-link>
-                                </div> --}}
+                                </div> 
                             </div>
                 
                             <!-- Settings Dropdown -->
@@ -201,7 +201,7 @@
                 
 
             </div>
-        </div>
+        </div> --}}
     </div>
     <!-- /#page-content-wrapper -->
     </div>

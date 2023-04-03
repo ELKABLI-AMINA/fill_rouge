@@ -15,9 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->string('slug');
+            $table->foreignId('agence_id')->constrained('agences')->onDelete('cascade')->onUpdate('cascade');
             $table->string('image');
             $table->date('date_depart');
             $table->date('date_arrive');
+            $table->integer('nb_jours');
+            $table->integer('nb_personne');
             $table->date('date_fin_reservation');
             $table->float('prix');
             $table->integer('nb_max_participants');

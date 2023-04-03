@@ -14,10 +14,21 @@ class Agence extends Model
         'description',
         'logo',
         'address',
+        'slug'
     ];
+
+    public function getRouteKeyName()
+    {
+       return 'slug' ;
+    }
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function voyage()
+    {
+        return $this->hasMany(Voyage::class);
     }
 }
