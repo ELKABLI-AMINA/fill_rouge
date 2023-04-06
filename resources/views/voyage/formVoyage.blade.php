@@ -35,7 +35,7 @@ Créer Votre Voyage
                       </div>
                       <div class="form-group mt-2 ">
                           <label for="exampleFormControlInput1">Image</label>
-                           <input type="file" name="logo" class="form-control" id="exampleFormControlInput1">
+                           <input type="file" name="image" class="form-control" id="exampleFormControlInput1">
                        </div>
                        <div class="form-group mt-2 ">
                         <label for="exampleFormControlInput1">date_depart</label>
@@ -47,17 +47,21 @@ Créer Votre Voyage
                       </div>
                       <div class="form-group mt-2 ">
                         <label for="exampleFormControlInput1">nb_jours</label>
-                        <input type="number" name="name" class="form-control" id="exampleFormControlInput1">
+                        <input type="number" name="nb_jours" class="form-control" id="exampleFormControlInput1">
                       </div>
                       <div class="form-group mt-2 ">
                         <label for="exampleFormControlInput1">nb_personne</label>
                         <input type="number" name="nb_personne" class="form-control" id="exampleFormControlInput1">
                       </div>
+                      <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">prix</label>
+                        <input type="number" name="prix" class="form-control" id="exampleFormControlInput1">
+                      </div>
                       <button type="submit" class="btn btn-primary mt-3">Valider</button>
              </form>                                                    
          </div>
-                        <div class="col-md-6">
-                            <img src="{{ asset('img/agafay.jpg') }}"class="img-fluid " >
+                        <div class="col-md-6 ">
+                            <img src="{{ asset('img/voyage.jpg') }}"class="img-fluid " >
                         </div>
        </div>
    </div>         

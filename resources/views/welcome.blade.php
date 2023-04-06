@@ -15,19 +15,15 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="{{asset('img/bg.jpg')}}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="fs-45 mt-25"><strong> Enjoy Your Vacation With Us </strong></h5>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quaerat, maiores dolor voluptas est dolorem pariatur at fugit? </p>
-              <div class="position-relative w-75 mx-auto">
-                <!-- input box -->
-                <input type="text" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5 " placeholder="Eg:Tanger">
-                <button type="button" class="btn btn-success rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top:7px;">Search</button>
-            </div>
-            </div>
+                 <img src="{{asset('img/aa.jpg')}}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="fs-45 mt-25"><strong> Enjoy Your Vacation With Us </strong></h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quaerat, maiores dolor voluptas est dolorem pariatur at fugit? </p>
+                            
+                     </div>
           </div>
           <div class="carousel-item">
-            <img src="{{asset('img/bg1.jpg')}}" class="d-block w-100" alt="...">
+            <img src="{{asset('img/bg.jpg')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block ">
               <h5><strong> Enjoy Your Vacation With Us </strong></h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil pariatur ratione asperiores esse doloremque, ullam cupiditate </p>
@@ -36,7 +32,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="{{asset('img/bg3.jpg')}}" class="d-block w-100" alt="...">
+            <img src="{{asset('img/shutterstock_1622273833-768x456.jpg')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5><strong> Enjoy Your Vacation With Us </strong></h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At facilis, non omnis accusantium a ducimus maxime praesentium rem </p>
@@ -74,271 +70,108 @@
     </div>
     {{-- Destination section --}}
    
-    <section class="gallery ">
-        <h1 class="text-center mb-5">Travelling Gallery</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="gallery-box">
-                       <img src="{{asset('img/hociema.jpg')}}" alt="">
-                       <h4>Al Hociema</h4>
+    <div class="container-xxl py-5">
+        <section class="gallery ">
+            <h1 class="text-center mb-5">Travelling Gallery</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                           <img src="{{asset('img/nord.jpg')}}" alt="">
+                           <h4>Le Nord</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                           <img src="{{asset('img/hociema.jpg')}}" alt="">
+                           <h4>Al Hociema</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                           <img src="{{asset('img/dakhla.jpg')}}" alt="">
+                           <h4>dakhla</h4>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="gallery-box">
-                       <img src="{{asset('img/hociema.jpg')}}" alt="">
-                       <h4>Al Hociema</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                           <img src="{{asset('img/agafay.jpg')}}" alt="">
+                           <h4>Agafay</h4>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-box">
-                       <img src="{{asset('img/hociema.jpg')}}" alt="">
-                       <h4>Al Hociema</h4>
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                           <img src="{{asset('img/hociema.jpg')}}" alt="">
+                           <h4>Al Hociema</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                           <img src="{{asset('img/hociema.jpg')}}" alt="">
+                           <h4>Al Hociema</h4>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="gallery-box">
-                       <img src="{{asset('img/hociema.jpg')}}" alt="">
-                       <h4>Al Hociema</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-box">
-                       <img src="{{asset('img/hociema.jpg')}}" alt="">
-                       <h4>Al Hociema</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-box">
-                       <img src="{{asset('img/hociema.jpg')}}" alt="">
-                       <h4>Al Hociema</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+        </section>
+        
+    </div>
 
-    </section>
+    
     {{-- package --}}
-    <div class="container-xxl py-5" id="package">
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-success px-3">Packages</h6>
-                <h1 class="mb-5">Awesome Packages</h1>
+                
+                <h1 class="mb-5 fw-bold ">Packages</h1>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                   <div class=" .package-item">
-                    <div class="overflow-hidden">
-                        <img src="{{asset('img/hociema.jpg')}}" alt="" class="img-fluid">
-                    </div>
-                      <div class="d-flex border-bottom">
-                         <small class="flex-fill text-center border-end py-2">
-                            <i class="fa fa-map-marker-alt text-success me-2"></i> AL HOCIEMA
-                         </small>
-                         <small class="flex-fill text-center border-end py-2">
-                            <i class="bi bi-calendar  text-success me-2"></i> 4 days
-                         </small>
-                         <small class="flex-fill text-center border-end py-2">
-                            <i class="bi bi-person  text-success me-2"></i>1 Pers
-                         </small>
-                      </div>
-                      <div class="text-center p-4">
-                        <h3 class="mb-0">2650.00 DH</h3>
-                        <div class="mb-3">
-                             <small class="fa fa-star text-success"></small>
-                             <small class="fa fa-star text-success"></small>
-                             <small class="fa fa-star text-success"></small>
-                             <small class="fa fa-star text-success"></small>
-                             <small class="fa fa-star text-success"></small>
-                        </div>
-                        
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
-                         <div class="d-flex justify-content-center mb-2">
-                        <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
-
-                        </div>
-                      </div>
-                   </div>
-
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class=" .package-item">
-                     <div class="overflow-hidden">
-                         <img src="{{asset('img/DAKHLA.jpg')}}" alt="" class="img-fluid">
-                     </div>
-                       <div class="d-flex border-bottom">
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="fa fa-map-marker-alt text-success me-2"></i> DAKHLA
-                          </small>
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="bi bi-calendar  text-success me-2"></i> 5 days
-                          </small>
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="bi bi-person  text-success me-2"></i>1 Pers
-                          </small>
-                       </div>
-                        <div class="text-center p-4">
-                         <h3 class="mb-0">5890.00 DH</h3>
-                         <div class="mb-3">
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                         </div>
-                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
-                         <div class="d-flex justify-content-center mb-2">
-                             <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
-                         </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class=" .package-item">
-                        <div class="overflow-hidden ">
-                            <img src="{{asset('img/agafay.jpg')}}" alt="" class="img-fluid">
-                        </div>
-                        <div class="d-flex border-bottom">
-                            <small class="flex-fill text-center border-end py-2">
-                                <i class="fa fa-map-marker-alt text-success me-2"></i> MARRAKECH – AGAFAY
-                            </small>
-                            <small class="flex-fill text-center border-end py-2">
-                                <i class="bi bi-calendar  text-success me-2"></i> 3 days
-                            </small>
-                            <small class="flex-fill text-center border-end py-2">
-                                <i class="bi bi-person  text-success me-2"></i>1 Pers
-                            </small>
-                        </div>
-                        <div class="text-center p-4">
-                            <h3 class="mb-0">1800.00 DH</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-success"></small>
-                                <small class="fa fa-star text-success"></small>
-                                <small class="fa fa-star text-success"></small>
-                                <small class="fa fa-star text-success"></small>
-                                <small class="fa fa-star text-success"></small>
-                            </div>
+            <div class="row g-4 ">
+                @foreach ($voyages as $voyage )
+                    <div class="col-lg-4 col-md-6">
+                            <div class=" .package-item">
                             
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
-                        <div class="d-flex justify-content-center mb-2">
-                            <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
+                                    <div class="overflow-hidden">
+                                        <img src="{{asset('uploads/'.$voyage->image)}}" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="d-flex border-bottom">
+                                        <small class="flex-fill text-center border-end py-2">
+                                            <i class="fa fa-map-marker-alt text-success me-2"></i> {{ $voyage->name }}
+                                        </small>
+                                        <small class="flex-fill text-center border-end py-2">
+                                            <i class="bi bi-calendar  text-success me-2"></i> {{ $voyage->nb_jours }} days
+                                        </small>
+                                        <small class="flex-fill text-center border-end py-2">
+                                            <i class="bi bi-person  text-success me-2"></i>{{ $voyage->nb_personne }} Pers
+                                        </small>
+                                    </div>
+                                    <div class="text-center p-4">
+                                                <h3 class="mb-0">{{ $voyage->prix }}.00 DH</h3>
+                                                <div class="mb-3">
+                                                    <small class="fa fa-star text-success"></small>
+                                                    <small class="fa fa-star text-success"></small>
+                                                    <small class="fa fa-star text-success"></small>
+                                                    <small class="fa fa-star text-success"></small>
+                                                    <small class="fa fa-star text-success"></small>
+                                                </div>
+                                        
+                                                <p class="fw-bold">{{ $voyage->description }}</p>
+                                                <div class="d-flex justify-content-center mb-2">
+                                                    <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
 
-                        </div>
-                        </div>
+                                                </div>
+                                    </div>
+                            </div>
                     </div>
-                </div>
+                @endforeach
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                   <div class=" .package-item">
-                    <div class="overflow-hidden">
-                        <img src="{{asset('img/mdik.jpg')}}" alt="" class="img-fluid">
-                    </div>
-                      <div class="d-flex border-bottom">
-                         <small class="flex-fill text-center border-end py-2">
-                            <i class="fa fa-map-marker-alt text-success me-2"></i> M’DIQ – TETOUAN – F’NIDEK
-                         </small>
-                         <small class="flex-fill text-center border-end py-2">
-                            <i class="bi bi-calendar  text-success me-2"></i> 3 days
-                         </small>
-                         <small class="flex-fill text-center border-end py-2">
-                            <i class="bi bi-person  text-success me-2"></i>1 Pers
-                         </small>
-                      </div>
-                      <div class="text-center p-4">
-                        <h3 class="mb-0">1900.00 DH</h3>
-                        <div class="mb-3">
-                             <small class="fa fa-star text-success"></small>
-                             <small class="fa fa-star text-success"></small>
-                             <small class="fa fa-star text-success"></small>
-                             <small class="fa fa-star text-success"></small>
-                             <small class="fa fa-star text-success"></small>
-                        </div>
-                        
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
-                    <div class="d-flex justify-content-center mb-2">
-                        <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
-
-                    </div>
-                      </div>
-                   </div>
-
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class=" .package-item">
-                     <div class="overflow-hidden">
-                         <img src="{{asset('img/nord.jpg')}}" alt="" class="img-fluid">
-                     </div>
-                       <div class="d-flex border-bottom">
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="fa fa-map-marker-alt text-success me-2"></i> ASSILAH – TANGER – CHEFCHAOUEN
-                          </small>
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="bi bi-calendar  text-success me-2"></i> 3 days
-                          </small>
-                          <small class="flex-fill text-center border-end py-2">
-                             <i class="bi bi-person  text-success me-2"></i>1 Pers
-                          </small>
-                       </div>
-                       <div class="text-center p-4">
-                         <h3 class="mb-0">1200.00 DH</h3>
-                         <div class="mb-3">
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                              <small class="fa fa-star text-success"></small>
-                         </div>
-                         
-                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
-                     <div class="d-flex justify-content-center mb-2">
-                         <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
- 
-                     </div>
-                       </div>
-                      </div>
- 
-                </div>
-                <div class="col-lg-4 col-md-6">
-                <div class=" .package-item">
-                    <div class="overflow-hidden ">
-                        <img src="{{asset('img/yaacoob.jpg')}}" alt="" class="img-fluid">
-                    </div>
-                    <div class="d-flex border-bottom">
-                        <small class="flex-fill text-center border-end py-2">
-                            <i class="fa fa-map-marker-alt text-success me-2"></i>WEEK-END IFRANE – FÈS – MOULAY YAACOUB
-                        </small>
-                        <small class="flex-fill text-center border-end py-2">
-                            <i class="bi bi-calendar  text-success me-2"></i> 3 days
-                        </small>
-                        <small class="flex-fill text-center border-end py-2">
-                            <i class="bi bi-person  text-success me-2"></i>1 Pers
-                        </small>
-                    </div>
-                    <div class="text-center p-4">
-                        <h3 class="mb-0">950.00 DH</h3>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-success"></small>
-                            <small class="fa fa-star text-success"></small>
-                            <small class="fa fa-star text-success"></small>
-                            <small class="fa fa-star text-success"></small>
-                            <small class="fa fa-star text-success"></small>
-                        </div>
-                        
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum provident expedita possimus saepe quisquam officia minima non eius laudantium iusto. Id ipsum cum blanditiis ea, enim officia illo omnis in?</p>
-                    <div class="d-flex justify-content-center mb-2">
-                        <a href="{{ route('readmore') }}" class="btn btn-sm btn-success px-3" style="border-radius: 30px;">Read More</a>
-
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
+            
         </div>
         
     </div>
+    {{-- avis --}}
     <section class="users-feedback">
         <h1 class="text-center mb-5">Users Review</h1>
        <div class="container">
@@ -373,7 +206,7 @@
     
       </section>
      {{-- booking Section --}}
-    <div class="container-xxl py-5">
+    {{-- <div class="container-xxl py-5">
         <div class="container"  style='background: url({{asset('img/booking.jpg')}}); background-position: center center ;
         background-repeat: no-repeat;
         background-size: cover;'>
@@ -469,7 +302,7 @@
 
    
    
- </div>
+ </div> --}}
 
 
 

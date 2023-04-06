@@ -1,10 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AgenceController;
 use App\Http\Controllers\VoyageController;
-use App\Http\Controllers\ProfileController;
+
 use App\Http\Controllers\RedirectController;
-use Illuminate\Support\Facades\Route;
 
 
 /*
@@ -18,26 +19,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/redirect', [RedirectController::class, 'redirect']);
 
-Route::get('/', function () { return view('welcome');})->name('/');
-Route::get('contact', function () {return view('contact');})->name('contact');
-Route::get('about', function () {return view('about');})->name('about');
+
+Route::get('/redirect', [RedirectController::class, 'redirect'])->name('redirect');
+
+Route::get('/', [VoyageController::class, 'show'])->name('/');
+Route::get('contact', function () { return view('contact');})->name('contact');
+Route::get('about', function () { return view('about');})->name('about');
 Route::get('readmore', function () { return view('readmore');})->name('readmore');
 
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile',    [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile',  [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
 
 
 
 
-require __DIR__ . '/auth.php';
+
+Route::get('/register', [UserController::class, 'index'])->name('register');
+Route::post('/registerUser', [UserController::class, 'register'])->name('registerUser');
+Route::get('/login', [UserController::class, 'show'])->name('login');
+Route::post('/loginUser', [UserController::class, 'login'])->name('loginUser');
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 
 Route::get('/formAgence', [AgenceController::class, 'index'])->name('form.agence');
@@ -59,14 +62,18 @@ Route::middleware(['auth', 'admin'])->group(function () {
 // ========= OWNER ROUTES===============
 Route::middleware(['auth', 'owner'])->group(function () {
     Route::get('/editAgence/{slug}', [AgenceController::class, 'edit'])->name('Agence.edit');
-    Route::put('/updateAgence/{slug}', [AgenceController::class, 'update'])->name('Agence.update'); 
-    Route::get('/owner', function () {return view('o-dashboard');})->name('owner');
+    Route::put('/updateAgence/{slug}', [AgenceController::class, 'update'])->name('Agence.update');
+    Route::get('/owner', function () { return view('o-dashboard');})->name('owner');
     Route::get('/AllAgencies', [AgenceController::class, 'show'])->name('AllAgencies');
     Route::get('/agence/{slug}', [AgenceController::class, 'showAgence'])->name('show.agence');
     Route::delete('/deleteAgence/{slug}', [AgenceController::class, 'delete'])->name('Agence.delete');
 
     Route::get('/formVoyage', [VoyageController::class, 'index'])->name('create.voyage');
+    Route::get('/ManageVoyage', [VoyageController::class, 'ManageVoyage'])->name('manage.voyage');
     Route::post('/formVoyage', [VoyageController::class, 'store']);
+    Route::get('/editVoyage/{slug}', [VoyageController::class, 'edit'])->name('voyage.edit');
+    Route::put('/updateVoyage/{slug}', [VoyageController::class, 'update'])->name('voyage.update');
+    Route::delete('/deletevoyage/{slug}', [VoyageController::class, 'delete'])->name('voyage.delete');
 });
 
 // ========= USER ROUTES===============

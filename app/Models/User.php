@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone_number',
         'role',
 
        
@@ -52,8 +53,8 @@ class User extends Authenticatable
 
 
 
-    public function agences()
+    public function agence()
     {
-        return $this->hasMany(agence::class);
+        return $this->hasOne(agence::class);
     }
 }

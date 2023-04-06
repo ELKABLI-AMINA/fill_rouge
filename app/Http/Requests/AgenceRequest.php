@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\OneAgencePerOwner;
 use Illuminate\Foundation\Http\FormRequest;
 
 class AgenceRequest extends FormRequest
@@ -21,12 +22,14 @@ class AgenceRequest extends FormRequest
      */
     public function rules(): array
     {
+        $userId = auth()->id();
         return [
             'name'=>'required',
             'description'=>'required',
             'logo'=>'required',
             'address'=>'required',
             'city'=>'required',
+            'one_agence' => [new OneAgencePerOwner($userId)]
         ];
     }
 }

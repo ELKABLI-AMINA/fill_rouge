@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('role')->default(2);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('phone_number');
             $table->rememberToken();
             $table->timestamps();
         });

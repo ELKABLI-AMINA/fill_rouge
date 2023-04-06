@@ -24,7 +24,7 @@
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 
-                                                                <button style="display: inline-block;width:100px" class="btn btn-danger mb-5  " type="submit">
+                                                                <button style="display: inline-block;width:100px" class="btn btn-danger   " type="submit">
                                                                                 Supprimer
                                                                 </button>
                                                                 </form>  
@@ -39,5 +39,7 @@
                                  
                 </div>
          </div> 
+         
+      
             
     @endsection

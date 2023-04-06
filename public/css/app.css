@@ -28,6 +28,7 @@
     height: 100vh;
     min-height: 300px;
 }
+
 .carousel-caption{
 
     z-index: 2;
@@ -45,54 +46,8 @@
     line-height: 1.9;
 }
 
-.btn{
-    font-family: 'Nuito', sans-serif;
-    font-weight: 600;
-    transition: 0.5s;
-}
-.btn.btn-success,
-.btn.bn-secondary{
-    color:#ffffff;
-}
-.btn-square{
-    width: 38px;
-    height: 38px;
-}
 
-.gallery{
-    padding: 100px 0;
-}
-.gallery-box img{
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-.gallery-box img:hover{
-    transform: scale(1.1);
-}
-.gallery-box h4{
-    display: block;
-   color: #fff;
-   text-shadow: -2px 2px 2px #000;
-    font-weight: 600;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-.gallery-box{
-    position: relative;
-    margin-bottom: 30px;
-}
 
-.booking{
-    background: linear-gradient(rgba(15,23,43,0.7)),(rgba(15,23,43,0.7)), url(../img/booking.jpg);
-    background-position:center center ;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .users-feedback
 {
     padding: 100px 0;
@@ -129,14 +84,7 @@
 /* Dashboard Admin */
 #wrapper {
     overflow-x: hidden;
-    background-image: linear-gradient(
-      to right,
-      #baf3d7,
-      #c2f5de,
-      #cbf7e4,
-      #d4f8ea,
-      #ddfaef
-    );
+    
   }
   
   #sidebar-wrapper {
@@ -205,9 +153,7 @@
 	color: #009d63;
               }
               
-              .second-text {
-	color:#c1efde ;
-              }
+
 
               .rounded-full {
 	border-radius: 100%;
@@ -250,8 +196,8 @@
               }
               
               .list-group-item.active {
-	background-color: transparent;
-	color: var(--main-text-color);
+	
+	
 	font-weight: bold;
 	border: none;
               }
@@ -332,3 +278,34 @@ input[type="number"] {
   background-color: #0069d9;
   border-color: #0062cc;
 }
+
+.gallery{
+  padding: 100px 0;
+}
+.gallery-box img{
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.gallery-box img:hover{
+  transform: scale(1.1);
+}
+.gallery-box h4{
+  display: block;
+ color: #fff;
+ text-shadow: -2px 2px 2px #000;
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.gallery-box{
+  position: relative;
+  margin-bottom: 30px;
+}
+
+
+

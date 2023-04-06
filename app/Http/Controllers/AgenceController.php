@@ -40,6 +40,8 @@ class AgenceController extends Controller
         $demande = Agence::All();
         return view('demandes')->with(['demandes' => $demande]);
     }
+
+    
     public function store(AgenceRequest $request)
     {
         if ($request->has('logo')) {
@@ -56,9 +58,10 @@ class AgenceController extends Controller
             'owner_id' => auth()->user()->id,
 
         ]);
-        return redirect()->back()->with([
-            'success' => 'Agence créée avec succès'
-        ]);
+         return redirect()->back()->with([
+             'success' => 'Agence créée avec succès'
+         ]);
+    
     }
 
     public function edit($slug)

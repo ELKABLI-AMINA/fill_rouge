@@ -24,11 +24,11 @@ class VoyageRequest extends FormRequest
         return [
             'name'=>'required',
             'description'=>'required',
-            'Image'=>'required',
+            'image'=>'required',
             'date_depart'=>'required',
             'date_arrive'=>'required',
-            'nb_jours'=>'required',
-            'nb_personne'=>'required',
+            'nb_jours'=>'required|numeric',
+            'nb_personne'=>'required|numeric',
         ];
     }
 }
