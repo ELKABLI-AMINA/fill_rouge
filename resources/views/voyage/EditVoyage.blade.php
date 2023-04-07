@@ -23,7 +23,9 @@ Editer Votre Voyage
        @endif
   <div class="row">
        <div class="col-md-6">
-              <form action=" {{ route('voyage.update', $voyage->slug) }}" method="post" enctype="multipart/form-data">
+              {{-- <form action=" {{ route('voyage.update', $voyage->slug) }}" method="post" enctype="multipart/form-data"> --}}
+                <form action="{{ route('voyage.update', $voyage->slug) }}" method="post" enctype="multipart/form-data">
+
                  @csrf
                  @method('PUT')
                       <div class="form-group mt-2 ">
@@ -32,7 +34,7 @@ Editer Votre Voyage
                       </div>
                       <div class="form-group mt-2">
                         <label for="exampleFormControlTextarea1">Description</label>
-                        <textarea class="form-control" name="description"  id="exampleFormControlTextarea1" rows="3">value="{{ $voyage->description }}"</textarea>
+                        <textarea class="form-control text-truncate" name="description"  id="exampleFormControlTextarea1" rows="3">{{ $voyage->description }}</textarea>
                       </div>
                       <div class="form-group mt-2 ">
                           <label for="exampleFormControlInput1">Image</label>

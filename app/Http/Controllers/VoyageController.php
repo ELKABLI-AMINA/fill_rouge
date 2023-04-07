@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agence;
 use App\Models\Voyage;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\VoyageRequest;
-use App\Models\Agence;
 
 class VoyageController extends Controller
 {
@@ -25,11 +26,11 @@ class VoyageController extends Controller
         }
 
         $user_id = auth()->user()->id;
-        $Agence = Agence::get()->where('owner_id',$user_id)->first();
+        $Agence = Agence::get()->where('owner_id', $user_id)->first();
         $Agence_id = $Agence->id;
 
 
-         Voyage::create([
+        Voyage::create([
             'name' => $request->name,
             'description' => $request->description,
             'image' => $image_name,
@@ -48,7 +49,7 @@ class VoyageController extends Controller
     }
 
 
-    
+
     public function Show()
     {
         $voyages = Voyage::paginate(6);
@@ -56,11 +57,10 @@ class VoyageController extends Controller
         return view('welcome')->with([
             'voyages' => $voyages
         ]);
-        
     }
 
 
-    
+
     public function ManageVoyage()
     {
         $voyage = Voyage::All();
@@ -75,7 +75,7 @@ class VoyageController extends Controller
         ]);
     }
 
-     
+
     public function update(VoyageRequest $request, $slug)
     {
         $voyage = Voyage::where('slug', $slug)->first();
@@ -83,11 +83,11 @@ class VoyageController extends Controller
             $file = $request->image;
             $image_name = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('uploads'), $image_name);
-            unlink(public_path('uploads') .'/' . $voyage->image);
+            unlink(public_path('uploads') . '/' . $voyage->image);
             $voyage->image = $image_name;
         }
 
-      
+
         $voyage->update([
             'name' => $request->name,
             'description' => $request->description,
@@ -98,7 +98,7 @@ class VoyageController extends Controller
             'nb_jours' => $request->nb_jours,
             'nb_personne' => $request->nb_personne,
             'prix' => $request->prix,
-            
+
 
         ]);
 
@@ -110,9 +110,34 @@ class VoyageController extends Controller
 
     public function delete($slug)
     {
-    $voyage = Voyage::where('slug',$slug)->first();
-    unlink(public_path('uploads') .'/' . $voyage->image);
-    $voyage->delete();
-    return view('/');
+        $voyage = Voyage::where('slug', $slug)->first();
+        unlink(public_path('uploads') . '/' . $voyage->image);
+        $voyage->delete();
+        return view('/');
+    }
+
+
+    public function ShowVoyage($slug)
+    {
+        $voyage = Voyage::where('slug', $slug)->first();
+
+        return view('readmore')->with([
+            'voyage' => $voyage
+        ]);
+    }
+
+
+
+
+    public function showReadMore($id_voyage)
+    {
+        // Récupération des détails du voyage
+        $voyage = DB::table('voyages')->where('id_voyage', $id_voyage)->first();
+
+        // Récupération de la date de fin de réservation pour ce voyage
+
+
+        // Passage des données à la vue
+        return view('readmore', compact('voyage'));
     }
 }

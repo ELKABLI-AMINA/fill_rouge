@@ -15,7 +15,8 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-                 <img src="{{asset('img/aa.jpg')}}" class="d-block w-100" alt="...">
+               
+                 <img src="{{asset('img/beach-6517214_960_720.jpg')}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="fs-45 mt-25"><strong> Enjoy Your Vacation With Us </strong></h5>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quaerat, maiores dolor voluptas est dolorem pariatur at fugit? </p>
@@ -23,7 +24,7 @@
                      </div>
           </div>
           <div class="carousel-item">
-            <img src="{{asset('img/bg.jpg')}}" class="d-block w-100" alt="...">
+            <img src="{{asset('img/bali-tour-packages-4706037_960_720.jpg')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block ">
               <h5><strong> Enjoy Your Vacation With Us </strong></h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil pariatur ratione asperiores esse doloremque, ullam cupiditate </p>
@@ -32,7 +33,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="{{asset('img/shutterstock_1622273833-768x456.jpg')}}" class="d-block w-100" alt="...">
+            <img src="{{asset('img/aa.jpg')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5><strong> Enjoy Your Vacation With Us </strong></h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At facilis, non omnis accusantium a ducimus maxime praesentium rem </p>
@@ -55,12 +56,12 @@
             <div class="row g-5">
                 <div class="col-lg-6 " style="min-height: 400px;">
                  <div class="position-relative h-100">
-                    <img src="{{ asset('img/amina.jpg') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
+                    <img src="{{ asset('img/couple-3852277_960_720.jpg') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
                  </div>   
                 </div>
                 <div class="col-lg-6">
-                    <h6 class="section-title bg-white text-start text-success pe-3"> <strong> About us</strong></h6>
-                    <h1 class="mb-4">Welcome to <span class="text-success">Travel</span></h1>
+                    
+                    <h1 class="mb-4">Welcome to <span class="text-success">Backseat Surfing</span></h1>
                     <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit possimus inventore ipsa facere qui, debitis maxime deserunt expedita ducimus cumque. Voluptates atque vitae corrupti numquam temporibus sint tenetur beatae quo. </p>
                     <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit possimus inventore ipsa facere qui, debitis maxime deserunt expedita ducimus cumque. Voluptates atque vitae corrupti numquam temporibus sint tenetur beatae quo. </p>
                     <a class="btn btn-md btn-success px-3" href="{{ route('about') }}">Read More</a>
@@ -157,9 +158,10 @@
                                                     <small class="fa fa-star text-success"></small>
                                                 </div>
                                         
-                                                <p class="fw-bold">{{ $voyage->description }}</p>
+                                                <p class="fw-bold"></p>
                                                 <div class="d-flex justify-content-center mb-2">
-                                                    <a href="readmore" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
+                                                    <a href="{{ route('readmore', ['slug' => $voyage->slug]) }}" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
+
 
                                                 </div>
                                     </div>

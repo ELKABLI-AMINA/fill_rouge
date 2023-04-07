@@ -22,7 +22,7 @@ Créer Votre Voyage
        </div> 
        @endif
   <div class="row">
-       <div class="col-md-6">
+       <div class="col-md-8">
               <form action="" method="post" enctype="multipart/form-data">
                  @csrf
                       <div class="form-group mt-2 ">
@@ -31,7 +31,7 @@ Créer Votre Voyage
                       </div>
                       <div class="form-group mt-2">
                         <label for="exampleFormControlTextarea1">Description</label>
-                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" name="description" id="description" rows="3"></textarea>
                       </div>
                       <div class="form-group mt-2 ">
                           <label for="exampleFormControlInput1">Image</label>
@@ -50,19 +50,25 @@ Créer Votre Voyage
                         <input type="number" name="nb_jours" class="form-control" id="exampleFormControlInput1">
                       </div>
                       <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">nb_limite_reservation</label>
+                        <input type="number" name="nb_limite_reservation" class="form-control" id="exampleFormControlInput1">
+                      </div>
+                      <div class="form-group mt-2 ">
                         <label for="exampleFormControlInput1">nb_personne</label>
                         <input type="number" name="nb_personne" class="form-control" id="exampleFormControlInput1">
                       </div>
                       <div class="form-group mt-2 ">
-                        <label for="exampleFormControlInput1">prix</label>
+                        <label for="exampleFormControlInput1">prix par personne</label>
                         <input type="number" name="prix" class="form-control" id="exampleFormControlInput1">
                       </div>
                       <button type="submit" class="btn btn-primary mt-3">Valider</button>
              </form>                                                    
          </div>
-                        <div class="col-md-6 ">
+                        <div class="col-md-4 ">
                             <img src="{{ asset('img/voyage.jpg') }}"class="img-fluid " >
                         </div>
        </div>
-   </div>         
+   </div> 
+   
+   
 @endsection

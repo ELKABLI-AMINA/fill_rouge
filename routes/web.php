@@ -26,7 +26,9 @@ Route::get('/redirect', [RedirectController::class, 'redirect'])->name('redirect
 Route::get('/', [VoyageController::class, 'show'])->name('/');
 Route::get('contact', function () { return view('contact');})->name('contact');
 Route::get('about', function () { return view('about');})->name('about');
-Route::get('readmore', function () { return view('readmore');})->name('readmore');
+Route::get('/voyage/{slug}', [VoyageController::class, 'showVoyage'])->name('readmore');
+Route::get('/voyages/{id_voyage}/readmore',  [VoyageController::class, 'showReadMore']);
+
 
 
 
@@ -74,6 +76,7 @@ Route::middleware(['auth', 'owner'])->group(function () {
     Route::get('/editVoyage/{slug}', [VoyageController::class, 'edit'])->name('voyage.edit');
     Route::put('/updateVoyage/{slug}', [VoyageController::class, 'update'])->name('voyage.update');
     Route::delete('/deletevoyage/{slug}', [VoyageController::class, 'delete'])->name('voyage.delete');
+  
 });
 
 // ========= USER ROUTES===============
