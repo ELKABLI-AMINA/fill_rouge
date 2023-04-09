@@ -34,7 +34,7 @@ Editer Votre Voyage
                       </div>
                       <div class="form-group mt-2">
                         <label for="exampleFormControlTextarea1">Description</label>
-                        <textarea class="form-control text-truncate" name="description"  id="exampleFormControlTextarea1" rows="3">{{ $voyage->description }}</textarea>
+                        <textarea class="form-control text-truncate" name="description"  id="description" rows="3">{{ $voyage->description }}</textarea>
                       </div>
                       <div class="form-group mt-2 ">
                           <label for="exampleFormControlInput1">Image</label>

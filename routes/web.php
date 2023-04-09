@@ -6,6 +6,7 @@ use App\Http\Controllers\AgenceController;
 use App\Http\Controllers\VoyageController;
 
 use App\Http\Controllers\RedirectController;
+use App\Http\Controllers\ReservationController;
 
 
 /*
@@ -28,7 +29,10 @@ Route::get('contact', function () { return view('contact');})->name('contact');
 Route::get('about', function () { return view('about');})->name('about');
 Route::get('/voyage/{slug}', [VoyageController::class, 'showVoyage'])->name('readmore');
 Route::get('/voyages/{id_voyage}/readmore',  [VoyageController::class, 'showReadMore']);
+Route::get('/voyages/{id_voyage}/Soumettre-la-commande',  [VoyageController::class, 'showReservationForm'])->name('soumettre.commande');
+Route::post('/voyages/{id_voyage}/Soumettre-la-commande',  [ReservationController::class, 'store']);
 
+// Route::get('/Soumettre-la-commande', function () { return view('voyage/Soumettre');})->name('soumettre.commande');
 
 
 

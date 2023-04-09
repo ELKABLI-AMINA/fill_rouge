@@ -140,4 +140,13 @@ class VoyageController extends Controller
         // Passage des données à la vue
         return view('readmore', compact('voyage'));
     }
+
+
+    public function showReservationForm($voyage_id)
+    {
+        $voyage = Voyage::find($voyage_id);
+        return view('voyage.Soumettre', ['voyage' => $voyage]);
+    }
+
+
 }

@@ -10,52 +10,53 @@
          <div class="row container mx-auto ">
                 <div class="col-md-12">
                         <div class="row">
-                                 <div class="col-md-9 mb-2  " >
-                                    <div class="row">
-                                         <div class="col-md-9">
+                                 <div class="col-md-9  " >
+                                    <div class="row ">
+                                         <div class="col-md-9 " >
                                                   
 
                                                    <div style="width:33rem;  ">
                                                 
-                                                     <div class="card-body h-100" >
+                                                     <div class="card-body h-100  " >
                                                         <div>{{!! $voyage->description!!}}</div>
                                                       </div>
                                                 
                                                   </div> 
-                                           </div>    
-                                           <div class="col-md-3 mt-3">
-                                              <div class="text-center ">
-                                             <span class="">Temps Restant</span>
-                                            </div>
-                                               <div class=" d-flex justify-content-center align-items-center fw-bold my-3">
-                                                    <div class="d-flex flex-column">
-                                                      <span id="jours_restants" class="days fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
-                                                      {{-- <span >Jours</span> --}}
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                      <span id="heures_restantes" class="hours fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
-                                                      {{-- <span >Heures</span> --}}
-                                                    </div>
-                                                      <div class="d-flex flex-column">
-                                                        <span id="minutes_restantes" class="minutes fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
-                                                        {{-- <span >Min</span> --}}
-                                                      </div>
-                                                        <div class="d-flex flex-column">
-                                                          <span id="secondes_restantes" class="seconds fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
-                                                          {{-- <span >Sec</span> --}}
-                                                      </div>
-                                                </div>
-                                                <div class="card bg-success" >
-                                                  <div class="card-body text-center">
-                                                    <h5 class="card-title text-white">850:00DH</h5>
-                                                    <a href="#" class="btn btn-success rounded-pill border-5 border-white mt-4 ">Je reserve</a>
-                                                  </div>
-                            
-                                                </div>
-                                                <div class="text-center mt-3"><span class="text-success">Valeur:</span>1400:00dh</div>
-                                                <div class="text-center "><span class="text-success">Remise:</span>39%</div>
-                                                <div class="text-center "><span class="text-success">Economie:</span>550:00dh</div>
-                                                
+                                           </div  >    
+                                              <div class="col-md-3 mt-5 bg-light h-50 "  >
+
+                                                            <div class="text-center "  >
+                                                          <span class="">Temps Restant</span>
+                                                          </div>
+                                                            <div class=" d-flex justify-content-center align-items-center fw-bold my-3">
+                                                                  <div class="d-flex flex-column">
+                                                                    <span id="jours_restants" class="days fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
+                                                                    {{-- <span >Jours</span> --}}
+                                                                  </div>
+                                                                  <div class="d-flex flex-column">
+                                                                    <span id="heures_restantes" class="hours fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
+                                                                    {{-- <span >Heures</span> --}}
+                                                                  </div>
+                                                                    <div class="d-flex flex-column">
+                                                                      <span id="minutes_restantes" class="minutes fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
+                                                                      {{-- <span >Min</span> --}}
+                                                                    </div>
+                                                                      <div class="d-flex flex-column">
+                                                                        <span id="secondes_restantes" class="seconds fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
+                                                                        {{-- <span >Sec</span> --}}
+                                                                    </div>
+                                                              </div>
+                                                              <div class="card bg-success" >
+                                                                <div class="card-body text-center">
+                                                                  <h5 class="card-title text-white">{{ $voyage->prix }}:00DH</h5>
+                                                                  <a href="{{ route('soumettre.commande', $voyage->id) }}"  id="bouton_reservation" class="btn btn-success rounded-pill border-5 border-white mt-4 ">Je reserve</a>
+                                                                </div>
+                                          
+                                                              </div>
+                                                              <div class="text-center mt-3"><span class="text-success">Valeur:</span>{{ $voyage->prix }}:00dh</div>
+                                                              <div class="text-center "><span class="text-success">Remise:</span>30%</div>
+                                                              <div class="text-center "><span class="text-success">Economie:</span>300:00dh</div>
+                                                              
                                           </div>      
                                      </div> 
                                   </div>
@@ -123,9 +124,13 @@ function updateTimeRemaining() {
     document.getElementById('heures_restantes').innerText = heures;
     document.getElementById('minutes_restantes').innerText = minutes;
     document.getElementById('secondes_restantes').innerText = secondes;
+    document.getElementById('bouton_reservation').style.display = 'block';
+
   } else {
     // Arrêter le chronomètre lorsque le temps est écoulé
     clearInterval(counter);
+    document.getElementById('bouton_reservation').style.display = 'none';
+
   }
 }
 
@@ -140,32 +145,5 @@ const counter = setInterval(updateTimeRemaining, 1000);
 
 
     </script> 
-         <div class="container mx-auto">
-            <table class="table">
-          <thead>
-            <tr class="text-white bg-success">
-              <th scope="col">Départ</th>
-              <th scope="col">Formule</th>
-              <th scope="col">Prix</th>
-              <th scope="col">Sélectionner</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          
-          </tbody>
-            </table>
-        </div>
-
+         
     @endsection

@@ -38,7 +38,7 @@
                         <img src="{{asset('img/20-destinations-de-reve-678x381.jpg')}}" alt="" class="img-fluid bg-light p-1">
                     </div>
                     <div class="col-4">
-                        <img src="{{asset('img/.jpg')}}" alt="" class="img-fluid bg-light p-1">
+                        <img src="{{asset('img/bali-tour-packages-4706037_960_720.jpg')}}" alt="" class="img-fluid bg-light p-1">
                     </div>
                     <div class="col-4">
                         <img src="{{asset('img/nord.jpg')}}" alt="" class="img-fluid bg-light p-1">

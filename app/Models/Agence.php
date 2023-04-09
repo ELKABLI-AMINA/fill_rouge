@@ -21,10 +21,9 @@ class Agence extends Model
     {
        return 'slug' ;
     }
-
-    public function user()
+    public function agence()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasOne(agence::class);
     }
 
     public function voyage()

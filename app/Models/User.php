@@ -57,4 +57,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(agence::class);
     }
+
+    public function Reservation()
+    {
+        return $this->hasOne(Reservation::class);
+    }
 }
