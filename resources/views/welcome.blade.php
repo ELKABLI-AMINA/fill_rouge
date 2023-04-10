@@ -16,16 +16,16 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
                
-                 <img src="{{asset('img/beach-6517214_960_720.jpg')}}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                 <img src="{{asset('img/2c775re-1.jpg')}}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block mb-5">
                         <h5 class="fs-45 mt-25"><strong> Enjoy Your Vacation With Us </strong></h5>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quaerat, maiores dolor voluptas est dolorem pariatur at fugit? </p>
                             
                      </div>
           </div>
           <div class="carousel-item">
-            <img src="{{asset('img/bali-tour-packages-4706037_960_720.jpg')}}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block ">
+            <img src="{{asset('img/Life-in-Istanbul-is-Istanbul-a-good-place-to-live-work-and-study-new4.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block mb-5">
               <h5><strong> Enjoy Your Vacation With Us </strong></h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil pariatur ratione asperiores esse doloremque, ullam cupiditate </p>
              
@@ -34,7 +34,7 @@
           </div>
           <div class="carousel-item">
             <img src="{{asset('img/aa.jpg')}}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block mb-5">
               <h5><strong> Enjoy Your Vacation With Us </strong></h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At facilis, non omnis accusantium a ducimus maxime praesentium rem </p>
              
@@ -71,47 +71,47 @@
     </div>
     {{-- Destination section --}}
    
-    <div class="container-xxl py-5">
+    <div class="container-xxl  ">
         <section class="gallery ">
             <h1 class="text-center mb-5">Travelling Gallery</h1>
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="gallery-box">
-                           <img src="{{asset('img/nord.jpg')}}" alt="">
-                           <h4>Le Nord</h4>
+                           <img src="{{asset('img/week-end-amsterdam-fleurs.jpg')}}" alt="">
+                           <h4>Amsterdam</h4>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-box">
-                           <img src="{{asset('img/hociema.jpg')}}" alt="">
-                           <h4>Al Hociema</h4>
+                           <img src="{{asset('img/tanger-maroc.jpg.1920x0_q85.jpg')}}" alt="">
+                           <h4>Tanger</h4>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-box">
-                           <img src="{{asset('img/dakhla.jpg')}}" alt="">
-                           <h4>dakhla</h4>
+                           <img src="{{asset('img/manhattan-1674404_960_720.jpg')}}" alt="">
+                           <h4>New York</h4>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="gallery-box">
-                           <img src="{{asset('img/agafay.jpg')}}" alt="">
-                           <h4>Agafay</h4>
+                           <img src="{{asset('img/shutterstockRF_394067971.jpg')}}" alt="">
+                           <h4>Istanbul</h4>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-box">
-                           <img src="{{asset('img/hociema.jpg')}}" alt="">
-                           <h4>Al Hociema</h4>
+                           <img src="{{asset('img/arch-6356637_960_720.jpg')}}" alt="">
+                           <h4>Paris</h4>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-box">
-                           <img src="{{asset('img/hociema.jpg')}}" alt="">
-                           <h4>Al Hociema</h4>
+                           <img src="{{asset('img/morocco-2746495_960_720.jpg')}}" alt="">
+                           <h4>Marrakech</h4>
                         </div>
                     </div>
                 </div>
@@ -123,18 +123,17 @@
 
     
     {{-- package --}}
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-3 ">
         <div class="container">
-            <div class="text-center">
-                
-                <h1 class="mb-5 fw-bold ">Packages</h1>
+            <div class="text-center" >
+                <h1 class=" fw-bold ">Best tour Package offers for You</h1>
             </div>
             <div class="row g-4 ">
                 @foreach ($voyages as $voyage )
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 mt-5">
                             <div class=" .package-item">
                             
-                                    <div class="overflow-hidden">
+                                    <div class="gallery-boxx">
                                         <img src="{{asset('uploads/'.$voyage->image)}}" alt="" class="img-fluid">
                                     </div>
                                     <div class="d-flex border-bottom">
@@ -161,8 +160,6 @@
                                                 <p class="fw-bold"></p>
                                                 <div class="d-flex justify-content-center mb-2">
                                                     <a href="{{ route('readmore', ['slug' => $voyage->slug]) }}" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
-
-
                                                 </div>
                                     </div>
                             </div>
@@ -178,137 +175,21 @@
         <h1 class="text-center mb-5">Users Review</h1>
        <div class="container">
         <div class="row">
+            @foreach ($ratings as $rating )
             <div class="col-md-4">
                 <div class="user-review text-center">
-                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi officia distinctio, veritatis blanditiis unde nemo quibusdam ratione, fugit mollitia nobis enim, repudiandae iusto voluptas quaerat adipisci molestias possimus exercitationem.</p>
-                   <h5>ELKABLI Amina</h5> 
-                   <small>Benslimane</small>
+                   <p>{{!! $rating->comment !!}}</p>
+                   <h5>{{ $rating->user_name }}</h5> 
+                
                 </div>
-                <img src="{{asset('img/femme2.jpg')}}" alt="">
+              
             
             </div>
-            <div class="col-md-4">
-                <div class="user-review text-center">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi officia distinctio, veritatis blanditiis unde nemo quibusdam ratione, fugit mollitia nobis enim, repudiandae iusto voluptas quaerat adipisci molestias possimus exercitationem.</p>
-                    <h5>ELKABLI Amina</h5> 
-                    <small>Benslimane</small>
-                 </div>
-                 <img src="{{asset('img/femme2.jpg')}}" alt="">
-            </div>
-            <div class="col-md-4">
-                <div class="user-review text-center">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi officia distinctio, veritatis blanditiis unde nemo quibusdam ratione, fugit mollitia nobis enim, repudiandae iusto voluptas quaerat adipisci molestias possimus exercitationem.</p>
-                    <h5>ELKABLI Amina</h5> 
-                    <small>Benslimane</small>
-                 </div>
-                 <img src="{{asset('img/femme3.jpg')}}" alt="">
-            </div>
+            @endforeach
         </div>
        </div>
     
-      </section>
-     {{-- booking Section --}}
-    {{-- <div class="container-xxl py-5">
-        <div class="container"  style='background: url({{asset('img/booking.jpg')}}); background-position: center center ;
-        background-repeat: no-repeat;
-        background-size: cover;'>
-            <div class="booking p-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-md-6 text-white">
-                        <h6 class="text-white text-uppercase">Booking</h6>
-                        <h1 class=" mb-4">Online Booking</h1>
-                        <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae iste non nulla sint sunt quae qui, dolore hic architecto ex perferendis debitis ducimus cumque, laboriosam doloremque ipsam fuga repudiandae iure?</p>
-                        <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad quas eveniet distinctio ullam temporibus mollitia veniam? Iusto quas perferendis unde repellat mollitia in sed nam deleniti explicabo reprehenderit, laudantium veritatis?</p>
-                        <a href="" class="btn btn-outline-light py-3 px-5 mt-2">Read More</a>
-                    </div>
-                    <div class="col-md-6">
-                        <h1 class="text-white mb-4">Book A Tour</h1>
-                        <form action="">
-                            <div class="row g-3 mb-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" name="" id="name" placeholder=" Your Name">
-                                        <label for="name">Your Name</label>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" name="" id="name" placeholder=" Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                            
-                            
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" name="" id="email" placeholder=" Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                           
-                          
-                                <div class="col-md-6">
-                                    <div class="form-floating" id="date3">
-                                        <input type="email" class="form-control bg-transparent" name="" id="datetime">
-                                        <label for="datetime">Date & Time</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating" id="date3">
-                                        <input type="text" class="form-control bg-transparent" id="datetime">
-                                        <label for="datetime">Date & Time</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select name="" id="selected1" class="form-select bg-transparent">
-                                            <option value="1">Destination 1</option>
-                                            <option value="2">Destination 2</option>
-                                            <option value="3">Destination 3</option>
-                                        </select>
-                                        <label for="select1">Destination</label>
-                                    </div>
-                                 </div>
-                                 <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea  class="form-control bg-transparent" placeholder="Special Request" name="" id="message" style="height: 100px;" ></textarea>
-                                        <label for="message">Special Request</label>
-                                    </div>
-                            
-                                 </div>
-                                 <div class="col-12">
-                                    <button class="btn btn-outline-light w-100 py-3" type="submit">
-                                        Book Now
-                                    </button>
-                                 </div>
-                            </div>
-                        </form>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-     </div>
-   
- 
-  
-
-   
-   
- </div> --}}
-
-
-
-    
+      </section>   
 @endsection
 
    

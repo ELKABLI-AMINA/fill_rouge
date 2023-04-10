@@ -6,6 +6,18 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+    
+      <div class="dropdown ">
+        <button class="btn btn-white text-success dropdown-toggle" style=" font-weight: bold;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Circuits
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item text-success" style=" font-weight: bold;"  href="#">Nationaux </a>
+          <a class="dropdown-item text-success" style=" font-weight: bold;"  href="#">Internationaux</a>
+    
+        </div>
+      </div>
+      
       <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="navbar-nav ms-auto me-5 ">
           <li class="nav-item">

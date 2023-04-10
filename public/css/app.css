@@ -80,7 +80,7 @@
     border-radius: 35px;
     transition: 0.3s;
 }
-
+/* 
 /* Dashboard Admin */
 #wrapper {
     overflow-x: hidden;
@@ -142,7 +142,7 @@
     #wrapper.toggled #sidebar-wrapper {
       margin-left: -15rem;
     }
-  }
+  } */
 
 
 
@@ -280,7 +280,7 @@ input[type="number"] {
 }
 
 .gallery{
-  padding: 100px 0;
+  padding: 10px 0;
 }
 .gallery-box img{
   width: 100%;
@@ -345,11 +345,24 @@ body{
    }
    .right-box{
       padding: 20px;
-   }
+   }  
+}
+.gallery-box img{
 
-  
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
   
 }
+.gallery-boxx img{
 
+  height: 250px;
+  width: 350px;
+  object-fit: cover;
+
+}
+.navbar-collapse{
+  flex-grow: 0 !important;
+}
 
 

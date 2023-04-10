@@ -16,12 +16,12 @@
         </ul>
     </div>
 @endif
-                <div class="bg-primary text-white  " style="border-radius: 2px; height: 40px; ">1-Soumettre la Commande</div>
+                <div class="bg-success text-white mt-3 " style="border-radius: 2px; height: 40px; ">1-Soumettre la Commande</div>
 
-                <h2>{{ $voyage->name }}</h2>
+              
               
 
-                <form method="POST" action="">
+                <form class="mt-5" method="POST" action="">
                                 @csrf
 
                                 <input type="hidden" name="voyage_id" value="{{ $voyage->id }}">
@@ -41,7 +41,7 @@
                                 <input type="text" name="total_price" id="total_price" readonly>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Réserver</button>
+                                <button type="submit" class="btn btn-success">Réserver</button>
                 </form>
 
                

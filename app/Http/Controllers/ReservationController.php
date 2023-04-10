@@ -24,7 +24,7 @@ class ReservationController extends Controller
         'status' =>'waiting'
     ]);
 
-    // Rediriger l'utilisateur vers une page de confirmation de réservation
+  
     return redirect()->back();
 }
 

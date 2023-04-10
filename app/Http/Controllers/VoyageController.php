@@ -53,9 +53,18 @@ class VoyageController extends Controller
     public function Show()
     {
         $voyages = Voyage::paginate(6);
-        // dd($voyages);
+        $ratings = DB::table('ratings')
+        ->join('voyages', 'ratings.rateable_id', '=', 'voyages.id')
+        ->join('users', 'ratings.user_id', '=', 'users.id')
+        ->select('ratings.*', 'voyages.name as voyage_name', 'users.name as user_name')
+        ->get();
+
+        
+        
         return view('welcome')->with([
-            'voyages' => $voyages
+            'voyages' => $voyages,
+            'ratings' => $ratings
+
         ]);
     }
 
@@ -149,4 +158,5 @@ class VoyageController extends Controller
     }
 
 
+    
 }

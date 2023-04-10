@@ -53,9 +53,14 @@
                                                                 </div>
                                           
                                                               </div>
-                                                              <div class="text-center mt-3"><span class="text-success">Valeur:</span>{{ $voyage->prix }}:00dh</div>
-                                                              <div class="text-center "><span class="text-success">Remise:</span>30%</div>
-                                                              <div class="text-center "><span class="text-success">Economie:</span>300:00dh</div>
+                                                              <div class="card bg-success mt-4" >
+                                                                <div class="card-body text-center">
+                                                                
+                                                                  <a href="{{ route('vote', $voyage->id) }}"  id="bouton_reservation" class="btn btn-success rounded-pill border-5 border-white  ">Write Review</a>
+                                                                </div>
+                                          
+                                                              </div>
+                                                            
                                                               
                                           </div>      
                                      </div> 

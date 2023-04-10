@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use willvincent\Rateable\Rateable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Voyage extends Model
 {
@@ -33,5 +34,6 @@ class Voyage extends Model
     {
         return $this->belongsTo(Agence::class);
     }
-    
+    use Rateable;
+
 }

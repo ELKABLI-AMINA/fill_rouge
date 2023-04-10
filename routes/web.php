@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AgenceController;
 use App\Http\Controllers\VoyageController;
-
+use App\Http\Controllers\VoteController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\ReservationController;
 
@@ -32,7 +32,8 @@ Route::get('/voyages/{id_voyage}/readmore',  [VoyageController::class, 'showRead
 Route::get('/voyages/{id_voyage}/Soumettre-la-commande',  [VoyageController::class, 'showReservationForm'])->name('soumettre.commande');
 Route::post('/voyages/{id_voyage}/Soumettre-la-commande',  [ReservationController::class, 'store']);
 
-// Route::get('/Soumettre-la-commande', function () { return view('voyage/Soumettre');})->name('soumettre.commande');
+Route::get('/voyages/{id}/formVote', [VoteController::class, 'index'])->name('vote');
+Route::post('/formVote/{id_voyage}', [VoteController::class, 'noterVoyage'])->name('store.vote');
 
 
 

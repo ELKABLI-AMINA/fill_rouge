@@ -30,6 +30,8 @@ Créer Votre Agence
                         <input type="text" name="name" class="form-control" id="exampleFormControlInput1">
                       </div>
                       <div class="form-group mt-2">
+                       
+
                         <label for="exampleFormControlSelect1">City</label>
                           <select class="form-control" name="city" id="exampleFormControlSelect1">
                           <option>Casablanca</option>

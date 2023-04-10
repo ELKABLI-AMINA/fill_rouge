@@ -23,7 +23,7 @@
                 <a href="{{ route('/') }}" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                          class="bi bi-house-check-fill me-2"></i>Home</a>        
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-project-diagram me-2"></i>Manage Store</a>
+                        class="bi bi-pencil me-2"></i>Manage Store</a>
                
               
             </div>
@@ -69,7 +69,7 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                                 <h3 class="fs-2">720</h3>
-                                <p class="fs-5">Products</p>
+                                <p class="fs-5">mes voyages</p>
                             </div>
                         
                         </div>
@@ -79,7 +79,7 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                                 <h3 class="fs-2">4920</h3>
-                                <p class="fs-5">Sales</p>
+                                <p class="fs-5">Réservé</p>
                             </div>
                             {{-- icon --}}
                         </div>
@@ -89,7 +89,7 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                                 <h3 class="fs-2">3899</h3>
-                                <p class="fs-5">Delivery</p>
+                                <p class="fs-5">Voyage_payé</p>
                             </div>
                           
                         </div>
@@ -99,7 +99,7 @@
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
                                 <h3 class="fs-2">%25</h3>
-                                <p class="fs-5">Increase</p>
+                                <p class="fs-5">Voyagé_</p>
                             </div>
                             {{-- icon --}}
                         </div>
