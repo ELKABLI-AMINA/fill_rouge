@@ -27,7 +27,7 @@ Créer Votre Voyage
                  @csrf
                       <div class="form-group mt-2 ">
                         <label for="exampleFormControlInput1">Name</label>
-                        <input type="text" name="name" class="form-control" id="exampleFormControlInput1">
+                        <input type="text" name="name"  class="form-control" id="exampleFormControlInput1">
                       </div>
                       <div class="form-group mt-2">
                         <label for="exampleFormControlTextarea1">Description</label>

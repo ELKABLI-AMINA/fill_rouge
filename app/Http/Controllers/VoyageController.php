@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Agence;
 use App\Models\Voyage;
+use App\Models\Reservation;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -59,8 +60,6 @@ class VoyageController extends Controller
         ->select('ratings.*', 'voyages.name as voyage_name', 'users.name as user_name')
         ->get();
 
-        
-        
         return view('welcome')->with([
             'voyages' => $voyages,
             'ratings' => $ratings
@@ -154,6 +153,9 @@ class VoyageController extends Controller
     public function showReservationForm($voyage_id)
     {
         $voyage = Voyage::find($voyage_id);
+        $nombreMaxParticipants = $voyage->nombre_max_participants;
+        $nombreReservations = Reservation::where('voyage_id', $voyage_id)->count();
+        $placesRestantes = $nombreMaxParticipants - $nombreReservations;
         return view('voyage.Soumettre', ['voyage' => $voyage]);
     }
 

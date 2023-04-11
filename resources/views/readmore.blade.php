@@ -53,15 +53,19 @@
                                                                 </div>
                                           
                                                               </div>
+                                                              <p>Nombre de places disponibles: {{ $voyage->max_participants - $voyage->reservations->sum('participants') }}</p>
+                                                              <ul>
+                                                                @foreach ($voyage->reservations as $reservation)
+                                                                  <li>{{ $reservation->user->name }} - {{ $reservation->participants }} participants</li>
+                                                                @endforeach
+                                                              </ul>
                                                               <div class="card bg-success mt-4" >
                                                                 <div class="card-body text-center">
                                                                 
                                                                   <a href="{{ route('vote', $voyage->id) }}"  id="bouton_reservation" class="btn btn-success rounded-pill border-5 border-white  ">Write Review</a>
                                                                 </div>
                                           
-                                                              </div>
-                                                            
-                                                              
+                                                              </div>                   
                                           </div>      
                                      </div> 
                                   </div>

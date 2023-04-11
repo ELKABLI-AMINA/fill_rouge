@@ -29,7 +29,7 @@ class AgenceRequest extends FormRequest
             'logo'=>'required',
             'address'=>'required',
             'city'=>'required',
-            'one_agence' => [new OneAgencePerOwner($userId)]
+            // 'one_agence' => [new OneAgencePerOwner($userId)]
         ];
     }
 }

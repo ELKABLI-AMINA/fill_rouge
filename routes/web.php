@@ -31,7 +31,6 @@ Route::get('/voyage/{slug}', [VoyageController::class, 'showVoyage'])->name('rea
 Route::get('/voyages/{id_voyage}/readmore',  [VoyageController::class, 'showReadMore']);
 Route::get('/voyages/{id_voyage}/Soumettre-la-commande',  [VoyageController::class, 'showReservationForm'])->name('soumettre.commande');
 Route::post('/voyages/{id_voyage}/Soumettre-la-commande',  [ReservationController::class, 'store']);
-
 Route::get('/voyages/{id}/formVote', [VoteController::class, 'index'])->name('vote');
 Route::post('/formVote/{id_voyage}', [VoteController::class, 'noterVoyage'])->name('store.vote');
 

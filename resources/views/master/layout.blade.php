@@ -51,7 +51,7 @@
 <script>
 
 tinymce.init({
-  selector: 'textarea',
+  selector: 'textarea.tinymce', // Utilisez le sélecteur .tinymce pour cibler les zones de texte avec la classe "tinymce"
   height: 400,
   paste_preprocess: function(plugin, args) {
     args.content = args.content.replace(/[{}]/g, '');
@@ -70,6 +70,7 @@ tinymce.init({
     '//www.tiny.cloud/css/codepen.min.css'
   ]
 });
+
 
 </script>
 

@@ -78,8 +78,8 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="gallery-box">
-                           <img src="{{asset('img/week-end-amsterdam-fleurs.jpg')}}" alt="">
-                           <h4>Amsterdam</h4>
+                           <img src="{{asset('img/casablanca.jpg')}}" alt="">
+                           <h4>Casablanca</h4>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -90,22 +90,22 @@
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-box">
-                           <img src="{{asset('img/manhattan-1674404_960_720.jpg')}}" alt="">
-                           <h4>New York</h4>
+                           <img src="{{asset('img/fes.jpg')}}" alt="">
+                           <h4>Fes</h4>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="gallery-box">
-                           <img src="{{asset('img/shutterstockRF_394067971.jpg')}}" alt="">
-                           <h4>Istanbul</h4>
+                           <img src="{{asset('img/agadir.jpg')}}" alt="">
+                           <h4>Agadir</h4>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-box">
-                           <img src="{{asset('img/arch-6356637_960_720.jpg')}}" alt="">
-                           <h4>Paris</h4>
+                           <img src="{{asset('img/Oualidia.jpg')}}" alt="">
+                           <h4>Oualidia</h4>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -138,7 +138,7 @@
                                     </div>
                                     <div class="d-flex border-bottom">
                                         <small class="flex-fill text-center border-end py-2">
-                                            <i class="fa fa-map-marker-alt text-success me-2"></i> {{ $voyage->name }}
+                                            <i class="fa fa-map-marker-alt text-success me-2"></i> {{ Str::limit($voyage->name,12)  }}
                                         </small>
                                         <small class="flex-fill text-center border-end py-2">
                                             <i class="bi bi-calendar  text-success me-2"></i> {{ $voyage->nb_jours }} days
@@ -149,13 +149,13 @@
                                     </div>
                                     <div class="text-center p-4">
                                                 <h3 class="mb-0">{{ $voyage->prix }}.00 DH</h3>
-                                                <div class="mb-3">
+                                                {{-- <div class="mb-3">
                                                     <small class="fa fa-star text-success"></small>
                                                     <small class="fa fa-star text-success"></small>
                                                     <small class="fa fa-star text-success"></small>
                                                     <small class="fa fa-star text-success"></small>
                                                     <small class="fa fa-star text-success"></small>
-                                                </div>
+                                                </div> --}}
                                         
                                                 <p class="fw-bold"></p>
                                                 <div class="d-flex justify-content-center mb-2">

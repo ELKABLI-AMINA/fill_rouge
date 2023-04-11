@@ -7,7 +7,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     
-      <div class="dropdown ">
+      {{-- <div class="dropdown ">
         <button class="btn btn-white text-success dropdown-toggle" style=" font-weight: bold;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Circuits
         </button>
@@ -16,7 +16,7 @@
           <a class="dropdown-item text-success" style=" font-weight: bold;"  href="#">Internationaux</a>
     
         </div>
-      </div>
+      </div> --}}
       
       <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="navbar-nav ms-auto me-5 ">

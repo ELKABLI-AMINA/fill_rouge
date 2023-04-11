@@ -34,7 +34,7 @@ Editer Votre Voyage
                       </div>
                       <div class="form-group mt-2">
                         <label for="exampleFormControlTextarea1">Description</label>
-                        <textarea class="form-control text-truncate" name="description"  id="description" rows="3">{{ $voyage->description }}</textarea>
+                        <textarea class="form-control tinymce text-truncate" name="description"  id="description" rows="3">{{ $voyage->description }}</textarea>
                       </div>
                       <div class="form-group mt-2 ">
                           <label for="exampleFormControlInput1">Image</label>
@@ -47,6 +47,19 @@ Editer Votre Voyage
                       <div class="form-group mt-2 ">
                         <label for="exampleFormControlInput1">date_arrive</label>
                         <input type="date" name="date_arrive" value="{{ $voyage->date_arrive}}"  class="form-control" id="exampleFormControlInput1">
+                      </div>
+                      <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">date_depart</label>
+                        <input type="date" name="date_depart" value="{{ $voyage->date_depart}}"  class="form-control" id="exampleFormControlInput1">
+                      </div>
+                      
+                      <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">nb_jours</label>
+                        <input type="number" name="nb_jours" value="{{ $voyage->nb_jours}}"  class="form-control" id="exampleFormControlInput1">
+                      </div>
+                      <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">nb_limite_reservation</label>
+                        <input type="number" name="nb_limite_reservation" value="{{ $voyage->nb_limite_reservation}}"  class="form-control" id="exampleFormControlInput1">
                       </div>
                       <div class="form-group mt-2 ">
                         <label for="exampleFormControlInput1">nb_jours</label>
