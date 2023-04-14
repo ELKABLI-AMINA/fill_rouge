@@ -18,6 +18,8 @@ class VoyageController extends Controller
         return view('Voyage.formVoyage');
     }
 
+    
+
     public function store(VoyageRequest $request)
     {
         if ($request->has('image')) {
@@ -41,6 +43,8 @@ class VoyageController extends Controller
             'nb_jours' => $request->nb_jours,
             'nb_personne' => $request->nb_personne,
             'prix' => $request->prix,
+            'date_fin_reservation'=>$request->date_fin_reservation,
+            'nb_limite_reservation'=>$request->nb_limite_reservation,
             'agence_id' => $Agence_id,
 
         ]);
@@ -105,6 +109,8 @@ class VoyageController extends Controller
             'date_arrive' => $request->date_arrive,
             'nb_jours' => $request->nb_jours,
             'nb_personne' => $request->nb_personne,
+            'date_fin_reservation'=>$request->date_fin_reservation,
+            'nb_limite_reservation'=>$request->nb_limite_reservation,
             'prix' => $request->prix,
 
 
@@ -128,37 +134,32 @@ class VoyageController extends Controller
     public function ShowVoyage($slug)
     {
         $voyage = Voyage::where('slug', $slug)->first();
-
+    
         return view('readmore')->with([
             'voyage' => $voyage
+           
         ]);
     }
 
 
 
 
+
     public function showReadMore($id_voyage)
     {
-        // Récupération des détails du voyage
+       
         $voyage = DB::table('voyages')->where('id_voyage', $id_voyage)->first();
-
-        // Récupération de la date de fin de réservation pour ce voyage
-
-
-        // Passage des données à la vue
         return view('readmore', compact('voyage'));
     }
 
+   
 
     public function showReservationForm($voyage_id)
     {
         $voyage = Voyage::find($voyage_id);
-        $nombreMaxParticipants = $voyage->nombre_max_participants;
-        $nombreReservations = Reservation::where('voyage_id', $voyage_id)->count();
-        $placesRestantes = $nombreMaxParticipants - $nombreReservations;
+       
         return view('voyage.Soumettre', ['voyage' => $voyage]);
     }
-
 
     
 }

@@ -17,8 +17,13 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 
 
-    
-    @yield('style')
+    <style>
+      .mce-image {
+        max-width: 100%;
+        height: auto;
+        overflow: auto;
+      }
+    </style>
     <title>@yield('title')</title>
 </head>
 <body>
@@ -33,7 +38,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+  <script src="https://cdn.tiny.cloud/1/sc5gr4ufscakvxl0769jshvc0883ter7sbbcmdeoqwd5oesd/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> 
+  
   
   
   <script src="app.js"></script>
@@ -49,30 +55,40 @@
 
 
 <script>
-
-tinymce.init({
-  selector: 'textarea.tinymce', // Utilisez le sélecteur .tinymce pour cibler les zones de texte avec la classe "tinymce"
-  height: 400,
-  paste_preprocess: function(plugin, args) {
-    args.content = args.content.replace(/[{}]/g, '');
-  },
+  tinymce.init({
+  selector: 'textarea',
   plugins: [
-    'advlist autolink lists link image charmap print preview anchor',
-    'searchreplace visualblocks code fullscreen',
-    'insertdatetime media table paste code help wordcount'
+    'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+    'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+    'media', 'table', 'emoticons', 'template', 'help'
   ],
-  toolbar: 'undo redo | formatselect | ' +
-    'bold italic backcolor | alignleft aligncenter ' +
-    'alignright alignjustify | bullist numlist outdent indent | ' +
-    'removeformat | help',
-  content_css: [
-    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
-    '//www.tiny.cloud/css/codepen.min.css'
-  ]
+  toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+    'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+    'forecolor backcolor emoticons | help',
+  file_picker_callback: function(callback, value, meta) {
+    var input = document.createElement('input');
+  input.setAttribute('type', 'file');
+  input.setAttribute('accept', 'image/*');
+
+  input.onchange = function() {
+    var file = this.files[0];
+    var reader = new FileReader();
+    reader.onload = function () {
+      var url = reader.result;
+      callback(url);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  input.click();
+
+
+  }
 });
 
-
 </script>
+
+
 
 
 

@@ -14,7 +14,8 @@ class Agence extends Model
         'description',
         'logo',
         'address',
-        'slug'
+        'slug',
+        'ville_id'
     ];
 
     public function getRouteKeyName()
@@ -30,4 +31,11 @@ class Agence extends Model
     {
         return $this->hasMany(Voyage::class);
     }
+    
+    public function ville()
+    {
+        return $this->belongsTo(Ville::class);
+    }
+
+
 }

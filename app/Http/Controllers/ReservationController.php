@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Voyage;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -28,4 +29,7 @@ class ReservationController extends Controller
     return redirect()->back();
 }
 
+
+
+ 
 }

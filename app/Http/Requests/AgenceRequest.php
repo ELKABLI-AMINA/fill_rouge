@@ -28,7 +28,8 @@ class AgenceRequest extends FormRequest
             'description'=>'required',
             'logo'=>'required',
             'address'=>'required',
-            'city'=>'required',
+            'ville_id' => 'required',
+            // 'city'=>'required',
             // 'one_agence' => [new OneAgencePerOwner($userId)]
         ];
     }

@@ -40,8 +40,9 @@
                                 <label for="total_price">Montant total:</label>
                                 <input type="text" name="total_price" id="total_price" readonly>
                                 </div>
-
-                                <button type="submit" class="btn btn-success">Réserver</button>
+                                                  
+                       {{-- <a href="{{ route('VerificationCommande') }}" class="btn btn-success btn-lg active mt-2" role="button" aria-pressed="true">Réserver</a> --}}
+                                <button type="submit" class="btn btn-success"><a href="{{ route('paiement') }}" class="btn btn-success btn-lg active mt-2" role="button" aria-pressed="true">Réserver</a></button>
                 </form>
 
                

@@ -18,8 +18,9 @@
                                                 <p class="card-text">{{ $agence['description'] }}</p>
                                                 <p class="card-text">{{ $agence['address'] }}</p>
                                                 </div>
+                                                {{-- @if(auth()->user()->id == $agence->user_id) --}}
                                                 <div >
-                                                                <a style="display: inline-block;width:100px;height:40px" href="{{ route('Agence.edit', $agence->slug) }}" class="btn btn-warning ">Modifier</a>  
+                                                                {{-- <a style="display: inline-block;width:100px;height:40px" href="{{ route('Agence.edit', $agence->slug) }}" class="btn btn-warning ">Modifier</a>   --}}
                                                                 <form style="border: none;height:40px" action="{{ route('Agence.delete', $agence->slug) }}" method="POST" >
                                                                 @csrf
                                                                 @method('DELETE')
@@ -29,6 +30,7 @@
                                                                 </button>
                                                                 </form>  
                                                 </div>
+                                                {{-- @endif --}}
                                       </div> 
                                       
                                       

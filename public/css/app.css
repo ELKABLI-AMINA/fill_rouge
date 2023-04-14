@@ -364,5 +364,13 @@ body{
 .navbar-collapse{
   flex-grow: 0 !important;
 }
-
+.paiement{
+  height: 40px;
+  width: 200px;
+}
+.bottom{
+  height: 60px;
+  width: 200px;
+  border: none;
+}
 

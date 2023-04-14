@@ -31,7 +31,7 @@ Créer Votre Voyage
                       </div>
                       <div class="form-group mt-2">
                         <label for="exampleFormControlTextarea1">Description</label>
-                        <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                        <textarea class="form-control tinymce" name="description" id="description" rows="3"></textarea>
                       </div>
                       <div class="form-group mt-2 ">
                           <label for="exampleFormControlInput1">Image</label>
@@ -52,6 +52,10 @@ Créer Votre Voyage
                       <div class="form-group mt-2 ">
                         <label for="exampleFormControlInput1">nb_limite_reservation</label>
                         <input type="number" name="nb_limite_reservation" class="form-control" id="exampleFormControlInput1">
+                      </div>
+                      <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">date_fin_reservation</label>
+                        <input type="date" name="date_fin_reservation" class="form-control" id="exampleFormControlInput1">
                       </div>
                       <div class="form-group mt-2 ">
                         <label for="exampleFormControlInput1">nb_personne</label>

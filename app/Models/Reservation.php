@@ -14,4 +14,9 @@ class Reservation extends Model
     {
         return $this->hasOne(agence::class);
     }
+    
+    public function User()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

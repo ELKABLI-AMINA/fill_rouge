@@ -61,10 +61,17 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id numquam atque libero sint! Nesciunt pariatur,</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
                     <input type="" class="form-control border-primary w-100 py-3 ps-4 pe-5" placeholder="Your Email">
-                 
-                  
-                       <a href="{{ route('form.agence') }}" class="btn btn-primary btn-lg active mt-2" role="button" aria-pressed="true">Join Us</a>
-                    
+                        
+                    @if (auth()->check() && auth()->user()->hasAgence())
+                        <button class="btn btn-success ">U Applied</button>
+                    @else
+                        <a href="{{ route('form.agence') }}" class="btn btn-primary btn-lg active mt-2" role="button" aria-pressed="true">Join Us</a>
+                    @endif
+                
+                        
+
+                        
+                        
                 </div>
             </div>
         </div> 

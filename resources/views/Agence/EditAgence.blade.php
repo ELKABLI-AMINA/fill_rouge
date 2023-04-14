@@ -57,7 +57,7 @@ Modifier Votre Agence
              </form>                                                    
          </div>
                         <div class="col-md-6">
-                            <img src="{{ asset('img/agafay.jpg') }}"class="img-fluid " >
+                            <img src="{{ asset('img/trip-2203682_960_720.jpg') }}"class="img-fluid " >
                         </div>
        </div>
    </div>         

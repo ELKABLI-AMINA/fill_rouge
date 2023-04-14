@@ -23,7 +23,6 @@ Editer Votre Voyage
        @endif
   <div class="row">
        <div class="col-md-6">
-              {{-- <form action=" {{ route('voyage.update', $voyage->slug) }}" method="post" enctype="multipart/form-data"> --}}
                 <form action="{{ route('voyage.update', $voyage->slug) }}" method="post" enctype="multipart/form-data">
 
                  @csrf
@@ -62,6 +61,10 @@ Editer Votre Voyage
                         <input type="number" name="nb_limite_reservation" value="{{ $voyage->nb_limite_reservation}}"  class="form-control" id="exampleFormControlInput1">
                       </div>
                       <div class="form-group mt-2 ">
+                        <label for="exampleFormControlInput1">date_fin_reservation</label>
+                        <input type="date" name="date_fin_reservation"  value="{{ $voyage->date_fin_reservation}}"  class="form-control" id="exampleFormControlInput1">
+                      </div>
+                      <div class="form-group mt-2 ">
                         <label for="exampleFormControlInput1">nb_jours</label>
                         <input type="number" name="nb_jours" value="{{ $voyage->nb_jours}}" class="form-control" id="exampleFormControlInput1">
                       </div>
@@ -77,7 +80,7 @@ Editer Votre Voyage
              </form>                                                    
          </div>
                         <div class="col-md-6 ">
-                            <img src="{{ asset('img/voyage.jpg') }}"class="img-fluid " >
+                            <img src="{{ asset('img/trip-2203682_960_720.jpg') }}"class="img-fluid " >
                         </div>
        </div>
    </div>         

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ville;
 use App\Models\Agence;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -13,7 +14,10 @@ class AgenceController extends Controller
 {
     public function index()
     {
-        return view('Agence.formAgence');
+        $villes = Ville::all();
+        return view('Agence.formAgence')->with([
+            'villes'=>$villes,
+        ]);
     }
 
     public function Show()
@@ -44,23 +48,29 @@ class AgenceController extends Controller
     
     public function store(AgenceRequest $request)
     {
+        // return $request->ville_id;
         if ($request->has('logo')) {
             $file = $request->logo;
             $logo_name = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('uploads'), $logo_name);
         }
+        // $ville_id = $request->input('ville_id');
+
         Agence::create([
             'name' => $request->name,
             'description' => $request->description,
             'logo' => $logo_name,
             'slug' => Str::slug($request->name),
             'address' => $request->address,
+            'ville_id' => $request->ville_id,
             'owner_id' => auth()->user()->id,
 
         ]);
          return redirect()->back()->with([
              'success' => 'Agence créée avec succès'
          ]);
+
+
     
     }
 

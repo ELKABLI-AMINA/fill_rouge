@@ -21,7 +21,7 @@ class Voyage extends Model
       'nb_personne',
       'date_fin_reservation',
       'prix',
-      'nb_max_participants',
+      'nb_limite_reservation',
     ];
 
     

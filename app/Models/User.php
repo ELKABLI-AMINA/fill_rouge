@@ -55,11 +55,19 @@ class User extends Authenticatable
 
     public function agence()
     {
-        return $this->hasOne(agence::class);
+        return $this->hasOne(agence::class, 'owner_id');
+    }
+    
+
+    public function hasAgence()
+    {
+        return $this->agence()->where('owner_id', $this->id)->exists();
     }
 
     public function Reservation()
     {
-        return $this->hasOne(Reservation::class);
+        return $this->hasMany(Reservation::class);
     }
+
+    
 }

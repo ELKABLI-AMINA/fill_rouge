@@ -19,7 +19,7 @@
                  <img src="{{asset('img/2c775re-1.jpg')}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block mb-5">
                         <h5 class="fs-45 mt-25"><strong> Enjoy Your Vacation With Us </strong></h5>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quaerat, maiores dolor voluptas est dolorem pariatur at fugit? </p>
+                        <p class="text-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quaerat, maiores dolor voluptas est dolorem pariatur at fugit? </p>
                             
                      </div>
           </div>
@@ -56,7 +56,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 " style="min-height: 400px;">
                  <div class="position-relative h-100">
-                    <img src="{{ asset('img/couple-3852277_960_720.jpg') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
+                    <img src="{{ asset('img/1519943176.jpg') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
                  </div>   
                 </div>
                 <div class="col-lg-6">
