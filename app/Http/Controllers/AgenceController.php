@@ -16,7 +16,7 @@ class AgenceController extends Controller
     {
         $villes = Ville::all();
         return view('Agence.formAgence')->with([
-            'villes'=>$villes,
+            'villes' => $villes,
         ]);
     }
 
@@ -32,7 +32,7 @@ class AgenceController extends Controller
     {
         $agence = Agence::where('slug', $slug)->first();
 
-        return view('Agence.show')->with([
+        return view('Agence.show-agence')->with([
             'agence' => $agence
         ]);
     }
@@ -45,16 +45,16 @@ class AgenceController extends Controller
         return view('demandes')->with(['demandes' => $demande]);
     }
 
-    
+
     public function store(AgenceRequest $request)
     {
-        // return $request->ville_id;
+        
         if ($request->has('logo')) {
             $file = $request->logo;
             $logo_name = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('uploads'), $logo_name);
         }
-        // $ville_id = $request->input('ville_id');
+        
 
         Agence::create([
             'name' => $request->name,
@@ -66,19 +66,20 @@ class AgenceController extends Controller
             'owner_id' => auth()->user()->id,
 
         ]);
-         return redirect()->back()->with([
-             'success' => 'Agence créée avec succès'
-         ]);
-
-
-    
+        return redirect()->back()->with([
+            'success' => 'Agence créée avec succès'
+        ]);
     }
 
     public function edit($slug)
     {
+        
+        $villes = Ville::all();
         $agence = Agence::where('slug', $slug)->first();
         return view('Agence.EditAgence')->with([
-            'agence' => $agence
+            'agence' => $agence,
+            'villes' => $villes
+            
         ]);
     }
 
@@ -93,6 +94,7 @@ class AgenceController extends Controller
             'slug' => Str::slug($request->name),
             'logo' => $request->logo,
             'address' => $request->address,
+            'ville_id' => $request->ville_id,
         ]);
 
         return redirect()->back()->with([

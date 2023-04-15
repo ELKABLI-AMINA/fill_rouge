@@ -32,13 +32,12 @@ Modifier Votre Agence
                       </div>
                       <div class="form-group mt-2">
                         <label for="exampleFormControlSelect1">City</label>
-                          <select class="form-control" value="{{ $agence->city }}"  name="city" id="exampleFormControlSelect1">
-                          <option>Casablanca</option>
-                          <option>Rabat</option>
-                          <option>Fes</option>
-                          <option>Marrakech</option>
-                          <option>5</option>
-                        </select> 
+                        <select class="form-control" name="ville_id" id="ville_id">
+                          <option selected disabled value=""></option>
+                          @foreach($villes as $ville)
+                              <option value="{{ $ville->id }}">{{ $ville->nom }}</option>
+                          @endforeach
+                      </select>
                         
                       </div>
                       <div class="form-group mt-2 ">

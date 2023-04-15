@@ -18,7 +18,7 @@ class VoyageController extends Controller
         return view('Voyage.formVoyage');
     }
 
-    
+
 
     public function store(VoyageRequest $request)
     {
@@ -43,8 +43,8 @@ class VoyageController extends Controller
             'nb_jours' => $request->nb_jours,
             'nb_personne' => $request->nb_personne,
             'prix' => $request->prix,
-            'date_fin_reservation'=>$request->date_fin_reservation,
-            'nb_limite_reservation'=>$request->nb_limite_reservation,
+            'date_fin_reservation' => $request->date_fin_reservation,
+            'nb_limite_reservation' => $request->nb_limite_reservation,
             'agence_id' => $Agence_id,
 
         ]);
@@ -59,10 +59,10 @@ class VoyageController extends Controller
     {
         $voyages = Voyage::paginate(6);
         $ratings = DB::table('ratings')
-        ->join('voyages', 'ratings.rateable_id', '=', 'voyages.id')
-        ->join('users', 'ratings.user_id', '=', 'users.id')
-        ->select('ratings.*', 'voyages.name as voyage_name', 'users.name as user_name')
-        ->get();
+            ->join('voyages', 'ratings.rateable_id', '=', 'voyages.id')
+            ->join('users', 'ratings.user_id', '=', 'users.id')
+            ->select('ratings.*', 'voyages.name as voyage_name', 'users.name as user_name')
+            ->get();
 
         return view('welcome')->with([
             'voyages' => $voyages,
@@ -95,7 +95,7 @@ class VoyageController extends Controller
             $file = $request->image;
             $image_name = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('uploads'), $image_name);
-            unlink(public_path('uploads') . '/' . $voyage->image);
+            // unlink(public_path('uploads') . '/' . $voyage->image);
             $voyage->image = $image_name;
         }
 
@@ -109,8 +109,8 @@ class VoyageController extends Controller
             'date_arrive' => $request->date_arrive,
             'nb_jours' => $request->nb_jours,
             'nb_personne' => $request->nb_personne,
-            'date_fin_reservation'=>$request->date_fin_reservation,
-            'nb_limite_reservation'=>$request->nb_limite_reservation,
+            'date_fin_reservation' => $request->date_fin_reservation,
+            'nb_limite_reservation' => $request->nb_limite_reservation,
             'prix' => $request->prix,
 
 
@@ -131,13 +131,33 @@ class VoyageController extends Controller
     }
 
 
-    public function ShowVoyage($slug)
+    public function ShowVoyage($id_voyage)
     {
-        $voyage = Voyage::where('slug', $slug)->first();
-    
+        //     $voyages = DB::table('voyages')
+        // ->leftJoin('reservations', 'voyages.id', '=', 'reservations.voyage_id')
+        // ->select('voyages.id', 'voyages.name', 'voyages.description', 'voyages.prix', DB::raw('SUM(reservations.participants) AS nombre_reservations'), 'voyages.nb_limite_reservation')
+        // ->groupBy('voyages.id', 'voyages.name', 'voyages.description', 'voyages.prix', 'voyages.nb_limite_reservation')
+        // ->get();
+
+        //     foreach ($voyages as $voyage) {
+        //         echo $voyage->description;
+        //     }
+
+
+        //     return view('readmore', [
+        //         'voyage' => $voyage
+
+        //     ]);
+        $voyage = Voyage::where('slug', $id_voyage)->first();
+        $id = $voyage->id;
+        $reservation = Reservation::where('voyage_id', $id)->get();
+        $place_recerved = $reservation->sum('participants');
+        $placesRestantes = $voyage->nb_limite_reservation - $place_recerved;
+        session()->put('placesRestantes', $placesRestantes);
         return view('readmore')->with([
-            'voyage' => $voyage
-           
+            'voyage' => $voyage,
+            'place_recerved' => $place_recerved,
+            'placesRestantes' => $placesRestantes
         ]);
     }
 
@@ -145,21 +165,31 @@ class VoyageController extends Controller
 
 
 
-    public function showReadMore($id_voyage)
-    {
-       
-        $voyage = DB::table('voyages')->where('id_voyage', $id_voyage)->first();
-        return view('readmore', compact('voyage'));
-    }
+    // public function showReadMore($id_voyage)
+    // {
 
-   
+    //     $reservation = Reservation::all(); 
+    //     $totalParticipants = count(explode(',', $reservation->participants));
+    //     $voyage = DB::table('voyages')->where('id_voyage', $id_voyage)->first();
+    //     return view('readmore')->with([
+    //         'voyage'=>$voyage,
+    //         'reservation'=>$reservation,
+    //         'totalParticipants'=>$totalParticipants
+
+    //     ]);
+
+
+    // }
+
 
     public function showReservationForm($voyage_id)
     {
         $voyage = Voyage::find($voyage_id);
-       
-        return view('voyage.Soumettre', ['voyage' => $voyage]);
-    }
 
-    
+
+        return view('voyage.Soumettre', [
+            'voyage' => $voyage,
+
+        ]);
+    }
 }

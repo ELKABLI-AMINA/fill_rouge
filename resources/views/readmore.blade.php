@@ -17,7 +17,7 @@
                                                    <div style="width:33rem;  ">
                                                 
                                                      <div class="card-body h-100  " >
-                                                        <div>{{!! $voyage->description!!}}</div>
+                                                        <div>{{!! $voyage->description !!}}</div>
                                                       </div>
                                                 
                                                   </div> 
@@ -25,33 +25,40 @@
                                               <div class="col-md-3 mt-5 bg-light h-50 "  >
 
                                                             <div class="text-center "  >
+                                                              <span>Places restantes: {{ $placesRestantes }}</span>
                                                           <span class="">Temps Restant</span>
                                                          
 
                                                           </div>
+                                                           
                                                             <div class=" d-flex justify-content-center align-items-center fw-bold my-3">
-                                                                  <div class="d-flex flex-column">
-                                                                    <span id="jours_restants" class="days fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
+                                                              <div class="d-flex flex-column">
+                                                                <span id="jours_restants" class="days fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
 
-                                                                  </div>
-                                                                  <div class="d-flex flex-column">
-                                                                    <span id="heures_restantes" class="hours fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
-                                                                 
-                                                                  </div>
-                                                                    <div class="d-flex flex-column">
-                                                                      <span id="minutes_restantes" class="minutes fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
-                                                                    
-                                                                    </div>
-                                                                      <div class="d-flex flex-column">
-                                                                        <span id="secondes_restantes" class="seconds fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
-                                                                     
-                                                                    </div>
                                                               </div>
-                                                              {{-- <p>Il reste {{ $placesRestantes }} places disponibles pour ce voyage.</p> --}}
+                                                              <div class="d-flex flex-column">
+                                                                <span id="heures_restantes" class="hours fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
+                                                             
+                                                              </div>
+                                                                <div class="d-flex flex-column">
+                                                                  <span id="minutes_restantes" class="minutes fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
+                                                                
+                                                                </div>
+                                                                  <div class="d-flex flex-column">
+                                                                    <span id="secondes_restantes" class="seconds fs-5 d-inline-block mx-2 text-center line-height-50 text-white bg-dark" style="width: 40px; height: 40px;"></span>
+                                                                 
+                                                                </div>
+                                                          </div>
+                                                            
+                                                             
                                                               <div class="card bg-success" >
                                                                 <div class="card-body text-center">
                                                                   <h5 class="card-title text-white">{{ $voyage->prix }}:00DH</h5>
-                                                                  <a href="{{ route('soumettre.commande', $voyage->id) }}"  id="bouton_reservation" class="btn btn-success rounded-pill border-5 border-white mt-4 ">Je reserve</a>
+                                                                  @if ( $placesRestantes !=0)
+                                                                  <a href="{{ route('soumettre.commande', $voyage->id) }}"  id="write_review" class="btn btn-success rounded-pill border-5 border-white mt-4 ">Je reserve</a>
+                                                                  @else   
+                                                                  <h3>il reset pas des places</h3>
+                                                                  @endif
                                                                 </div>
                                           
                                                               </div>
@@ -116,6 +123,7 @@
    
    
          <script>
+           const counter = setInterval(updateTimeRemaining, 1000);
           const dateFinReservation = new Date("{{ $voyage->date_fin_reservation }}");
           function updateTimeRemaining() {
             const tempsRestant = dateFinReservation - new Date();
@@ -137,14 +145,16 @@
                 document.getElementById('secondes_restantes').innerText = '0';
               
               clearInterval(counter);
-
+              console.log("hghggh")
+              document.getElementById("bouton_reservation").parentElement.style.display="none";
+              document.getElementById("write_review").parentElement.style.display="none";
 
             }
           }
           // Appel initial de la fonction pour mettre à jour le temps restant
           updateTimeRemaining();
           // Appel périodique de la fonction toutes les secondes
-          const counter = setInterval(updateTimeRemaining, 1000);
+         
               </script>
    
     @endsection

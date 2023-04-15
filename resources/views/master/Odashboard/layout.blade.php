@@ -17,7 +17,7 @@
       <div id="page-content-wrapper">
         @include('master.Odashboard.navbar')
              
-                @include('master.Odashboard.cartes')
+              
  
                 @yield('content')
                 

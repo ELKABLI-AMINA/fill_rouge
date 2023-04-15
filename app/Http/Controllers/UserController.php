@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Agence;
+use App\Models\Voyage;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 use App\Http\Controllers\Controller;
@@ -71,12 +73,26 @@ class UserController extends Controller
         
 
         $totalAgences = Agence::count();
+        $totalVoyages = Voyage::count();
+        $totalReservation = Reservation::count();
 
         return view('dashboard')->with([
-            'totalAgences'=>$totalAgences
+            'totalAgences'=>$totalAgences,
+            'totalVoyages'=>$totalVoyages,
+            'totalReservation'=>$totalReservation
            
         ]);
     }
 
-  
+    
+    
+    public function viewODashboard()
+    {
+        $agence= Agence::where('owner_id', auth()->user()->id)->first();
+        $totalVoyages = Voyage::where('agence_id', $agence->id)->count();
+        return view('o-dashboard')->with([
+            'totalVoyages' => $totalVoyages
+        ]);
+    }
+    
 }

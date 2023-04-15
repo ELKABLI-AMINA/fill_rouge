@@ -7,7 +7,7 @@
                     <div class="col-md-3">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-5">Total Agencies</h3>
+                                <h3 class="fs-2">Total Agencies</h3>
                                 <p class="fs-5">{{ $totalAgences }}</p>
                             </div>
                         
@@ -17,8 +17,8 @@
                     <div class="col-md-3">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">4920</h3>
-                                <p class="fs-5">Sales</p>
+                                <h3 class="fs-2">Total Voyages</h3>
+                                <p class="fs-5">{{ $totalVoyages }}</p>
                             </div>
                             {{-- icon --}}
                          </div>
@@ -27,8 +27,8 @@
                     <div class="col-md-3">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">3899</h3>
-                                <p class="fs-5">Delivery</p>
+                                <h3 class="fs-2">Total Reservation</h3>
+                                <p class="fs-5">{{$totalReservation }}</p>
                             </div>
                           
                         </div>

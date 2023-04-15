@@ -28,7 +28,7 @@
 
                                 <div class="form-group">
                                 <label for="quantity">Quantité:</label>
-                                <input type="number" name="quantity" id="quantity" min="1" max="30" onchange="calculateTotal()">
+                                <input type="number" name="quantity" id="quantity" min="1" max="{{ session()->get('placesRestantes') }}" onchange="calculateTotal()">
                                 </div>
 
                                 <div class="form-group">
@@ -41,8 +41,7 @@
                                 <input type="text" name="total_price" id="total_price" readonly>
                                 </div>
                                                   
-                       {{-- <a href="{{ route('VerificationCommande') }}" class="btn btn-success btn-lg active mt-2" role="button" aria-pressed="true">Réserver</a> --}}
-                                <button type="submit" class="btn btn-success"><a href="{{ route('paiement') }}" class="btn btn-success btn-lg active mt-2" role="button" aria-pressed="true">Réserver</a></button>
+                                <button type="submit" class="btn btn-success">Réserver</button>
                 </form>
 
                
