@@ -2,17 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\Contact;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
 
-    public function contact(){
+    public function index(){
         return view('contact-us');
     }
+
+
+    public function store( Request $request)
+    {
+        Contact::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'message'=>$request->message,
+            
+        ]);
+        return redirect()->route('contact-us');
+    }
+
+
 
     public function sendEmail( Request $request)
     {

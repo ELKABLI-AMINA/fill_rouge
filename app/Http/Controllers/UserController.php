@@ -60,6 +60,27 @@ class UserController extends Controller
     }
 
 
+    public function edit()
+    {
+        return view('Auth.EditProfil');
+    }
+
+    public function update( Request $request)
+    {
+        $user = Auth::user();
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone_number' => $request->phone_number
+        ]);
+        return redirect()->route('login');
+
+    }
+
+
+
+
+
     public function logout()
     {
         Auth::logout();

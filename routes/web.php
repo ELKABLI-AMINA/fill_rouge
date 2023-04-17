@@ -27,7 +27,8 @@ use App\Http\Controllers\QRcodeController;
 Route::get('/redirect', [RedirectController::class, 'redirect'])->name('redirect');
 
 Route::get('/', [VoyageController::class, 'show'])->name('/');
-Route::get('/contact-us', [ContactController::class, 'contact'])->name('contact-us');
+Route::get('/contact-us', [ContactController::class, 'index'])->name('contact-us');
+Route::post('/contactStore', [ContactController::class, 'store'])->name('contact-store');
 Route::get('about', function () { return view('about');})->name('about');
 Route::get('/voyage/{slug}', [VoyageController::class, 'showVoyage'])->name('readmore');
 
@@ -36,7 +37,7 @@ Route::get('/voyages/{id}/formVote', [VoteController::class, 'index'])->name('vo
 Route::post('/formVote/{id_voyage}', [VoteController::class, 'noterVoyage'])->name('store.vote');
 
 Route::get('/paiement', function () { return view('paiement');})->name('paiement');
-Route::post('/contact', [ContactController::class, 'sendEmail'])->name('contact-us');
+Route::post('/contact', [ContactController::class, 'sendEmail'])->name('submit-contact');
 Route::get('/viresement', function () { return view('viresement');})->name('viresement');
 Route::get('/espece', function () { return view('espece');})->name('espece');
 
@@ -59,6 +60,8 @@ Route::post('/registerUser', [UserController::class, 'register'])->name('registe
 Route::get('/login', [UserController::class, 'show'])->name('login');
 Route::post('/loginUser', [UserController::class, 'login'])->name('loginUser');
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+Route::get('/EditProfil',[UserController::class, 'edit'])->name('edit.profil');
+Route::PUT('/profil', [UserController::class, 'update'])->name('update-profile');
 
 
 Route::get('/formAgence', [AgenceController::class, 'index'])->name('form.agence');
