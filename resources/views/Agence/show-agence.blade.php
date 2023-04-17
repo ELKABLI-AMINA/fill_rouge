@@ -14,9 +14,9 @@
                                       <div class="card m-auto" style="width:33rem">
                                         <img src="{{ asset('uploads/'.$agence['logo']) }}" class="card-img-top" alt="...">
                                                 <div class="card-body h-100">
-                                                <h5 class="card-title">{{ $agence['name'] }}</h5>
-                                                <p class="card-text">{{ $agence['description'] }}</p>
-                                                <p class="card-text">{{ $agence['address'] }}</p>
+                                                <h5 class="card-title">{{ $agence->name}}</h5>
+                                                <p class="card-text">{!! $agence->description !!}</p>
+                                                <p class="card-text">{{ $agence->address }}</p>
                                                 </div>
                                               
                                                 <div >

@@ -55,7 +55,7 @@
 
 
 <script>
-  tinymce.init({
+   $('textarea:not(#comment)').tinymce({
   selector: 'textarea',
   plugins: [
     'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',

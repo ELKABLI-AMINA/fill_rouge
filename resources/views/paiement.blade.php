@@ -13,10 +13,10 @@
                 <div class="bg-success text-white  mt-3 px-2 " style="border-radius: 2px; height: 40px;">3- Payer votre réservation</div>
                 <form action="" class="mt-3" method="POST">
                   <div>
-                      <a href="{{ route('viresement') }}" style="color: #87CEFA" class="btn btn-primary text-start text-white text-bold paiement mt-2">1-Versement bancaire</a>
+                      <a href="{{ route('viresement') }}" style="background-color: #3FA8E5" class="btn btn-primary text-start text-white text-bold paiement mt-2">1-Versement bancaire</a>
                   </div>
                   <div>
-                      <a href="{{ route('espece') }}" class="btn btn-success text-start paiement mt-2">2-Espèce</a>
+                      <a href="{{ route('espece') }}" style="background-color: #3FA8E5" class="btn btn-success text-start paiement mt-2">2-Espèce</a>
                   </div>
                 
               </form>

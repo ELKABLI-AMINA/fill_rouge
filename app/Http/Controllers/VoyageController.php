@@ -151,6 +151,4 @@ class VoyageController extends Controller
             'placesRestantes' => $placesRestantes
         ]);
     }
-
-  
 }

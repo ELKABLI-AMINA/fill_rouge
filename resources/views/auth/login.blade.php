@@ -42,6 +42,11 @@ Register
                                         <input type="checkbox" class="form-check-input" id="formCheck">
                                         <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me</small></label>
                                     </div>
+                                    <div class="form-check">
+                                        <a class="btn btn-link" href="#">
+                                            Forgot Your Password?
+                                        </a>
+                                    </div>
                             
                                 </div>
                                 <div class="input-group mb-3">

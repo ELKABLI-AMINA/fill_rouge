@@ -9,7 +9,7 @@
         <div class="row my-5">
             <h3 class=" mb-4 bg-white ">Agences</h3>
             <div class="col table-responsive">
-                <table class="table bg-white rounded shadow-sm  table-hover ">
+                <table id="example" class="table bg-white rounded shadow-sm  table-hover ">
                     <thead class="bg-dark text-white">
                         <tr>
                             <th scope="col">#</th>

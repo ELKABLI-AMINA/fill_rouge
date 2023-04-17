@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 
 class StripeController extends Controller
@@ -15,7 +16,7 @@ class StripeController extends Controller
     public function makePayment(Request $request)
     {
         $input = $request->all();
-
+        $reservation = session()->get('reservation_id');
         \Stripe\Stripe::setApiKey('sk_test_51MwBHhEN0ITF1muGPKf3WDh31j4hZzHzPO1AEQNATsdWrVsoKNmP4gEwBl5YUC4UKDSTUXMt8aZ9h64MRGtox4k900xJo2oxad');
         $charge = \Stripe\Charge::create([
             'source' => $_POST['stripeToken'],
@@ -23,5 +24,13 @@ class StripeController extends Controller
             'amount' => 7000,
             'currency' => 'usd',
         ]);
+        if ($charge) {
+            $reservation = Reservation::where('id', $reservation)->first();
+
+
+            $reservation->update([
+                'status' => 'Done'
+            ]);
+        }
     }
 }

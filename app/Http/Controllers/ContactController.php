@@ -28,6 +28,14 @@ class ContactController extends Controller
         return redirect()->route('contact-us');
     }
 
+    public function show()
+    {
+       $messages= Contact::all();
+        return view('message')->with([
+            'messages'=>$messages
+        ]);
+    }
+
 
 
     public function sendEmail( Request $request)

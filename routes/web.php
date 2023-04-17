@@ -62,6 +62,7 @@ Route::post('/loginUser', [UserController::class, 'login'])->name('loginUser');
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('/EditProfil',[UserController::class, 'edit'])->name('edit.profil');
 Route::PUT('/profil', [UserController::class, 'update'])->name('update-profile');
+Route::get('/message',[ContactController::class, 'show'])->name('message');
 
 
 Route::get('/formAgence', [AgenceController::class, 'index'])->name('form.agence');

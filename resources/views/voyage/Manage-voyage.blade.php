@@ -27,7 +27,7 @@
                            <td>{{$voyage->id}}</td>
                             <td>{{$voyage->name}}</td>
                             <td> {{$voyage->prix}}</td>
-                           
+                            <td> {{$voyage->description}}</td>
                             <td> {{$voyage->image}}</td>
                             <td><div class="d-flex">
                                 

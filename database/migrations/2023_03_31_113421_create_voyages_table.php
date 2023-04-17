@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('voyages', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description');
+            $table->longText('description');
             $table->string('slug');
             $table->foreignId('agence_id')->constrained('agences')->onDelete('cascade')->onUpdate('cascade');
             $table->string('image');
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->integer('nb_personne');
             $table->date('date_fin_reservation');
             $table->float('prix');
-            $table->integer('nb_max_participants');
+            $table->integer('nb_limite_reservation');
             $table->timestamps();
         });
     }

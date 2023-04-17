@@ -36,6 +36,7 @@ class ReservationController extends Controller
             'status' => 'waiting'
         ]);
         session()->put('total', $reservation->Montant_total);
+        session()->put('reservation_id', $reservation->id);
 
 
 
