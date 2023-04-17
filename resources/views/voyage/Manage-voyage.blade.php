@@ -15,7 +15,7 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">name</th>
-                            <th scope="col">description</th>
+                            <th  scope="col" class="text-truncate">description</th>
                             <th scope="col">Address</th>
                             <th scope="col">logo</th>
                             <th scope="col">Status</th>
