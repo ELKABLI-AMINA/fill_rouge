@@ -23,7 +23,7 @@ Editer Votre Voyage
        @endif
   <div class="row">
        <div class="col-md-6">
-                <form action="{{ route('voyage.update', $voyage->slug) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('voyage.update', ['slug'=>$voyage->slug]) }}" method="post" enctype="multipart/form-data">
 
                  @csrf
                  @method('PUT')

@@ -42,9 +42,7 @@ Register
                                         <input type="checkbox" class="form-check-input" id="formCheck">
                                         <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me</small></label>
                                     </div>
-                                    <div class="forgot">
-                                        <small><a href="#">Forgot Password?</a></small>
-                                    </div>
+                            
                                 </div>
                                 <div class="input-group mb-3">
                                     <button class="btn btn-lg btn-primary w-100 fs-6">Login</button>
@@ -52,7 +50,7 @@ Register
                           </form>  
                             
                             <div class="row">
-                                <small>Don't have account? <a href="{{ route('registerUser') }}">Sign Up</a></small>
+                                <small>Don't have account? <a href="{{ route('register') }}">Sign Up</a></small>
                             </div>
                       </div>
                   </div> 

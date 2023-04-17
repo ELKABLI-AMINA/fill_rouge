@@ -6,10 +6,12 @@ use App\Models\Agence;
 use App\Models\Voyage;
 use App\Models\Reservation;
 use Illuminate\Support\Str;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\VoyageRequest;
+use Illuminate\Support\Facades\Auth;
 
 class VoyageController extends Controller
 {
@@ -75,7 +77,11 @@ class VoyageController extends Controller
 
     public function ManageVoyage()
     {
-        $voyage = Voyage::All();
+        $user_id = Auth::user()->id;
+        $agence = Agence::where('owner_id', $user_id)->first();
+        $voyage = Voyage::where('agence_id', $agence->id)->get();
+
+
         return view('Voyage.Manage-voyage')->with(['voyages' => $voyage]);
     }
 
@@ -125,29 +131,14 @@ class VoyageController extends Controller
     public function delete($slug)
     {
         $voyage = Voyage::where('slug', $slug)->first();
-        unlink(public_path('uploads') . '/' . $voyage->image);
         $voyage->delete();
-        return view('/');
+        return redirect()->route('manage.voyage');
     }
 
 
     public function ShowVoyage($id_voyage)
     {
-        //     $voyages = DB::table('voyages')
-        // ->leftJoin('reservations', 'voyages.id', '=', 'reservations.voyage_id')
-        // ->select('voyages.id', 'voyages.name', 'voyages.description', 'voyages.prix', DB::raw('SUM(reservations.participants) AS nombre_reservations'), 'voyages.nb_limite_reservation')
-        // ->groupBy('voyages.id', 'voyages.name', 'voyages.description', 'voyages.prix', 'voyages.nb_limite_reservation')
-        // ->get();
 
-        //     foreach ($voyages as $voyage) {
-        //         echo $voyage->description;
-        //     }
-
-
-        //     return view('readmore', [
-        //         'voyage' => $voyage
-
-        //     ]);
         $voyage = Voyage::where('slug', $id_voyage)->first();
         $id = $voyage->id;
         $reservation = Reservation::where('voyage_id', $id)->get();
@@ -161,35 +152,5 @@ class VoyageController extends Controller
         ]);
     }
 
-
-
-
-
-    // public function showReadMore($id_voyage)
-    // {
-
-    //     $reservation = Reservation::all(); 
-    //     $totalParticipants = count(explode(',', $reservation->participants));
-    //     $voyage = DB::table('voyages')->where('id_voyage', $id_voyage)->first();
-    //     return view('readmore')->with([
-    //         'voyage'=>$voyage,
-    //         'reservation'=>$reservation,
-    //         'totalParticipants'=>$totalParticipants
-
-    //     ]);
-
-
-    // }
-
-
-    public function showReservationForm($voyage_id)
-    {
-        $voyage = Voyage::find($voyage_id);
-
-
-        return view('voyage.Soumettre', [
-            'voyage' => $voyage,
-
-        ]);
-    }
+  
 }

@@ -10,10 +10,21 @@ use App\Http\Requests\ReservationRequest;
 
 class ReservationController extends Controller
 {
+
+    public function showReservationForm($voyage_id)
+    {
+        $voyage = Voyage::find($voyage_id);
+
+
+        return view('voyage.Soumettre', [
+            'voyage' => $voyage,
+
+        ]);
+    }
+
+
     public function store(ReservationRequest $request)
     {
-
-
 
         $reservation = Reservation::create([
             'user_id' => auth()->user()->id,
@@ -25,7 +36,7 @@ class ReservationController extends Controller
             'status' => 'waiting'
         ]);
         session()->put('total', $reservation->Montant_total);
-        
+
 
 
 

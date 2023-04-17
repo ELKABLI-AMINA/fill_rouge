@@ -25,7 +25,7 @@
                                               <div class="col-md-3 mt-5 bg-light h-50 "  >
 
                                                             <div class="text-center "  >
-                                                              <span>Places restantes: {{ $placesRestantes }}</span>
+                                                              <span class="text-danger">Places restantes: {{ $placesRestantes }}</span>
                                                           <span class="">Temps Restant</span>
                                                          
 

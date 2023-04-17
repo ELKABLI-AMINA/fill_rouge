@@ -36,4 +36,14 @@ class Voyage extends Model
     }
     use Rateable;
 
+
+  
+
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
 }
+
+
+

@@ -19,4 +19,10 @@ class Reservation extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function Voyage()
+    {
+        return $this->belongsTo(voyage::class);
+    }
 }
+

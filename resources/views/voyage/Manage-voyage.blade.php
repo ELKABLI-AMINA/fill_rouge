@@ -35,11 +35,12 @@
                                 <form style="border: none" action="{{ route('voyage.delete', $voyage->slug) }}" method="post">
                                     @csrf
                                     @method('DELETE')
+                                    <button class="btn btn-danger" type="submit">
+                                        Supprimer
+                                  </button>
                                    
                                 </form>
-                                <button class="btn btn-danger" type="submit">
-                                    Supprimer
-                              </button>
+                                
                                  
                              </div></td>
                              <td>

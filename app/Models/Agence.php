@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Agence extends Model
 {
@@ -20,22 +21,20 @@ class Agence extends Model
 
     public function getRouteKeyName()
     {
-       return 'slug' ;
+        return 'slug';
     }
-    public function agence()
+    public function user()
     {
-        return $this->hasOne(agence::class);
+        return $this->belongsTo(User::class);
     }
 
     public function voyage()
     {
         return $this->hasMany(Voyage::class);
     }
-    
+
     public function ville()
     {
         return $this->belongsTo(Ville::class);
     }
-
-
 }

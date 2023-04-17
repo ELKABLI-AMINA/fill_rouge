@@ -16,13 +16,8 @@ class RedirectController extends Controller
         } elseif (Auth::user()->role == 1) {
             return redirect()->route('owner');
         } else {
-            return redirect()->route('user');
+            return redirect()->route('/');
         }
     }
 
-    public function user()
-    {
-        
-        return redirect()->route('/');
-    }
 }

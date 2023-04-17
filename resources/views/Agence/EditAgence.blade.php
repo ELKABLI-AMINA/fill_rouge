@@ -23,7 +23,7 @@ Modifier Votre Agence
        @endif
   <div class="row">
        <div class="col-md-6">
-              <form action="{{ route('Agence.update', $agence->slug) }}" method="post" enctype="multipart/form-data">
+              <form action="{{ route('Agence.update', ['slug'=>$agence->slug]) }}" method="post" enctype="multipart/form-data">
                  @csrf
                  @method('PUT')
                       <div class="form-group mt-2 ">

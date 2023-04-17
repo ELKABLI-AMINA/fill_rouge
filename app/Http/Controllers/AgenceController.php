@@ -48,13 +48,13 @@ class AgenceController extends Controller
 
     public function store(AgenceRequest $request)
     {
-        
+
         if ($request->has('logo')) {
             $file = $request->logo;
             $logo_name = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('uploads'), $logo_name);
         }
-        
+
 
         Agence::create([
             'name' => $request->name,
@@ -73,13 +73,14 @@ class AgenceController extends Controller
 
     public function edit($slug)
     {
-        
+
         $villes = Ville::all();
+
         $agence = Agence::where('slug', $slug)->first();
         return view('Agence.EditAgence')->with([
             'agence' => $agence,
             'villes' => $villes
-            
+
         ]);
     }
 
@@ -97,18 +98,14 @@ class AgenceController extends Controller
             'ville_id' => $request->ville_id,
         ]);
 
-        return redirect()->back()->with([
-            'success' => 'Agence modifiée avec succès'
-        ]);
+        return redirect()->route('show-agence', ['slug' => $agence->slug]);
     }
 
     public function delete($slug)
     {
         $agence = Agence::where('slug', $slug)->first();
         $agence->delete();
-        $agences = Agence::paginate(6);
-        return view('Agence.AllAgencies')->with([
-            'agences' => $agences
-        ]);
+
+        return redirect()->route('AllAgencies');
     }
 }
