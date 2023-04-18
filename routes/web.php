@@ -90,7 +90,7 @@ Route::middleware(['auth', 'owner'])->group(function () {
 
 
     Route::get('/formVoyage', [VoyageController::class, 'index'])->name('create.voyage');
-    Route::get('/ManageVoyage', [VoyageController::class, 'ManageVoyage'])->name('manage.voyage');
+    Route::get('/AllVoyage', [VoyageController::class, 'AllVoyage'])->name('AllVoyage');
     Route::post('/formVoyage', [VoyageController::class, 'store']);
     Route::get('/editVoyage/{slug}', [VoyageController::class, 'edit'])->name('voyage.edit');
     Route::put('/updateVoyage/{slug}', [VoyageController::class, 'update'])->name('voyage.update');

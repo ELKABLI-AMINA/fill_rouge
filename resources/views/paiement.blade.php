@@ -20,26 +20,25 @@
                   </div>
                 
               </form>
-              <form action="{{ route('make.payment') }}" method="post">
-                @csrf
-                <script>
-
-                </script>
-                <script
-                                src="https://checkout.stripe.com/checkout.js"
-                                
-                                class="stripe-button"
-                                data-key="pk_test_51MwBHhEN0ITF1muGvBmeMZKMtgiSjYjUbzacUFU2TXmsJ50QzGR80QXDcj8HSpKUCG6r7NAWlp6YZYu617M1FuA000oWmw9lO3"
-                                data-name="Trip"
-                                data-description="Enjoy Your Trip"
-                                data-amount="{{ session()->get('total')  }}"
-                                data-image="https://www.webappfix.com/storage/app/public/site-setting/SRBx2hTgEOaHdozWVR3hgPb3LTdEw9NwajD05FL2.png" 
-                                data-currency="usd">
-                                data-label="Make Payment">
-                             
-                </script>
-                                            
-                </form>
+              {{-- <form action="{{ route('make.payment') }}" method="post">
+                @csrf --}}
+                <div id="payment-script" class="d-none">
+                  <script
+                    src="https://checkout.stripe.com/checkout.js"
+                    
+                    class="stripe-button hidden"
+                    data-key="pk_test_51MwBHhEN0ITF1muGvBmeMZKMtgiSjYjUbzacUFU2TXmsJ50QzGR80QXDcj8HSpKUCG6r7NAWlp6YZYu617M1FuA000oWmw9lO3"
+                    data-name="Trip"
+                    data-description="Enjoy Your Trip"
+                    data-amount="{{ session()->get('total')  }}"
+                    data-image="https://www.webappfix.com/storage/app/public/site-setting/SRBx2hTgEOaHdozWVR3hgPb3LTdEw9NwajD05FL2.png" 
+                    data-currency="usd"
+                    data-label="Make Payment">
+                              
+                  </script>               
+                </div>
+                <button class="btn btn-success" onclick="document.querySelector('#payment-script button').click();">Make Payment</button>
+                {{-- </form> --}}
               
  <div
                 

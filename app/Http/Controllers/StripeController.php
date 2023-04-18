@@ -17,9 +17,9 @@ class StripeController extends Controller
     {
         $input = $request->all();
         $reservation = session()->get('reservation_id');
-        \Stripe\Stripe::setApiKey('sk_test_51MwBHhEN0ITF1muGPKf3WDh31j4hZzHzPO1AEQNATsdWrVsoKNmP4gEwBl5YUC4UKDSTUXMt8aZ9h64MRGtox4k900xJo2oxad');
+        \Stripe\Stripe::setApiKey(env('STRIPE_KEY'));
         $charge = \Stripe\Charge::create([
-            'source' => $_POST['stripeToken'],
+            'source' => env('STRIPE_KEY'),
             'description' => "10 cucumbers from Roger's Farm",
             'amount' => 7000,
             'currency' => 'usd',

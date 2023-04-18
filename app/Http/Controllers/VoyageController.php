@@ -75,14 +75,14 @@ class VoyageController extends Controller
 
 
 
-    public function ManageVoyage()
+    public function AllVoyage()
     {
         $user_id = Auth::user()->id;
         $agence = Agence::where('owner_id', $user_id)->first();
         $voyage = Voyage::where('agence_id', $agence->id)->get();
 
 
-        return view('Voyage.Manage-voyage')->with(['voyages' => $voyage]);
+        return view('Voyage.AllVoyage')->with(['voyages' => $voyage]);
     }
 
     public function edit($slug)
@@ -101,7 +101,7 @@ class VoyageController extends Controller
             $file = $request->image;
             $image_name = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('uploads'), $image_name);
-            // unlink(public_path('uploads') . '/' . $voyage->image);
+          
             $voyage->image = $image_name;
         }
 

@@ -370,3 +370,17 @@ body{
 }
 
 
+
+
+.stripe-button {
+  background-color: red;
+}
+
+
+.img-footer:hover{
+  transform: scale(1.1);
+}
+
+.NAV:hover{
+  opacity: 1;
+}

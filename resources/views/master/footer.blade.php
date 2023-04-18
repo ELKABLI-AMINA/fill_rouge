@@ -31,36 +31,33 @@
 
                     </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Gallery</h4>
-                <div class="row g-2 pt-2">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white  ">Gallery</h4>
+                <div class="row  g-2 pt-2">
                     <div class="col-4">
-                        <img src="{{asset('img/20-destinations-de-reve-678x381.jpg')}}" alt="" class="img-fluid bg-light p-1">
+                        <img src="{{asset('img/bali-tour-packages-4706037_960_720.jpg')}}" alt="" class="img-fluid img-footer bg-light p-1">
                     </div>
                     <div class="col-4">
-                        <img src="{{asset('img/bali-tour-packages-4706037_960_720.jpg')}}" alt="" class="img-fluid bg-light p-1">
+                        <img src="{{asset('img/bali-tour-packages-4706037_960_720.jpg')}}" alt="" class="img-fluid img-footer bg-light p-1">
                     </div>
                     <div class="col-4">
-                        <img src="{{asset('img/nord.jpg')}}" alt="" class="img-fluid bg-light p-1">
+                        <img src="{{asset('img/nord.jpg')}}" alt="" class="img-fluid  img-footer bg-light p-1">
                     </div>
                     <div class="col-4">
-                        <img src="{{asset('img/agafay.jpg')}}" alt="" class="img-fluid bg-light p-1">
+                        <img src="{{asset('img/agafay.jpg')}}" alt="" class="img-fluid img-footer bg-light p-1">
                     </div>
                     <div class="col-4">
-                        <img src="{{asset('img/dakhla.jpg')}}" alt="" class="img-fluid bg-light p-1">
+                        <img src="{{asset('img/dakhla.jpg')}}" alt="" class="img-fluid img-footer bg-light p-1">
                     </div>
                     <div class="col-4">
-                        <img src="{{asset('img/nord.jpg')}}" alt="" class="img-fluid bg-light p-1">
+                        <img src="{{asset('img/nord.jpg')}}" alt="" class="img-fluid img-footer bg-light p-1">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text white mb-3">
-                    Newsletter
-                </h4>
+            <div class="col-lg-3 col-md-6 ">
+               
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id numquam atque libero sint! Nesciunt pariatur,</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <input type="" class="form-control border-primary w-100 py-3 ps-4 pe-5" placeholder="Your Email">
                         
                     @if (auth()->check() && auth()->user()->hasAgence())
                         <button class="btn btn-success ">U Applied</button>
