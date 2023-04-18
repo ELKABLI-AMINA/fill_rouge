@@ -85,7 +85,7 @@ class AgenceController extends Controller
     }
 
 
-
+    
     public function update(AgenceRequest $request, $slug)
     {
         $agence = Agence::where('slug', $slug)->first();

@@ -16,7 +16,7 @@ class ReservationController extends Controller
         $voyage = Voyage::find($voyage_id);
 
 
-        return view('voyage.Soumettre', [
+        return view('formReservation', [
             'voyage' => $voyage,
 
         ]);
@@ -37,9 +37,6 @@ class ReservationController extends Controller
         ]);
         session()->put('total', $reservation->Montant_total);
         session()->put('reservation_id', $reservation->id);
-
-
-
 
         return redirect()->route('paiement');
     }

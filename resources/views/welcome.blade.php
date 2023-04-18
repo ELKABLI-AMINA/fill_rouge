@@ -19,7 +19,7 @@
                  <img src="{{asset('img/2c775re-1.jpg')}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block mb-5">
                         <h5 class="fs-45 mt-25"><strong> Enjoy Your Vacation With Us </strong></h5>
-                        <p class="text-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quaerat, maiores dolor voluptas est dolorem pariatur at fugit? </p>
+
                             
                      </div>
           </div>
@@ -27,7 +27,7 @@
             <img src="{{asset('img/Life-in-Istanbul-is-Istanbul-a-good-place-to-live-work-and-study-new4.jpg')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block mb-5">
               <h5><strong> Enjoy Your Vacation With Us </strong></h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil pariatur ratione asperiores esse doloremque, ullam cupiditate </p>
+             
              
               
             </div>
@@ -36,8 +36,6 @@
             <img src="{{asset('img/aa.jpg')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block mb-5">
               <h5><strong> Enjoy Your Vacation With Us </strong></h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At facilis, non omnis accusantium a ducimus maxime praesentium rem </p>
-             
             </div>
           </div>
         </div>

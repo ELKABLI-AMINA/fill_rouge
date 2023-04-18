@@ -55,7 +55,7 @@
                                                                 <div class="card-body text-center">
                                                                   <h5 class="card-title text-white">{{ $voyage->prix }}:00DH</h5>
                                                                   @if ( $placesRestantes !=0)
-                                                                  <a href="{{ route('soumettre.commande', $voyage->id) }}"  id="write_review" class="btn btn-success rounded-pill border-5 border-white mt-4 ">Je reserve</a>
+                                                                  <a href="{{ route('form.reservation', $voyage->id) }}"  id="write_review" class="btn btn-success rounded-pill border-5 border-white mt-4 ">Je reserve</a>
                                                                   @else   
                                                                   <h3>il reset pas des places</h3>
                                                                   @endif

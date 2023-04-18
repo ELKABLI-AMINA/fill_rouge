@@ -132,7 +132,7 @@ class VoyageController extends Controller
     {
         $voyage = Voyage::where('slug', $slug)->first();
         $voyage->delete();
-        return redirect()->route('manage.voyage');
+        return redirect()->route('AllVoyage');
     }
 
 

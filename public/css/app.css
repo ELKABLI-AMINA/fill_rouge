@@ -226,9 +226,8 @@
 form {
   max-width: 600px;
   margin: 0 auto;
-  /* padding: 20px; */
-  border: 1px solid #ccc;
-  border-radius: 5px;
+ 
+ 
 }
 
 .form-group {
@@ -383,4 +382,9 @@ body{
 
 .NAV:hover{
   opacity: 1;
+}
+
+.featured-image img {
+ 
+  border-radius: 20px;
 }

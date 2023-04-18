@@ -103,5 +103,5 @@ Route::middleware(['auth', 'owner'])->group(function () {
 // ========= USER ROUTES===============
 Route::middleware(['auth', 'user'])->group(function () {
     Route::post('/voyages/{id_voyage}/Soumettre-la-commande',  [ReservationController::class, 'store']);
-    Route::get('/voyages/{id_voyage}/Soumettre-la-commande',  [ReservationController::class, 'showReservationForm'])->name('soumettre.commande');
+    Route::get('/voyages/{id_voyage}/formReservation',  [ReservationController::class, 'showReservationForm'])->name('form.reservation');
 });
