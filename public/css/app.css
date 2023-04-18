@@ -226,7 +226,7 @@
 form {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  /* padding: 20px; */
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -368,9 +368,5 @@ body{
   height: 30px;
   width: 120px;
 }
-.bottom{
-  height: 60px;
-  width: 200px;
-  border: none;
-}
+
 

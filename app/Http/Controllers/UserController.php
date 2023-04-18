@@ -115,5 +115,36 @@ class UserController extends Controller
             'totalVoyages' => $totalVoyages
         ]);
     }
+
+
+
+
+    public function action($id, $act)
+    {
+        if($act ==1){
+            $agence = Agence::find($id);
+            if($agence){
+                $agence->status =1;
+                $agence->save();
+
+                $user= User::find($agence->owner_id);
+                $user->role=1;
+                $user->save();
+                return redirect()->back()->with('success','the Agence has been accepted with success');
+            }else{
+                abort(404);
+            }
+        }elseif($act ==2){
+            $agence = Agence::find($id);
+            if($agence){
+                $agence->status =2;
+                $agence->save();
+                return redirect()->back()->with('success','the Agence has been declined with success'); 
+            }else{
+                abort(404);
+            }
+        }
+        
+    }
     
 }

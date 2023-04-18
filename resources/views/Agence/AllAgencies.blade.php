@@ -17,8 +17,9 @@
                             <th scope="col">description</th>
                             <th scope="col">Address</th>
                             <th scope="col">logo</th>
-                           
                             <th scope="col">Action</th>
+                            <th scope="col">Status</th>
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -31,7 +32,7 @@
                             <td> {{$agence->logo}}</td>
                          
                             <td>
-                            <div class="d-flex bottom  ">
+                            <div >
                               
 
                                     <form action="{{ route('Agence.delete', $agence->slug) }}" method="POST" class="border-0 " style="display: inline-block;">
@@ -40,8 +41,19 @@
                                     <button type="submit" class="btn btn-danger  "><i class="bi bi-trash"></i> Supprimer</button>
                                     </form>
 
-                                 </td>
-                            </div>     
+                                
+                            </div> 
+                        </td>
+                        <td>
+                            @if($agence->status == 0)
+                                pending
+                            @elseif ($agence->status == 1)
+                                accepted
+                            @elseif ($agence->status == 2)
+                                canceled
+
+                            @endif
+                            </td>    
                         </tr>
                         @endforeach
                     </tbody>

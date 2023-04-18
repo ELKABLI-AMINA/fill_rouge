@@ -12,19 +12,23 @@ use Illuminate\Queue\SerializesModels;
 class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
-public $datalis;
+    public $name;
+    public $email;
+    public $phone;
+    public $subject;
+
     /**
      * Create a new message instance.
      */
-    public function __construct($datalis)
+    public function __construct($name,$email,$phone,$subject)
     {
-        $this->datalis=$datalis;
+        //
+        $this->name = $name;
+        $this->email = $email;
+        $this->phone = $phone;
+        $this->subject = $subject;
     }
-   
-    public function build()
-    {
-       return $this->subject('Contact Messag')->view('email.contactMail');
-    }
+
     /**
      * Get the message envelope.
      */

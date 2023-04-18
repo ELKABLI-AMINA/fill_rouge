@@ -33,7 +33,10 @@
                                     : ( $demande->status==1 ? 'Accepted' : 'Rejected')
 
                     }}</td>
-                        <td> </td>
+                        <td>
+                            <a href="/demandes/{{ $demande->id}}/action/1" class="btn btn-success">Accepted</a>    
+                            <a href="/demandes/{{ $demande->id}}/action/2" class="btn btn-danger">Canceled</a>   
+                        </td>
                        
                     </tr>
                     @endforeach

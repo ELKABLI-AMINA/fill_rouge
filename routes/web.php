@@ -47,6 +47,9 @@ Route::post('make/payment', [StripeController::class, 'makePayment'])->name('mak
 Route::get('/qrcode', [QRCodeController::class, 'generateQRCode']);
 
 
+Route::get('/demandes/{id}/action/{act}',[UserController::class, 'action']);
+
+
 
 
 

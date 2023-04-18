@@ -7,10 +7,11 @@
                 <title>Contact us</title>
 </head>
 <body>
-       <h1>{{ $detalis['name']}}</h1>
-       <h2>{{ $detalis['email']}}</h2>
-       <h2>{{ $detalis['phone']}}</h2>
-       <h2>{{ $detalis['message']}}</h2>   
+       <p>{{ $name }}</p>
+       <p>{{ $email}}</p>
+       <p>{{ $phone }}</p>
+       <p>{{ $subject }}</p>
+
        <p>Meeerci</p>       
 </body>
 </html>
