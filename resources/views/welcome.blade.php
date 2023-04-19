@@ -54,7 +54,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 " style="min-height: 400px;">
                  <div class="position-relative h-100">
-                    <img src="{{ asset('img/1519943176.jpg') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
+                    <img src="{{ asset('img/Une.jpg') }}" alt="" style="object-fit:cover;" class="img-fluid position-absolute w-100 h-100">
                  </div>   
                 </div>
                 <div class="col-lg-6">
@@ -132,10 +132,10 @@
                             <div class=" .package-item">
                             
                                     <div class="gallery-boxx">
-                                        <img src="{{asset('uploads/'.$voyage->image)}}" alt="" class="img-fluid">
+                                        <img src="{{asset('uploads/'.$voyage->image)}}" alt="" width="100%" class="img-fluid">
                                     </div>
                                     <div class="d-flex border-bottom">
-                                        <small class="flex-fill text-center border-end py-2">
+                                        <small class="flex-fill text-center border-start border-end py-2">
                                             <i class="fa fa-map-marker-alt text-success me-2"></i> {{ Str::limit($voyage->name,12)  }}
                                         </small>
                                         <small class="flex-fill text-center border-end py-2">
@@ -147,13 +147,7 @@
                                     </div>
                                     <div class="text-center p-4">
                                                 <h3 class="mb-0">{{ $voyage->prix }}.00 DH</h3>
-                                                {{-- <div class="mb-3">
-                                                    <small class="fa fa-star text-success"></small>
-                                                    <small class="fa fa-star text-success"></small>
-                                                    <small class="fa fa-star text-success"></small>
-                                                    <small class="fa fa-star text-success"></small>
-                                                    <small class="fa fa-star text-success"></small>
-                                                </div> --}}
+                                               
                                         
                                                 <p class="fw-bold"></p>
                                                 <div class="d-flex justify-content-center mb-2">

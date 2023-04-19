@@ -6,22 +6,20 @@
 
 @section('content')
    
-<div class="container">
+<div class="">
   
   
 
-                <div class="bg-success text-white  mt-3 px-2 " style="border-radius: 2px; height: 40px;">3- Payer votre réservation</div>
+                <div class="bg-success text-white  mt-3 px-2 " style="border-radius: 2px; height: 40px;">Payer votre réservation</div>
                 <form action="" class="mt-3" method="POST">
                   <div>
-                      <a href="{{ route('viresement') }}" style="background-color: #3FA8E5" class="btn btn-primary text-start text-white text-bold paiement mt-2">1-Versement bancaire</a>
+                      <a href="{{ route('viresement') }}"  class="btn btn-success text-start text-white text-bold paiement mt-2">Versement bancaire</a>
                   </div>
                   <div>
-                      <a href="{{ route('espece') }}" style="background-color: #3FA8E5" class="btn btn-success text-start paiement mt-2">2-Espèce</a>
+                      <a href="{{ route('espece') }}"  class="btn btn-success text-start paiement mt-2">2-Espèce</a>
                   </div>
                 
-              </form>
-              {{-- <form action="{{ route('make.payment') }}" method="post">
-                @csrf --}}
+             
                 <div id="payment-script" class="d-none">
                   <script
                     src="https://checkout.stripe.com/checkout.js"
@@ -38,7 +36,7 @@
                   </script>               
                 </div>
                 <button class="btn btn-success" onclick="document.querySelector('#payment-script button').click();">Make Payment</button>
-                {{-- </form> --}}
+               
               
  <div
                 

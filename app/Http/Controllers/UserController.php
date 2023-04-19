@@ -111,8 +111,10 @@ class UserController extends Controller
     {
         $agence= Agence::where('owner_id', auth()->user()->id)->first();
         $totalVoyages = Voyage::where('agence_id', $agence->id)->count();
+        // $totlaReservation = Reservation::where('voyage_id',$voyage->id)->count();
         return view('o-dashboard')->with([
-            'totalVoyages' => $totalVoyages
+            'totalVoyages' => $totalVoyages,
+            // 'totlaReservation'=>  $totlaReservation
         ]);
     }
 

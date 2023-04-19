@@ -56,7 +56,7 @@
             </div>
             <div class="col-lg-3 col-md-6 ">
                
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id numquam atque libero sint! Nesciunt pariatur,</p>
+                <p>Our agency is the undisputed leader in the field in Morocco, offering superior quality services and innovative solutions to meet the specific needs of each client.</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
                         
                     @if (auth()->check() && auth()->user()->hasAgence())

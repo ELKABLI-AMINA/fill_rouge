@@ -13,7 +13,7 @@ Register
   <div class="container d-flex justify-content-center align-items-center min-vh-100">
     <div class="row border rounded-5 p-3 bg-white shadow box-area">
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: ">
-                <div class="featured-image mb-3">
+                <div style="padding-top: 56px" class="featured-image mb-3">
                   <img src="https://cdn.pixabay.com/photo/2017/04/05/01/13/trip-2203682_960_720.jpg" class="img-fluid" style="width: 800px;">
                 </div>
                 <p class="text-dark fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Be Verified</p>

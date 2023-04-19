@@ -141,7 +141,7 @@ class VoyageController extends Controller
 
         $voyage = Voyage::where('slug', $id_voyage)->first();
         $id = $voyage->id;
-        $reservation = Reservation::where('voyage_id', $id)->get();
+        $reservation = Reservation::where('voyage_id', $id)->where('status', 'done')->get();
         $place_recerved = $reservation->sum('participants');
         $placesRestantes = $voyage->nb_limite_reservation - $place_recerved;
         session()->put('placesRestantes', $placesRestantes);

@@ -33,8 +33,6 @@ Route::get('about', function () { return view('about');})->name('about');
 Route::get('/voyage/{slug}', [VoyageController::class, 'showVoyage'])->name('readmore');
 
 
-Route::get('/voyages/{id}/formVote', [VoteController::class, 'index'])->name('vote');
-Route::post('/formVote/{id_voyage}', [VoteController::class, 'noterVoyage'])->name('store.vote');
 
 Route::get('/paiement', function () { return view('paiement');})->name('paiement');
 Route::post('/contact', [ContactController::class, 'sendEmail'])->name('submit-contact');
@@ -102,6 +100,10 @@ Route::middleware(['auth', 'owner'])->group(function () {
 
 // ========= USER ROUTES===============
 Route::middleware(['auth', 'user'])->group(function () {
-    Route::post('/voyages/{id_voyage}/Soumettre-la-commande',  [ReservationController::class, 'store']);
+    Route::post('/voyages/{id_voyage}/formReservation',  [ReservationController::class, 'store']);
     Route::get('/voyages/{id_voyage}/formReservation',  [ReservationController::class, 'showReservationForm'])->name('form.reservation');
+
+    
+Route::get('/voyages/{id}/formVote', [VoteController::class, 'index'])->name('vote');
+Route::post('/formVote/{id_voyage}', [VoteController::class, 'noterVoyage'])->name('store.vote');
 });
