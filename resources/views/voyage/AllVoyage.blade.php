@@ -18,6 +18,7 @@
                             <th  scope="col" class="text-truncate">description</th>
                             <th scope="col">Address</th>
                             <th scope="col">logo</th>
+                            <th scope="col">Action</th>
                             <th scope="col">Status</th>
                         </tr>
                     </thead>
@@ -27,7 +28,7 @@
                            <td>{{$voyage->id}}</td>
                             <td>{{$voyage->name}}</td>
                             <td> {{$voyage->prix}}</td>
-                            <td> {{$voyage->description}}</td>
+                            <td> {{Str::limit($voyage->description, 50)}}</td>
                             <td> {{$voyage->image}}</td>
                             <td><div class="d-flex">
                                 

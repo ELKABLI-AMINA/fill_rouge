@@ -68,9 +68,9 @@ Créer Votre Voyage
                       <button type="submit" class="btn btn-primary mt-3">Valider</button>
              </form>                                                    
          </div>
-                        <div class="col-md-4 ">
+                        {{-- <div class="col-md-4 ">
                             <img src="{{ asset('img/voyage.jpg') }}"class="img-fluid " >
-                        </div>
+                        </div> --}}
        </div>
    </div> 
    

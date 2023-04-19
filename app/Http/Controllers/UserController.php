@@ -109,12 +109,19 @@ class UserController extends Controller
     
     public function viewODashboard()
     {
+       
         $agence= Agence::where('owner_id', auth()->user()->id)->first();
         $totalVoyages = Voyage::where('agence_id', $agence->id)->count();
-        // $totlaReservation = Reservation::where('voyage_id',$voyage->id)->count();
+        $voyage= Voyage::where('agence_id', $agence->id)->first();
+       
+         $totalReservation = Reservation::where('voyage_id',$voyage->id)->count();
+         $ReservationPayante = Reservation::where('voyage_id',$voyage->id)->where('status', 'done')->count();
+         $profit= Reservation::where('status','done')->sum('Montant_total');
         return view('o-dashboard')->with([
             'totalVoyages' => $totalVoyages,
-            // 'totlaReservation'=>  $totlaReservation
+            'totalReservation'=>  $totalReservation,
+             'ReservationPayante'=> $ReservationPayante,
+             'profit'=>$profit
         ]);
     }
 

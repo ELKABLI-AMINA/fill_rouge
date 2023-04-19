@@ -18,7 +18,7 @@
 @endif
                 <div class="bg-success text-white mt-3 " style="border-radius: 2px; height: 40px; ">1-Soumettre la Commande</div>
 
-              
+              <h3 class="text-danger">"Avis important : Veuillez noter que toute réservation effectuée sans paiement ne sera pas considérée comme confirmée. </h3>
               
 
                 <form class="mt-5" method="POST" action="">

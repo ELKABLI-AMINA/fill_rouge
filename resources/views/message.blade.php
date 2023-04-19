@@ -29,7 +29,9 @@
                         <td>{{$message->name}}</td>
                         <td>{{$message->email}}</td>
                         <td> {{$message->phone}}</td>
-                        <td> {{$message->message}}</td>
+                        <td> {{Str::limit($message->message,50)}}</td>
+                     
+                        
                      
                        
                     </tr>
