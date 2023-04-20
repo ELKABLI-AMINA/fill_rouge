@@ -120,7 +120,7 @@
     </div>
 
     
-    {{-- package --}}
+    
     <div class="container-xxl py-3 ">
         <div class="container">
             <div class="text-center" >
@@ -147,8 +147,6 @@
                                     </div>
                                     <div class="text-center p-4">
                                                 <h3 class="mb-0">{{ $voyage->prix }}.00 DH</h3>
-                                               
-                                        
                                                 <p class="fw-bold"></p>
                                                 <div class="d-flex justify-content-center mb-2">
                                                     <a href="{{ route('readmore', ['slug' => $voyage->slug]) }}" class="btn btn-sm btn-success px-3" style="border-radius:30px;">Read More</a>
@@ -158,11 +156,21 @@
                     </div>
                 @endforeach
             </div>
+            <div class="d-flex justify-content-center ">
+                <a href="{{$voyages->previousPageUrl()}}">
+                    <button class="p-2 rounded">
+                        < </button>
+                </a>
+                <a href="{{$voyages->nextPageUrl()}}">
+                    <button class="p-2 rounded">></button>
+                </a>
+            </div>
             
         </div>
         
     </div>
-    {{-- avis --}}
+    <a href="#" class=" other-trips text-center text-success">see other trips</a>
+    
     <section class="users-feedback">
         <h1 class="text-center mb-5">Users Review</h1>
        <div class="container">

@@ -34,13 +34,16 @@ Route::get('/voyage/{slug}', [VoyageController::class, 'showVoyage'])->name('rea
 
 
 
-Route::get('/paiement', function () { return view('paiement');})->name('paiement');
+
 Route::post('/contact', [ContactController::class, 'sendEmail'])->name('submit-contact');
 Route::get('/viresement', function () { return view('viresement');})->name('viresement');
 Route::get('/espece', function () { return view('espece');})->name('espece');
+Route::get('/confirm-paiment', function () { return view('confirm-paiment');})->name('confirm-paiment');
 
-Route::get('payment-form', [StripeController::class, 'form'])->name('form.payment');
-Route::post('make/payment', [StripeController::class, 'makePayment'])->name('make.payment');
+Route::get('stripe',[StripeController::class,'paymentStripe'])->name('addmoney.paymentstripe');
+Route::post('add-money-stripe',[StripeController::class,'postPaymentStripe'])->name('addmoney.stripe');
+Route::get('paiement',[StripeController::class,'ShowPaiement'])->name('paiement');
+
 
 Route::get('/qrcode', [QRCodeController::class, 'generateQRCode']);
 
