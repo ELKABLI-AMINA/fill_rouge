@@ -1,50 +1,55 @@
+# Nom du projet
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Site web de voyage au Maroc</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Voyages</a></li>
-				<li><a href="#">Agences de voyages</a></li>
-				<li><a href="#">Connexion</a></li>
-				<li><a href="#">Inscription</a></li>
-			</ul>
-		</nav>
-	</header>
+Mon site web de voyage au Maroc
 
-	<main>
-		<section id="banner">
-			<h1>Voyagez au Maroc</h1>
-			<p>Découvrez les merveilles du Maroc avec notre site web de voyage</p>
-			<a href="#" class="button">Rechercher un voyage</a>
-		</section>
+## Description
 
-		<section id="about">
-			<h2>À propos de nous</h2>
-			<p>Nous sommes une équipe passionnée de voyageurs et d'experts en voyages qui travaillent ensemble pour créer la meilleure expérience de voyage possible. Notre site web de voyage vous offre la possibilité de découvrir les merveilles du Maroc à travers une variété de voyages et d'expériences uniques.</p>
-		</section>
+Le site web de voyage au Maroc est une plateforme qui permet aux utilisateurs de découvrir et de réserver des voyages dans différentes villes du Maroc. Les agences de voyages peuvent également créer un compte pour proposer leurs voyages sur la plateforme. Les utilisateurs peuvent facilement rechercher, réserver et payer pour leurs voyages en ligne en toute sécurité.
 
-		<section id="services">
-			<h2>Nos services</h2>
-			<ul>
-				<li><span class="icon">&#128197;</span>Recherche de voyages</li>
-				<li><span class="icon">&#127965;</span>Réservation de voyages en ligne</li>
-				<li><span class="icon">&#128179;</span>Paiement en ligne sécurisé</li>
-				<li><span class="icon">&#128273;</span>Assistance client 24/7</li>
-			</ul>
-		</section>
-	</main>
+## Table des matières
 
-	<footer>
-		<p>Tous droits réservés &copy; 2021</p>
-	</footer>
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Contribuer](#contribuer)
+- [Licence](#licence)
+- [Auteurs](#auteurs)
+- [Statut du projet](#statut-du-projet)
+- [Contact](#contact)
 
-</body>
-</html>
+## Installation
+
+1. Clonez le projet sur votre ordinateur.
+2. Installez les dépendances avec `npm install`.
+3. Configurez les fichiers de configuration.
+4. Exécutez le serveur en utilisant `npm start`.
+
+## Utilisation
+
+Sur la page d'accueil, les utilisateurs peuvent rechercher des voyages en fonction de différents critères tels que la destination, le type de voyage, le prix, etc. Les agences de voyages peuvent créer un compte et proposer leurs voyages sur la plateforme. Les utilisateurs peuvent réserver et payer pour leurs voyages en ligne en toute sécurité.
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Voici comment vous pouvez contribuer au projet :
+1. Forker le projet.
+2. Créez une nouvelle branche.
+3. Faites vos modifications et vos ajouts.
+4. Faites un commit de vos changements avec une description claire.
+5. Soumettez une pull request en expliquant les changements que vous avez apportés.
+
+## Licence
+
+Le projet est sous la licence MIT.
+
+## Auteurs
+
+- John Doe - Développeur principal - john.doe@email.com
+- Jane Smith - Designer UX/UI - jane.smith@email.com
+
+## Statut du projet
+
+Le projet est actuellement en développement.
+
+## Contact
+
+Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter à l'adresse email suivante : contact@monsitevoyage.com
 
