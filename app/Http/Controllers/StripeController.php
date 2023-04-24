@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
+use App\Models\Reservation;
 
 
 
@@ -42,7 +43,7 @@ class StripeController extends Controller
                             'cvc' => $request->get('cvvNumber'),
                         ],
                     ]);
-     
+                   
                     if (!isset($token['id'])) {
                         return redirect()->route('stripe.add.money');
                     }
@@ -50,12 +51,17 @@ class StripeController extends Controller
                     $charge = $stripe->charges()->create([
                         'card' => $token['id'],
                         'currency' => 'USD',
-                        'amount' => 200.49,
+                        'amount' => session()->get('total'),
                         'description' => 'wallet',
                     ]);
-                     
+                    session()->forget('total');
                     if($charge['status'] == 'succeeded') {
+                        $id=session()->get('reservation_id');
+                        $reservation=Reservation::find($id);
+                        $reservation->update(['status'=>'done']);
+                        session()->forget('reservation_id');
                        
+                
                         return redirect()->route('confirm-paiment');
                     } else {
                         return redirect()->route('addmoney.paymentstripe')->with('error','Money not add in wallet!');
@@ -69,6 +75,8 @@ class StripeController extends Controller
                 }
             }
         }
+
+
 
         public function ShowPaiement()
         {

@@ -27,12 +27,12 @@
                                 <input type="hidden" name="voyage_id" value="{{ $voyage->id }}">
 
                                 <div class="form-group">
-                                <label for="quantity">Quantité:</label>
+                                <label for="quantity">NB participants:</label>
                                 <input type="number" name="quantity" id="quantity" min="1" max="{{ session()->get('placesRestantes') }}" onchange="calculateTotal()">
                                 </div>
 
                                 <div class="form-group">
-                                <label for="price">Prix unitaire:</label>
+                                <label for="price">Prix par participant:</label>
                                 <input type="text" name="price" id="price" value="{{ $voyage->prix }}" readonly>
                                 </div>
 
