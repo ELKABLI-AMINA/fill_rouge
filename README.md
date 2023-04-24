@@ -1,4 +1,4 @@
-Bien sûr ! Voici un exemple de contenu que vous pouvez inclure dans votre fichier README pour votre projet de site web de voyage au Maroc :
+
 
 Site web de voyage au Maroc
 Ce projet est un site web de voyage destiné aux voyageurs et aux agences de voyages pour la création et la réservation de voyages au Maroc.
