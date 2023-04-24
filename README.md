@@ -42,8 +42,8 @@ Le projet est sous la licence MIT.
 
 ## Auteurs
 
-- John Doe - Développeur principal - john.doe@email.com
-- Jane Smith - Designer UX/UI - jane.smith@email.com
+- ELKABLI AMINA- Développeur principal - amina.elkabli1@gmail.com
+- ELKABLI AMINA - Designer UX/UI - amina.elkabli1@gmail.com
 
 ## Statut du projet
 
@@ -51,5 +51,5 @@ Le projet est actuellement en développement.
 
 ## Contact
 
-Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter à l'adresse email suivante : contact@monsitevoyage.com
+Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter à l'adresse email suivante : amina.elkabli1@gmail.com
 
