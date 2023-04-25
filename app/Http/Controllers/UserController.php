@@ -32,27 +32,26 @@ class UserController extends Controller
 
 
     public function login(Request $request)
-{
-    $credentials = $request->only('email', 'password');
-    $remember = $request->has('remember');
+    {
+        $credentials = $request->only('email', 'password');
+        $remember = $request->has('remember');
 
-    if (Auth::attempt($credentials, $remember)) {
-        $user = Auth::user();
+        if (Auth::attempt($credentials, $remember)) {
+            $user = Auth::user();
 
-        if ($user && $user->role == 0) {
-            return redirect()->route('dashboard');
-        }else if($user && $user->role == 1){
-            return redirect()->route('owner');
+            if ($user && $user->role == 0) {
+                return redirect()->route('dashboard');
+            } else if ($user && $user->role == 1) {
+                return redirect()->route('owner');
+            } else {
+
+                return redirect()->route('/');
+            }
         }
-         else {
-            
-            return redirect()->route('/');
-        }
+        return back()->withErrors([
+            'email' => 'Les informations de connexion sont invalides.',
+        ]);
     }
-    return back()->withErrors([
-        'email' => 'Les informations de connexion sont invalides.',
-    ]);
-}
 
     public function show()
     {
@@ -65,7 +64,7 @@ class UserController extends Controller
         return view('Auth.EditProfil');
     }
 
-    public function update( Request $request)
+    public function update(Request $request)
     {
         $user = Auth::user();
         $user->update([
@@ -74,7 +73,6 @@ class UserController extends Controller
             'phone_number' => $request->phone_number
         ]);
         return redirect()->route('login');
-
     }
 
 
@@ -91,37 +89,43 @@ class UserController extends Controller
 
     public function viewDashboard()
     {
-        
+
 
         $totalAgences = Agence::count();
         $totalVoyages = Voyage::count();
         $totalReservation = Reservation::count();
 
         return view('dashboard')->with([
-            'totalAgences'=>$totalAgences,
-            'totalVoyages'=>$totalVoyages,
-            'totalReservation'=>$totalReservation
-           
+            'totalAgences' => $totalAgences,
+            'totalVoyages' => $totalVoyages,
+            'totalReservation' => $totalReservation
+
         ]);
     }
 
-    
-    
+
+
     public function viewODashboard()
     {
-       
-        $agence= Agence::where('owner_id', auth()->user()->id)->first();
+
+        $agence = Agence::where('owner_id', auth()->user()->id)->first();
         $totalVoyages = Voyage::where('agence_id', $agence->id)->count();
-        $voyage= Voyage::where('agence_id', $agence->id)->first();
-       
-         $totalReservation = Reservation::where('voyage_id',$voyage->id)->count();
-         $ReservationPayante = Reservation::where('voyage_id',$voyage->id)->where('status', 'done')->count();
-         $profit= Reservation::where('status','done')->sum('Montant_total');
+        $voyage = Voyage::where('agence_id', $agence->id)->first();
+        if ($voyage) {
+            $totalReservation = Reservation::where('voyage_id', $voyage->id)->count();
+            $ReservationPayante = Reservation::where('voyage_id', $voyage->id)->where('status', 'done')->count();
+        } else {
+            $totalReservation = 0;
+            $ReservationPayante = 0;
+        }
+
+
+        $profit = Reservation::where('status', 'done')->sum('Montant_total');
         return view('o-dashboard')->with([
             'totalVoyages' => $totalVoyages,
-            'totalReservation'=>  $totalReservation,
-             'ReservationPayante'=> $ReservationPayante,
-             'profit'=>$profit
+            'totalReservation' =>  $totalReservation,
+            'ReservationPayante' => $ReservationPayante,
+            'profit' => $profit
         ]);
     }
 
@@ -130,30 +134,28 @@ class UserController extends Controller
 
     public function action($id, $act)
     {
-        if($act ==1){
+        if ($act == 1) {
             $agence = Agence::find($id);
-            if($agence){
-                $agence->status =1;
+            if ($agence) {
+                $agence->status = 1;
                 $agence->save();
 
-                $user= User::find($agence->owner_id);
-                $user->role=1;
+                $user = User::find($agence->owner_id);
+                $user->role = 1;
                 $user->save();
-                return redirect()->back()->with('success','the Agence has been accepted with success');
-            }else{
+                return redirect()->back()->with('success', 'the Agence has been accepted with success');
+            } else {
                 abort(404);
             }
-        }elseif($act ==2){
+        } elseif ($act == 2) {
             $agence = Agence::find($id);
-            if($agence){
-                $agence->status =2;
+            if ($agence) {
+                $agence->status = 2;
                 $agence->save();
-                return redirect()->back()->with('success','the Agence has been declined with success'); 
-            }else{
+                return redirect()->back()->with('success', 'the Agence has been declined with success');
+            } else {
                 abort(404);
             }
         }
-        
     }
-    
 }

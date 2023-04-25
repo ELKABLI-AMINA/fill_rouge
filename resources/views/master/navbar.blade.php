@@ -27,15 +27,17 @@
             <a class="nav-link text-success" href="{{ route('dashboard') }}">Dash-Admin</a>
           </li>
           @endif
-          @if(! Auth::check())
+          @guest
           <li class="nav-item ">
             <a class="nav-link text-success" href="{{ route('register') }}">Register</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link text-success" href="{{ route('login') }}">Login</a>
           </li>
-          @endif
-          
+          @endguest
+          @auth
+          <a class="nav-link text-success" href="{{ route('logout') }}">log out</a>
+          @endauth
           
           
         </ul>

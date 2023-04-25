@@ -303,6 +303,8 @@ input[type="number"] {
 .gallery-box{
   position: relative;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 

@@ -25,7 +25,7 @@
                     <tr>
                        <td>{{$demande->id}}</td>
                         <td>{{$demande->name}}</td>
-                        <td>{{$demande->description}}</td>
+                        <td> {{Str::limit($demande->description, 50)}}</td>
                         <td> {{$demande->address}}</td>
                         <td> {{$demande->logo}}</td>
                         <td>{{

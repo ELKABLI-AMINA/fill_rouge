@@ -50,7 +50,7 @@ class StripeController extends Controller
                      
                     $charge = $stripe->charges()->create([
                         'card' => $token['id'],
-                        'currency' => 'USD',
+                        'currency' => 'MAD',
                         'amount' => session()->get('total'),
                         'description' => 'wallet',
                     ]);

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->foreignId('owner_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('ville_id')->constrained('villes')->onDelete('cascade');
-            $table->text('description');
+            $table->longText('description');
             $table->string('logo');
             $table->string('address');
             $table->integer('status')->default(0);

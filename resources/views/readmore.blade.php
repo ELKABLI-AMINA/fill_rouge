@@ -17,7 +17,7 @@
                                                    <div style="width:33rem;  ">
                                                 
                                                      <div class="card-body h-100  " >
-                                                        <div>{{!! $voyage->description !!}}</div>
+                                                        <div class="container">{!! $voyage->description !!}</div>
                                                       </div>
                                                 
                                                   </div> 
